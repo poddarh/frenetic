@@ -101,6 +101,9 @@ let rec policy_to_json (pol : policy) : json = match pol with
   | Seq (p, q) ->
     `Assoc [("type", `String "seq");
            ("pols", `List [policy_to_json p; policy_to_json q])]
+  | Failover (p, q) ->
+    `Assoc [("type", `String "failover");
+           ("pols", `List [policy_to_json p; policy_to_json q])]
   | Star p -> `Assoc [("type", `String "star");
                       ("pol", policy_to_json p)]
   | Link (sw1, pt1, sw2, pt2) ->

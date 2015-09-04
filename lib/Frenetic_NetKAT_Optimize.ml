@@ -58,6 +58,10 @@ let mk_seq pol1 pol2 =
     | _ ->
       Seq(pol1,pol2)
 
+(* SJS: nothing fancy for now *)
+let mk_failover pol1 pol2 = 
+  Failover(pol1, pol2)
+
 let mk_star pol =
   match pol with
     | Filter True ->
@@ -100,6 +104,8 @@ let specialize_policy sw pol =
         loop pol1 (fun p1 -> loop pol2 (fun p2 -> k (mk_union p1 p2)))
       | Seq (pol1, pol2) ->
         loop pol1 (fun p1 -> loop pol2 (fun p2 -> k (mk_seq p1 p2)))
+      | Failover (pol1, pol2) ->
+        loop pol1 (fun p1 -> loop pol2 (fun p2 -> k (mk_failover p1 p2)))
       | Star pol ->
         loop pol (fun p -> k (mk_star p))
       | Link _ | VLink _ ->
@@ -155,6 +161,8 @@ let rec norm_policy (pol : policy) : policy = match pol with
   | Seq (p, q) ->
     let pol' = Seq (norm_policy p, norm_policy q) in
     mk_big_seq (list_of_seq pol')
+  | Failover (p, q) ->
+    Failover (norm_policy p, norm_policy q)
 
 let rec flatten_union_k (pol : policy)
   (acc : policy list)

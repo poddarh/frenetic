@@ -151,6 +151,8 @@ module Field = struct
         let (n, lst) = f_seq' q lst in
         (m * n, lst)
       | Union _ -> (f_union pol, lst)
+      (* SJS: I'm clueless what would be a sensible thing to do here... *)
+      | Failover _ -> (f_union pol, lst)
       | Star _ | Link _ | VLink _ -> (1, lst) (* bad, but it works *)
     and f_seq pol =
       let (size, preds) = f_seq' pol [] in
@@ -159,7 +161,7 @@ module Field = struct
     and f_union' pol k = match pol with
       | Mod _ -> k 1
       | Filter _ -> k 1
-      | Union (p, q) ->
+      | Union (p, q) | Failover (p, q) (* SJS: does this make sense?? *) ->
         f_union' p (fun m -> f_union' q (fun n -> k (m + n)))
       | Seq _ -> k (f_seq pol)
       | Star _ | Link _ | VLink _ -> k 1 (* bad, but it works *)

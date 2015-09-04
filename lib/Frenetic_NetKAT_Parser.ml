@@ -20,6 +20,7 @@ let nk_pol = Gram.Entry.mk "nk_pol"
 let nk_pol_atom = Gram.Entry.mk "nk_pol_atom"
 let nk_pol_seq = Gram.Entry.mk "nk_pol_seq"
 let nk_pol_star = Gram.Entry.mk "nk_pol_star"
+let nk_pol_failover = Gram.Entry.mk "nk_pol_failover"
 let nk_pol_union = Gram.Entry.mk "nk_pol_union"
 let nk_pol_cond = Gram.Entry.mk "nk_pol_cond"
 let nk_int64 = Gram.Entry.mk "nk_int64"
@@ -178,6 +179,14 @@ EXTEND Gram
       p
     | p = nk_pol_star; "*" -> 
       Frenetic_NetKAT.Star p
+  ]];
+
+  nk_pol_failover : [[
+      p = nk_pol_star ->
+      p
+    | p = nk_pol_failover; "||"; q = nk_pol_star ->
+      Frenetic_NetKAT.Failover (p, q)
+
   ]];
 
   nk_pol_seq : [[

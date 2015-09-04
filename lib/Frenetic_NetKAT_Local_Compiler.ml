@@ -72,6 +72,9 @@ module FDK = struct
     else
       sum t u
 
+  (* TODO: implement this! *) (* SJS *)
+  let failover t u = failwith "not implemented"
+
   (* Do NOT eta-reduce to avoid caching problems with mk_drop *)
   let big_union fdds = List.fold ~init:(mk_drop ()) ~f:union fdds
 
@@ -101,6 +104,9 @@ module FDK = struct
                       else
                         of_local_pol_k q (fun q' ->
                           k (seq p' q')))
+    | Failover (p,q) -> of_local_pol_k p (fun p' ->
+                          of_local_pol_k q (fun q' ->
+                            k (failover p' q')))
     | Star p -> of_local_pol_k p (fun p' -> k (star p'))
     | Link _ | VLink _ -> raise Non_local
 
@@ -425,6 +431,7 @@ module Pol = struct
     | Mod of header_val
     | Union of policy * policy
     | Seq of policy * policy
+    | Failover of policy * policy
     | Star of policy
     | Dup (* we can handle all of NetKAT *)
     | FDK of FDK.t * FDK.t (* FDK injection. E and D matrix. *)
@@ -447,6 +454,8 @@ module Pol = struct
     | _, Filter True -> pol1
     | Filter False, _ | _, Filter False -> drop
     | _ -> Seq (pol1,pol2)
+
+  let mk_failover p q = Failover (p,q)
 
   let mk_star pol =
     match pol with
@@ -475,6 +484,7 @@ module Pol = struct
     | Mod hv -> Mod hv
     | Union (p,q) -> Union (of_pol ing p, of_pol ing q)
     | Seq (p,q) -> Seq (of_pol ing p, of_pol ing q)
+    | Failover (p,q) -> Failover (of_pol ing p, of_pol ing q)
     | Star p -> Star (of_pol ing p)
     | Link (s1,p1,s2,p2) ->
       (* SJS: This is not the true sematnics of a link! This is a hack that works for now,
@@ -682,6 +692,18 @@ module NetKAT_Automaton = struct
       let d = FDK.union d_p (FDK.seq e_p d_q) in
       let q' = Pol.mk_fdk e_q d_q in
       let k = (List.map k_p ~f:(fun (id,p) -> (id, Pol.mk_seq p q'))) @ k_q in
+      (e, d, k)
+    | Failover (p,q) ->
+      (* SJS:
+          E[p||q] = E[p] || E[q]
+          D[p||q] = D[p] || D[q]
+          K[p||q] = (K[p]||q) \union K[q]
+      *)
+      let (e_p, d_p, k_p) = split_pol automaton p in
+      let (e_q, d_q, k_q) = split_pol automaton q in
+      let e = FDK.failover e_p e_q in
+      let d = FDK.failover d_p d_q in
+      let k = (List.map k_p ~f:(fun (id,p) -> (id, Pol.mk_failover p q))) @ k_q in
       (e, d, k)
     | Star p ->
       let (e_p, d_p, k_p) = split_pol automaton p in

@@ -166,10 +166,14 @@ module Field = struct
       | Seq _ -> k (f_seq pol)
       | Star _ | Link _ | VLink _ -> k 1 (* bad, but it works *)
     and f_union pol = f_union' pol (fun n -> n) in
-    let _ = f_seq pol in
     let cmp (_, x) (_, y) = Pervasives.compare y x in
-    let lst = List.sort ~cmp (Hashtbl.Poly.to_alist count_tbl) in
-    set_order (List.map lst ~f:(fun (fld, _) -> fld))
+    begin
+      f_seq pol;
+      Hashtbl.Poly.to_alist count_tbl
+      |> List.sort ~cmp
+      |> List.map ~f:fst
+      |> set_order
+    end
 
 end
 

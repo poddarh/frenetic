@@ -153,6 +153,7 @@ module type S = sig
       operation on the [r] type is used to combine leaf nodes. *)
 
   val sum_generalized : (r -> r -> r) -> r -> t -> t -> t
+  (** apply operator on fdds (with memoization) **)
 
   val prod : t -> t -> t
   (** [prod a b] returns the conjunction of the two diagrams. The [prod]

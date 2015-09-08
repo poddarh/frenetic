@@ -72,8 +72,24 @@ module FDK = struct
     else
       sum t u
 
-  (* TODO: implement this! *) (* SJS *)
-  let failover t u = failwith "not implemented"
+  (* SJS *)
+  let failover t u =
+    let open Action in
+    let open Value in
+    let port = F Field.Location in
+    let get_ports a = match Seq.find a port with
+      | Some (Const p1) -> [Int32.of_int64_exn p1]
+      | Some (FastFail ps) -> ps
+      | _ -> failwith "fast failover: unexpected case!"
+    in
+    let ffo as1 as2 =
+      match Par.(to_list as1, to_list as2) with
+      | [a1], [a2] when Seq.equal (=) (Seq.remove a1 port) (Seq.remove a2 port) ->
+        a1 |> Seq.add ~key:port ~data:(FastFail (get_ports a1 @ get_ports a2))
+           |> Par.singleton
+      | _ -> failwith "fast failover: unexpected case!"
+    in
+    FDK.sum_generalized ffo Action.zero t u
 
   (* Do NOT eta-reduce to avoid caching problems with mk_drop *)
   let big_union fdds = List.fold ~init:(mk_drop ()) ~f:union fdds

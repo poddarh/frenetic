@@ -259,7 +259,6 @@ let queries_of_policy (pol : policy) : string list =
     | Star p -> loop p acc in
   loop pol []
 
-(* JNF: is this dead code? *)
 let switches_of_policy (p:policy) =
   let rec collect' a =
     match a with

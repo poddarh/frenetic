@@ -190,9 +190,9 @@ EXTEND Gram
   ]];
 
   nk_pol_seq : [[
-      p = nk_pol_star -> 
+      p = nk_pol_failover -> 
       p
-    | p = nk_pol_seq; ";"; q = nk_pol_star ->
+    | p = nk_pol_seq; ";"; q = nk_pol_failover ->
       Frenetic_NetKAT.Seq (p, q)
   ]];
 

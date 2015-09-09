@@ -134,6 +134,7 @@ let size (pol:policy) : int =
     match pol with
       | Filter pr -> f (size_pred pr + 1)
       | Mod(_) -> f 1
+      | Failover (pol1, pol2)
       | Union(pol1, pol2)
       | Seq(pol1, pol2) -> size pol1 (fun spol1 -> size pol2 (fun spol2 -> f (1 + spol1 + spol2)))
       | Star(pol) -> size pol (fun spol -> f (1 + spol))
@@ -197,6 +198,7 @@ let rec eval (pkt : packet) (pol : policy) : PacketSet.t = match pol with
         { pkt with headers = { pkt.headers with tcpDstPort = n }} 
       | VSwitch n | VPort n | VFabric n -> pkt (* SJS *) in
     PacketSet.singleton pkt'
+  | Failover _ -> failwith "currently not supported"
   | Union (pol1, pol2) ->
     PacketSet.union (eval pkt pol1) (eval pkt pol2)
   | Seq (pol1, pol2) ->
@@ -255,11 +257,10 @@ let queries_of_policy (pol : policy) : string list =
     | Mod (Location (Query str)) ->
       if List.mem acc str then acc else str :: acc
     | Filter _ | Mod _ | Link _ | VLink _ -> acc
-    | Union (p, q) | Seq (p, q) -> loop q (loop p acc)
+    | Failover(p, q) | Union (p, q) | Seq (p, q) -> loop q (loop p acc)
     | Star p -> loop p acc in
   loop pol []
 
-(* JNF: is this dead code? *)
 let switches_of_policy (p:policy) =
   let rec collect' a =
     match a with
@@ -276,7 +277,7 @@ let switches_of_policy (p:policy) =
        collect' a
     | Mod _ ->
        []
-    | Union(q,r) | Seq (q,r) ->
+    | Union(q,r) | Seq (q,r) | Failover(q,r) ->
        collect q @ collect r
     | Star q ->
        collect q

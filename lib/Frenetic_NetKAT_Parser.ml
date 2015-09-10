@@ -181,25 +181,26 @@ EXTEND Gram
       Frenetic_NetKAT.Star p
   ]];
 
-  nk_pol_failover : [[
-      p = nk_pol_star ->
+  nk_pol_seq : [[
+      p = nk_pol_star -> 
       p
-    | p = nk_pol_failover; "||"; q = nk_pol_star ->
+    | p = nk_pol_seq; ";"; q = nk_pol_star ->
+      Frenetic_NetKAT.Seq (p, q)
+  ]];
+
+  (* failover binds stronger than union, as failover on unions is not defined *)
+  nk_pol_failover : [[
+      p = nk_pol_seq ->
+      p
+    | p = nk_pol_failover; "||"; q = nk_pol_seq ->
       Frenetic_NetKAT.Failover (p, q)
 
   ]];
 
-  nk_pol_seq : [[
+  nk_pol_union : [[
       p = nk_pol_failover -> 
       p
-    | p = nk_pol_seq; ";"; q = nk_pol_failover ->
-      Frenetic_NetKAT.Seq (p, q)
-  ]];
-
-  nk_pol_union : [[
-      p = nk_pol_seq -> 
-      p
-    | p = nk_pol_union; "|"; q = nk_pol_seq ->
+    | p = nk_pol_union; "|"; q = nk_pol_failover ->
       Frenetic_NetKAT.Union (p, q)
   ]];
 

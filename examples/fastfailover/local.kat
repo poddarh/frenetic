@@ -1,1 +1,7 @@
-port:=1 || port:=2
+filter switch=1; filter ethTyp=0x0800; ip4Dst:=10.0.0.1;
+(if port=1 then
+  (port:=4 || port:=2); ip4Src:=10.0.0.2
+else if port=2 then
+  (port:=3 || port:=1 || port:=4); ip4Src:=10.0.0.3
+else
+  drop)

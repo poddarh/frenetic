@@ -168,7 +168,7 @@ module Field = struct
     and f_union pol = f_union' pol (fun n -> n) in
     let cmp (_, x) (_, y) = Pervasives.compare y x in
     begin
-      f_seq pol;
+      ignore (f_seq pol);
       Hashtbl.Poly.to_alist count_tbl
       |> List.sort ~cmp
       |> List.map ~f:fst

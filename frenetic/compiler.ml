@@ -37,7 +37,6 @@ let dump_ffo_table ?pc fdd sw =
   let open Frenetic_NetKAT_Compiler in
   let group_tbl = Frenetic_GroupTable0x04.create () in
   let tbl = to_table ?pc ~group_tbl sw fdd in
-  printf "FDD:\n%s\n\n" (to_string fdd);
   printf "Table:\n%s\n"
     (Frenetic_OpenFlow.string_of_flowTable ~label:(sprintf "Switch %Ld" sw) tbl);
   printf "Group Table:\n%s\n" (Frenetic_GroupTable0x04.to_string group_tbl)

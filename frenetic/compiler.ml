@@ -12,8 +12,8 @@ let parse_pred file =
   In_channel.read_all file
   |> Frenetic_NetKAT_Parser.pred_from_string
 
-let dump_table fdd sw =
-  Frenetic_NetKAT_Compiler.to_table sw fdd
+let dump_table ?pc fdd sw =
+  Frenetic_NetKAT_Compiler.to_table ?pc sw fdd
   |> Frenetic_OpenFlow.string_of_flowTable ~label:(sprintf "Switch %Ld" sw)
   |> printf "%s\n"
 
@@ -33,21 +33,21 @@ let trivial_layout = [Frenetic_Fdd.Field.all_fields]
     | tbls,_ ->
       printf "Unexpected case: %d flow tables!?\n" (List.length tbls) *)
 
-let dump_ffo_table fdd sw =
+let dump_ffo_table ?pc fdd sw =
   let open Frenetic_NetKAT_Compiler in
   let group_tbl = Frenetic_GroupTable0x04.create () in
-  let tbl = to_table ~group_tbl sw fdd in
+  let tbl = to_table ?pc ~group_tbl sw fdd in
   printf "FDD:\n%s\n\n" (to_string fdd);
   printf "Table:\n%s\n"
     (Frenetic_OpenFlow.string_of_flowTable ~label:(sprintf "Switch %Ld" sw) tbl);
   printf "Group Table:\n%s\n" (Frenetic_GroupTable0x04.to_string group_tbl)
 
 
-let dump_all_tables switches fdd =
-  List.iter switches ~f:(dump_table fdd)
+let dump_all_tables ?pc switches fdd =
+  List.iter switches ~f:(dump_table ?pc fdd)
 
-let dump_all_ffo_tables switches fdd =
-  List.iter switches ~f:(dump_ffo_table fdd)
+let dump_all_ffo_tables ?pc switches fdd =
+  List.iter switches ~f:(dump_ffo_table ?pc fdd)
 
 
 (*===========================================================================*)
@@ -90,13 +90,15 @@ module Global = struct
   )
 
   let run file failover () =
+    let open Frenetic_NetKAT_Compiler in
     let pol = parse_pol file in
-    let fdd = Frenetic_NetKAT_Compiler.compile_global pol in
+    let fdd = compile_global pol in
     let switches = Frenetic_NetKAT_Semantics.switches_of_policy pol in
+    let pc = Field.Vlan in
     if failover then
-      dump_all_ffo_tables switches fdd
+      dump_all_ffo_tables ~pc switches fdd
     else
-      dump_all_tables switches fdd
+      dump_all_tables ~pc switches fdd
 end
 
 module Virtual = struct

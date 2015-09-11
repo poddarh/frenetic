@@ -86,14 +86,17 @@ module FDK = struct
     let get_ports a = match Seq.find a port with
       | Some (Const p1) -> [Int32.of_int64_exn p1]
       | Some (FastFail ps) -> ps
-      | _ -> failwith "fast failover: unexpected case!"
+      | Some v -> raise (FieldValue_mismatch (Field.Location, v))
+      | None -> failwith "fast failover: unexpected case (no port specified)!"
     in
     let ffo as1 as2 =
       match Par.(to_list as1, to_list as2) with
-      | [a1], [a2] when Seq.equal (=) (Seq.remove a1 port) (Seq.remove a2 port) ->
+      | [a1], [a2] when Seq.equal_mod_k (Seq.remove a1 port) (Seq.remove a2 port) ->
         a1 |> Seq.add ~key:port ~data:(FastFail (get_ports a1 @ get_ports a2))
            |> Par.singleton
-      | _ -> failwith "fast failover: unexpected case!"
+      | [a1], [a2] -> failwith "fast failover: unexpected case\
+                                (backup action can only differ in port)!"
+      | _ -> failwith "fast failover: unexpected case (multicast not supported)!"
     in
     FDK.sum_generalized ffo Action.zero t u
 

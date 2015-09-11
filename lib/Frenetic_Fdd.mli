@@ -45,6 +45,8 @@ module Value : sig
   val to_int_exn : t -> int
 end
 
+exception FieldValue_mismatch of Field.t * Value.t
+
 module Pattern : sig
   type t = Field.t * Value.t
   val compare : t -> t -> int

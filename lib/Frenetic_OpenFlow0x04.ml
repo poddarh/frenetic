@@ -18,8 +18,8 @@ type 'a mask = { m_value : 'a; m_mask : 'a option } with sexp
 type 'a asyncMask = { m_master : 'a ; m_slave : 'a } with sexp
 
 type payload =
-  | Buffered of int32 * bytes
-  | NotBuffered of bytes
+  | Buffered of int32 * Cstruct.t
+  | NotBuffered of Cstruct.t
   with sexp
 
 type xid = Frenetic_OpenFlow_Header.xid with sexp
@@ -497,8 +497,8 @@ type tableFeatureProp =
   | TfpWriteSetFieldMiss of oxm list
   | TfpApplySetField of oxm list
   | TfpApplySetFieldMiss of oxm list
-  | TfpExperimenter of (experimenter*bytes)
-  | TfpExperimenterMiss of (experimenter*bytes)
+  | TfpExperimenter of (experimenter*Cstruct.t)
+  | TfpExperimenterMiss of (experimenter*Cstruct.t)
   with sexp
 
 type tableConfig = Deprecated with sexp
@@ -672,7 +672,7 @@ type asyncConfig = { packet_in : packetInReasonMap asyncMask;
 
 type error = {
   err : errorTyp;
-  data : bytes;
+  data : Cstruct.t;
 } with sexp
 
 
@@ -7468,8 +7468,8 @@ module Message = struct
 
   type t = 
     | Hello of element list
-    | EchoRequest of bytes
-    | EchoReply of bytes
+    | EchoRequest of Cstruct.t
+    | EchoReply of Cstruct.t
     | FeaturesRequest
     | FeaturesReply of switchFeatures
     | FlowModMsg of flowMod
@@ -7566,8 +7566,8 @@ module Message = struct
 
   let sizeof (msg : t) : int = match msg with
     | Hello e -> Header.size + Hello.sizeof e
-    | EchoRequest bytes -> Header.size + (String.length (Cstruct.to_string bytes))
-    | EchoReply bytes -> Header.size + (String.length (Cstruct.to_string bytes))
+    | EchoRequest b -> Header.size + (String.length (Cstruct.to_string b))
+    | EchoReply b -> Header.size + (String.length (Cstruct.to_string b))
     | FeaturesRequest -> Header.size
     | FeaturesReply f -> Header.size + SwitchFeatures.sizeof f
     | FlowModMsg fm -> Header.size + FlowMod.sizeof fm
@@ -7636,10 +7636,10 @@ module Message = struct
     match msg with
     | Hello e ->
       Header.size + Hello.marshal out e
-    | EchoRequest bytes
-    | EchoReply bytes ->
-      Cstruct.blit_from_string (Cstruct.to_string bytes) 0 out 0 (String.length (Cstruct.to_string bytes));
-      Header.size + String.length (Cstruct.to_string bytes)
+    | EchoRequest b
+    | EchoReply b ->
+      Cstruct.blit_from_string (Cstruct.to_string b) 0 out 0 (String.length (Cstruct.to_string b));
+      Header.size + String.length (Cstruct.to_string b)
     | FeaturesRequest ->
       Header.size
     | FeaturesReply fr ->

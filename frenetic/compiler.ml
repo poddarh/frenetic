@@ -71,7 +71,7 @@ module Local = struct
       | None -> Frenetic_NetKAT_Semantics.switches_of_policy pol
       | Some n -> List.range 1 (n+1) |> List.map ~f:Int64.of_int
     in
-    if Option.is_none nr_switches then
+    if Option.is_none nr_switches && List.is_empty switches then
       printf "Number of switches not automatically recognized!\n\
               Use the --switches flag to specify it manually.\n"
     else if failover then

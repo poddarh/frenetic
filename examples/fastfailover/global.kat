@@ -10,6 +10,6 @@
 filter(switch=1 and port=0);(
      port:=2; 1@2=>2@1; port:=3; 2@3=>3@2; port:=0 (* main path *)
   || port:=4; 1@4=>4@1; port:=5; 4@5=>5@4; port:=6; 5@6=>6@5; port:=3; 6@3=>3@6; port:=0
-  || port:=2; 1@2=>2@1; port:=5; 2@5=>5@2; port:=6; 5@6=>6@5; port:=3; 6@3=>3@6; port:=0
+  || port:=5; 2@5=>5@2; port:=6; 5@6=>6@5; port:=3; 6@3=>3@6; port:=0
 );
 filter(switch=3 and port=0)

@@ -504,21 +504,57 @@ module Action = struct
 
     let to_hvs seq =
       seq |> to_alist |> List.filter_map ~f:(function (F f,v) -> Some (f,v) | _ -> None)
+
+    let concat seq1 seq2 =
+      if mem seq1 K
+        (* cannot implement sequential composition of this kind here *)
+        then failwith "Seq.concat: cannot compose transition functions!"
+        (* Favor modifications to the right *)
+        else merge seq1 seq2 ~f:(fun ~key m ->
+          match m with | `Both(_, v) | `Left v | `Right v -> Some(v))
+  end
+
+  module GroupOrSeq = struct
+    type t =
+      | Seq of Value.t Seq.t
+      | Group of (Value.t Seq.t) list
+    with sexp
+
+    let compare x y = match x,y with
+      | Seq _, Group _ -> -1
+      | Group _, Seq _ -> 1
+      | Seq s1, Seq s2 -> Seq.compare_direct Value.compare s1 s2
+      | Group g1, Group g2 -> List.compare (Seq.compare_direct Value.compare) g1 g2
+
+    let to_seqlist groupOrSeq = match groupOrSeq with
+      | Seq s -> [s]
+      | Group l -> l
+
+    let of_seqlist seqlist = match seqlist with
+      | [] -> failwith "GroupOrSeq.of_seqlist: cannot convert empty seqlist"
+      | [s] -> Seq s
+      | l -> Group l
+
+    let concat groupOrSeq1 groupOrSeq2 =
+      to_seqlist groupOrSeq1
+      |> List.concat_map ~f:(fun seq1 ->
+          to_seqlist groupOrSeq2 |> List.map ~f:(Seq.concat seq1))
+      |> of_seqlist
+
+    let to_hvs gOrS =
+      List.concat_map (to_seqlist gOrS) ~f:Seq.to_hvs
   end
 
   module Par = struct
-    include Set.Make(struct
-    type t = Value.t Seq.t with sexp
-    let compare = Seq.compare_direct Value.compare
-    end)
+    include Set.Make(GroupOrSeq)
 
     let to_hvs par =
-      fold par ~init:[] ~f:(fun acc seq -> Seq.to_hvs seq @ acc)
+      fold par ~init:[] ~f:(fun acc seq -> GroupOrSeq.to_hvs seq @ acc)
   end
 
   type t = Par.t with sexp
 
-  let one = Par.singleton Seq.empty
+  let one = Par.singleton (Seq Seq.empty)
   let zero = Par.empty
 
   let sum (a:t) (b:t) : t =
@@ -536,15 +572,9 @@ module Action = struct
     else if Par.equal a one then b      (* 1; p == p *)
     else if Par.equal b one then a      (* p; 1 == p *)
     else
-      Par.fold a ~init:zero ~f:(fun acc seq1 ->
-        (* cannot implement sequential composition of this kind here *)
-        let _ = assert (match Seq.find seq1 K with None -> true | _ -> false) in
-        let r = Par.map b ~f:(fun seq2 ->
-          (* Favor modifications to the right *)
-          Seq.merge seq1 seq2 ~f:(fun ~key m ->
-            match m with | `Both(_, v) | `Left v | `Right v -> Some(v)))
-        in
-        Par.union acc r)
+      Par.fold a ~init:zero ~f:(fun acc groupOrSeq1 ->
+        Par.map b ~f:(GroupOrSeq.concat groupOrSeq1)
+        |> Par.union acc)
 
   let negate t : t =
     (* This implements negation for the [zero] and [one] actions. Any
@@ -552,10 +582,11 @@ module Action = struct
     if compare t zero = 0 then one else zero
 
   let get_queries (t : t) : string list =
-    Par.fold t ~init:[] ~f:(fun queries seq ->
-      match Seq.find seq (F Location) with
-      | Some (Query str) -> str :: queries
-      | _ -> queries)
+    Par.fold t ~init:[] ~f:(fun init groupOrSeq ->
+      GroupOrSeq.to_seqlist groupOrSeq |> List.fold ~init ~f:(fun queries seq ->
+        match Seq.find seq (F Location) with
+        | Some (Value.Query str) -> str :: queries
+        | _ -> queries))
 
   let to_sdn ?pc ?group_tbl (in_port : int64 option) (t:t) : SDN.par =
     (* Convert a NetKAT action to an SDN action. At the moment this function
@@ -564,18 +595,23 @@ module Action = struct
        surface syntax program, then this assumption likely holds. *)
     let to_int = Int64.to_int_exn in
     let to_int32 = Int64.to_int32_exn in
-    let t = Par.filter_map t ~f:(fun seq ->
-      (* Queries are equivalent to drop, so remove any [Seq.t]'s from the
-       * [Par.t] that set the location to a query.
-       *
-       * Pipe locations are no longer relevant to compilation, so rewrite all
-       * all of them to the empty string. This will allow multiple singleton
-       * [Seq.t]'s of port location assignments in a [Par.t] to be collapsed
-       * into into one. *)
-      match Seq.find seq (F Field.Location) with
-      | Some(Value.Query _) -> None
-      | Some(Value.Pipe  _) -> Some(Seq.add seq (F Field.Location) (Value.Pipe ""))
-      | _                   -> Some(seq))
+    let t = Par.filter_map t ~f:(fun groupOrSeq ->
+      GroupOrSeq.to_seqlist groupOrSeq
+      |> List.filter_map ~f:(fun seq ->
+        (* Queries are equivalent to drop, so remove any [Seq.t]'s from the
+         * [Par.t] that set the location to a query.
+         *
+         * Pipe locations are no longer relevant to compilation, so rewrite all
+         * all of them to the empty string. This will allow multiple singleton
+         * [Seq.t]'s of port location assignments in a [Par.t] to be collapsed
+         * into into one. *)
+          match Seq.find seq (F Field.Location) with
+          | Some(Value.Query _) -> None
+          | Some(Value.Pipe  _) -> Some(Seq.add seq (F Field.Location) (Value.Pipe ""))
+          | _                   -> Some(seq))
+      |> function
+          | [] -> None
+          | seqs -> Some (GroupOrSeq.of_seqlist seqs))
     in
     let to_port p = match in_port with
       | Some(p') when p = p' -> SDN.InPort

@@ -25,7 +25,6 @@ module Field = struct
     | TCPDstPort
     | Location
     | VFabric
-    | IsPortUp (* SJS: only allowed in tests, not in assignements! *)
     with sexp
 
   (** The type of packet fields. This is an enumeration whose ordering has an
@@ -65,19 +64,17 @@ module Field = struct
     | TCPDstPort -> "TCPDstPort"
     | Location -> "Location"
     | VFabric -> "VFabric"
-    | IsPortUp -> "IsPortUp"
 
-  let num_fields = 16
+  let num_fields = 15
 
   (* Ensure that these are in the same order in which the variants appear. *)
   let all_fields =
     [ Switch; Vlan; VlanPcp; VSwitch; VPort; EthType; IPProto; EthSrc; EthDst;
-      IP4Src; IP4Dst; TCPSrcPort; TCPDstPort; Location; VFabric; IsPortUp]
+      IP4Src; IP4Dst; TCPSrcPort; TCPDstPort; Location; VFabric]
 
   let is_valid_order (lst : t list) : bool =
     List.length lst = num_fields &&
-    List.for_all all_fields ~f:(List.mem lst) &&
-    List.last_exn lst = IsPortUp
+    List.for_all all_fields ~f:(List.mem lst)
 
   assert (is_valid_order all_fields)
 
@@ -172,8 +169,6 @@ module Field = struct
     let cmp (_, x) (_, y) = Pervasives.compare y x in
     begin
       ignore (f_seq pol);
-      (* SJS: ensure isPortUp will be bottom-most field *)
-      Hashtbl.Poly.set ~key:IsPortUp ~data:(-1) count_tbl;
       Hashtbl.Poly.to_alist count_tbl
       |> List.sort ~cmp
       |> List.map ~f:fst

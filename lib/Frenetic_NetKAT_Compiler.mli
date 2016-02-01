@@ -24,7 +24,7 @@ type order
     | `Static of Field.t list
     | `Heuristic ]
 
-type t
+type t = FDK.t
 (** The type of the intermediate compiler representation (FDD). *)
 
 val compare : t -> t -> int
@@ -50,6 +50,9 @@ type compiler_options = {
     optimize: bool;
     openflow_adherence: adherence;
 }
+
+(* TODO: delete *)
+val prepare_compilation : options:compiler_options -> policy -> unit
 
 (** {2 Compilation} *)
 

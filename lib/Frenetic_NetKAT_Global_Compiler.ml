@@ -322,4 +322,36 @@ module Auto = struct
   let of_pol ~(determinize : bool) (pol : Frenetic_NetKAT.policy) : t =
     of_pol' ~determinize (Pol.of_pol pol)
 
+
+  let pc_unused pc fdd =
+    let open Frenetic_NetKAT_Compiler in
+    FDK.fold
+      (Par.for_all ~f:(fun seq -> not (Seq.mem seq (F pc))))
+      (fun (f,_) l r -> l && r && f<>pc)
+      fdd
+
+  let to_local ~(pc : Frenetic_Fdd.Field.t) (auto : t) : FDK.t =
+    let open Frenetic_NetKAT_Compiler in
+    Int.Map.fold auto.states ~init:FDK.drop ~f:(fun ~key:id ~data:(e,d) acc ->
+      let _ = assert (pc_unused pc e && pc_unused pc d) in
+      let d =
+        FDK.map_r
+          (Par.map ~f:(fun seq -> match Seq.find seq K with
+            | None -> failwith "transition function must specify next state!"
+            | Some data -> Seq.remove seq K |> Seq.add ~key:(F pc) ~data))
+          d
+      in
+      let guard =
+        if id = auto.start then FDK.id
+        else FDK.atom (pc, Value.of_int id) Action.one Action.zero in
+      let fdk = FDK.seq guard (FDK.union e d) in
+      FDK.union acc fdk)
+
 end
+
+let default = Frenetic_NetKAT_Compiler.default_compiler_options
+
+let compile ?(options=default) (pol : Frenetic_NetKAT.policy) : FDK.t =
+  Frenetic_NetKAT_Compiler.prepare_compilation ~options pol;
+  Auto.of_pol pol ~determinize:true
+  |> Auto.to_local ~pc:Frenetic_Fdd.Field.Vlan

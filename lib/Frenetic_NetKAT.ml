@@ -56,32 +56,11 @@ type pred =
   | Neg of pred
   with sexp
 
-module Coin = struct
-  module T = struct
-    type coin_label = int with sexp
-    type coin_idx = int with sexp
-    type prob = float with sexp
-    type t = coin_label * coin_idx * prob with sexp
-    let  compare (x:t) (y:t) = Pervasives.compare x y
-    let hash = Hashtbl.hash
-    let to_string x = sexp_of_t x |> Sexp.to_string
-    let prob (_,_,prob) = prob
-    let idx = ref 0
-    let mk_fresh ?(prob=0.5) () =
-      let c = (!idx, 0, prob) in
-      incr idx; c
-
-  end
-  include T
-  module Set = Set.Make(T)
- end
-
 type policy =
   | Filter of pred
   | Mod of header_val
   | Union of policy * policy
   | Seq of policy * policy
-  | Choice of policy * Coin.t * policy
   | Star of policy
   | Link of switchId * portId * switchId * portId
   | VLink of vswitchId * vportId * vswitchId * vportId

@@ -53,26 +53,11 @@ type pred =
   | Neg of pred
   with sexp
 
-module Coin : sig
-  type coin_label = int with sexp
-  type coin_idx = int with sexp
-  type prob = float
-  type t with sexp
-  (* type t = coin_label * coin_idx * prob with sexp *)
-  module Set : Set.S with type Elt.t = t
-  val compare : t -> t -> int
-  val hash : t -> int
-  val to_string : t -> string
-  val prob : t -> float
-  val mk_fresh : ?prob:float -> unit -> t
-end
-
 type policy =
   | Filter of pred
   | Mod of header_val
   | Union of policy * policy
   | Seq of policy * policy
-  | Choice of policy * Coin.t * policy
   | Star of policy
   | Link of switchId * portId * switchId * portId
   | VLink of vswitchId * vportId * vswitchId * vportId

@@ -154,7 +154,7 @@ module Local = struct
 
   let run file nr_switches printfdd dumpfdd no_tables json () =
     let pol = parse_pol ~json file in
-    let (t,fdd) = time (fun () -> Frenetic_NetKAT_Compiler.compile_local pol) in
+    let (t, fdd) = time (fun () -> Frenetic_NetKAT_Compiler.compile_local pol) in
     let switches = match nr_switches with
       | None -> Frenetic_NetKAT_Semantics.switches_of_policy pol
       | Some n -> List.range 0 n |> List.map ~f:Int64.of_int
@@ -237,9 +237,9 @@ module Virtual = struct
       Virtual.compile vpol ~log:true ~vrel ~vtopo ~ving_pol ~ving ~veg ~ptopo ~ping ~peg
     in
     let fdd = Frenetic_NetKAT_Compiler.compile_global global_pol in
-    let switches = Frenetic_NetKAT_Semantics.switches_of_policy global_pol in
 
-    (* ptiny & dump *)
+    (* print & dump *)
+    let switches = Frenetic_NetKAT_Semantics.switches_of_policy global_pol in
     if printglobal then begin
       Format.fprintf fmt "Global Policy:@\n@[%a@]@\n@\n"
         Frenetic_NetKAT_Pretty.format_policy global_pol

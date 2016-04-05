@@ -33,8 +33,8 @@ open Frenetic_Packet
 
 module OF10 = Frenetic_OpenFlow0x01
 
-type switchId = int64 [@@deriving sexp]
-type portId = int32 [@@deriving sexp]
+type switchId = int64 [@@deriving sexp, yojson]
+type portId = int32 [@@deriving sexp, yojson]
 type queueId = int32 [@@deriving sexp]
 type bufferId = int32 [@@deriving sexp]
 
@@ -167,7 +167,7 @@ type flowTable = flow list [@@deriving sexp]
 
 (** The payload for [packetIn] and [packetOut] messages *)
 type payload =
-  | Buffered of bufferId * Cstruct.t 
+  | Buffered of bufferId * Cstruct.t
     (** [Buffered (id, buf)] is a packet buffered on a switch *)
   | NotBuffered of Cstruct.t
 [@@deriving sexp]

@@ -10,24 +10,21 @@ open Frenetic_Packet
   (i.e. policy containing links) is encountered *)
 exception Non_local
 
-type switchId = Frenetic_OpenFlow.switchId [@@deriving sexp]
-type portId = Frenetic_OpenFlow.portId [@@deriving sexp]
+type switchId = Frenetic_OpenFlow.switchId [@@deriving sexp, yojson]
+type portId = Frenetic_OpenFlow.portId [@@deriving sexp, yojson]
 type payload = Frenetic_OpenFlow.payload [@@deriving sexp]
-type vswitchId = int64 [@@deriving sexp]
-type vportId = int64 [@@deriving sexp]
-type vfabricId = int64 [@@deriving sexp]
+type vswitchId = int64 [@encoding `string] [@@deriving sexp, yojson]
+type vportId = int64 [@encoding `string] [@@deriving sexp, yojson]
+type vfabricId = int64 [@encoding `string] [@@deriving sexp, yojson]
 
-(** {2 Policies} *)
-
-
-let string_of_fastfail = Frenetic_OpenFlow.format_list ~to_string:Int32.to_string
+(** {2 Headers} *)
 
 type location =
   | Physical of int32
   | FastFail of int32 list
   | Pipe of string
   | Query of string
-  [@@deriving sexp]
+  [@@deriving sexp, yojson]
 
 type header_val =
   | Switch of switchId
@@ -45,7 +42,10 @@ type header_val =
   | VSwitch of vswitchId
   | VPort of vportId
   | VFabric of vfabricId
-  [@@deriving sexp]
+  [@@deriving sexp, yojson]
+
+
+(** {3 Policies} *)
 
 type pred =
   | True
@@ -54,7 +54,7 @@ type pred =
   | And of pred * pred
   | Or of pred * pred
   | Neg of pred
-  [@@deriving sexp]
+  [@@deriving sexp, yojson]
 
 type policy =
   | Filter of pred
@@ -64,13 +64,13 @@ type policy =
   | Star of policy
   | Link of switchId * portId * switchId * portId
   | VLink of vswitchId * vportId * vswitchId * vportId
-  [@@deriving sexp]
+  [@@deriving sexp, yojson]
 
 let id = Filter True
 let drop = Filter False
 
 
-(** {3 Applications} *)
+(** {4 Applications} *)
 
 type action = Frenetic_OpenFlow.action
 
@@ -91,3 +91,6 @@ type event =
   | HostUp of switch_port * host
   | HostDown of switch_port * host
   [@@deriving sexp]
+
+(** {5 Applications} **)
+let string_of_fastfail = Frenetic_OpenFlow.format_list ~to_string:Int32.to_string

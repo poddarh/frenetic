@@ -30,6 +30,7 @@ Library frenetic
     tcpip,
     ulex,
     yojson,
+    ppx_deriving_yojson,
     threads
   Modules:
     Frenetic_Hashcons,
@@ -56,6 +57,16 @@ Library frenetic
     Frenetic_Topology,
     Frenetic_Util,
     Frenetic_Vlr
+
+
+Executable test
+  Path: .
+  MainIs: test.ml
+  Install: true
+  BuildDepends:
+    core,
+    frenetic
+
 
 Library async
   Findlibparent: frenetic

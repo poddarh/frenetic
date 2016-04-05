@@ -26,6 +26,26 @@ type location =
   | Query of string
   [@@deriving sexp, yojson]
 
+type ip = nwAddr * int32 [@@deriving sexp]
+
+let ip_to_yojson (addr, mask : ip) : Yojson.Safe.json =
+  let open Yojson.Safe.Util in
+  let addr = ("addr", `String (Frenetic_Packet.string_of_ip addr)) in
+  let mask = Int32.to_int_exn mask |> function
+    | 32 -> []
+    | m -> [("mask", `Int m)] in
+  `Assoc (addr :: mask)
+
+let ip_of_yojson (json : Yojson.Safe.json) : [ `Ok of ip | `Error of string ] =
+  try
+    let open Yojson.Safe.Util in
+    let addr = json |> member "addr" |> to_string |> Frenetic_Packet.ip_of_string in
+    let mask = json |> member "mask" |> function
+      | `Null -> 32 |> Int32.of_int_exn
+      | x -> x |> to_int |> Int32.of_int_exn in
+    `Ok (addr, mask)
+  with e -> `Error (Exn.to_string e)
+
 type header_val =
   | Switch of switchId
   | Location of location
@@ -35,8 +55,8 @@ type header_val =
   | VlanPcp of dlVlanPcp
   | EthType of dlTyp
   | IPProto of nwProto
-  | IP4Src of nwAddr * int32
-  | IP4Dst of nwAddr * int32
+  | IP4Src of ip
+  | IP4Dst of ip
   | TCPSrcPort of tpPort
   | TCPDstPort of tpPort
   | VSwitch of vswitchId

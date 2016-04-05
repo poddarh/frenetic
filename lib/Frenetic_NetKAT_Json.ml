@@ -182,7 +182,16 @@ let policy_to_json_string (pol : policy) : string =
   Yojson.Basic.to_string ~std:true (policy_to_json pol)
 
 let policy_of_json_string (str : string) : policy =
-  policy_of_json (from_string str)
+  policy_of_json (Yojson.Basic.from_string str)
+
+let policy_to_json_string' (pol : policy) : string =
+  Frenetic_NetKAT.policy_to_yojson pol
+  |> Yojson.Safe.to_string ~std:true
+
+let policy_of_json_string' (str : string) : policy =
+  Yojson.Safe.from_string str
+  |> Frenetic_NetKAT.policy_of_yojson
+  |> function `Ok p -> p | `Error e -> failwith e
 
 let policy_of_json_channel (chan : In_channel.t) : policy =
   policy_of_json (from_channel chan)

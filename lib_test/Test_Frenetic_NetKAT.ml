@@ -333,6 +333,27 @@ let check gen_fn compare_fn =
         QuickCheck.Success -> true
     | _                  -> false
 
+let%test "deriving joyson <-> manual joyson" =
+  let open Frenetic_NetKAT_Json in
+  let open Frenetic_NetKAT_Json in
+  let open Frenetic_NetKAT_Optimize in
+  let generate_policy_json =
+    let open QuickCheck in
+    let open QuickCheck_gen in
+    let open Arbitrary_Frenetic_NetKAT in
+    testable_fun
+      arbitrary_lf_pol
+      (fun p -> string_of_policy p ^ "\n" ^ policy_to_json_string p)
+      testable_bool in
+  let prop_parse_ok pol =
+    let s1 = String.lowercase (policy_to_json_string pol) in
+    let s2 = String.lowercase (policy_to_json_string' pol) in
+    match s1 = s2 with
+    | true -> true
+    | false -> Printf.printf "%s\n!=\n%s" s1 s2; false
+  in
+  check generate_policy_json prop_parse_ok
+
 (*
 let%test "quickcheck NetKAT <-> JSON" =
   let open Frenetic_NetKAT_Json in

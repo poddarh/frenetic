@@ -24,7 +24,9 @@ type location =
   | FastFail of int32 list
   | Pipe of string
   | Query of string
-  [@@deriving sexp]
+  [@@deriving sexp, yojson]
+
+type ip = nwAddr * int32 [@@deriving sexp]
 
 type header_val =
   | Switch of switchId
@@ -35,8 +37,8 @@ type header_val =
   | VlanPcp of dlVlanPcp
   | EthType of dlTyp
   | IPProto of nwProto
-  | IP4Src of nwAddr * int32
-  | IP4Dst of nwAddr * int32
+  | IP4Src of ip
+  | IP4Dst of ip
   | TCPSrcPort of tpPort
   | TCPDstPort of tpPort
   | VSwitch of vswitchId
@@ -51,7 +53,7 @@ type pred =
   | And of pred * pred
   | Or of pred * pred
   | Neg of pred
-  [@@deriving sexp]
+  [@@deriving sexp, yojson]
 
 type policy =
   | Filter of pred
@@ -61,7 +63,7 @@ type policy =
   | Star of policy
   | Link of switchId * portId * switchId * portId
   | VLink of vswitchId * vportId * vswitchId * vportId
-  [@@deriving sexp]
+  [@@deriving sexp, yojson]
 
 val id : policy
 val drop : policy

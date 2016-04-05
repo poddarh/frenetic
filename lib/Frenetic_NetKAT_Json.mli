@@ -12,8 +12,10 @@ val event_to_json : event -> json
 
 val policy_of_json_channel : In_channel.t -> policy
 val policy_of_json_string : string -> policy
+val policy_of_json_string' : string -> policy
 val event_to_json_string : event -> string
 val policy_to_json_string : policy -> string
+val policy_to_json_string' : policy -> string
 val stats_to_json_string : Int64.t * Int64.t -> string
 val port_stats_to_json_string : Frenetic_OpenFlow0x01.portStats list -> string
 

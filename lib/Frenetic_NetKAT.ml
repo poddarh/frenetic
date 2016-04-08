@@ -10,12 +10,12 @@ open Frenetic_Packet
   (i.e. policy containing links) is encountered *)
 exception Non_local
 
-type switchId = Frenetic_OpenFlow.switchId [@@deriving sexp, yojson]
-type portId = Frenetic_OpenFlow.portId [@@deriving sexp, yojson]
+type switchId = Frenetic_OpenFlow.switchId [@@deriving sexp, compare, eq, yojson]
+type portId = Frenetic_OpenFlow.portId [@@deriving sexp, compare, eq, yojson]
 type payload = Frenetic_OpenFlow.payload [@@deriving sexp]
-type vswitchId = int64 [@encoding `string] [@@deriving sexp, yojson]
-type vportId = int64 [@encoding `string] [@@deriving sexp, yojson]
-type vfabricId = int64 [@encoding `string] [@@deriving sexp, yojson]
+type vswitchId = int64 [@@deriving sexp, compare, eq, yojson]
+type vportId = int64 [@@deriving sexp, compare, eq, yojson]
+type vfabricId = int64 [@@deriving sexp, compare, eq, yojson]
 
 (** {2 Headers} *)
 
@@ -24,7 +24,7 @@ type location =
   | FastFail of int32 list
   | Pipe of string
   | Query of string
-  [@@deriving sexp, yojson]
+  [@@deriving sexp, compare, yojson]
 
 type ip = nwAddr * int32 [@@deriving sexp]
 

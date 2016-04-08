@@ -75,31 +75,31 @@ let sexp_of_bytes s =
 
 type bytes = Cstruct.t
 
-type int8 = int [@@deriving sexp, yojson]
+type int8 = int [@@deriving sexp, compare, yojson]
 
-type int16 = int [@@deriving sexp, yojson]
+type int16 = int [@@deriving sexp, compare, yojson]
 
-type int48 = int64 [@@deriving sexp, yojson]
+type int48 = int64 [@@deriving sexp, compare, yojson]
 
-type dlAddr = int48 [@@deriving sexp, yojson]
+type dlAddr = int48 [@@deriving sexp, compare, yojson]
 
-type dlTyp = int16 [@@deriving sexp, yojson]
+type dlTyp = int16 [@@deriving sexp, compare, yojson]
 
-type dlVlan = int16 option [@@deriving sexp, yojson]
+type dlVlan = int16 option [@@deriving sexp, compare, yojson]
 
-type dlVlanPcp = int8 [@@deriving sexp, yojson]
+type dlVlanPcp = int8 [@@deriving sexp, compare, yojson]
 
-type dlVlanDei = bool [@@deriving sexp, yojson]
+type dlVlanDei = bool [@@deriving sexp, compare, yojson]
 
-type nwAddr = int32 [@@deriving sexp, yojson]
+type nwAddr = int32 [@@deriving sexp, compare, yojson]
 
-type nwProto = int8 [@@deriving sexp, yojson]
+type nwProto = int8 [@@deriving sexp, compare, yojson]
 
-type nwTos = int8 [@@deriving sexp, yojson]
+type nwTos = int8 [@@deriving sexp, compare, yojson]
 
-type ipv6Addr = int64*int64 [@@deriving sexp, yojson]
+type ipv6Addr = int64*int64 [@@deriving sexp, compare, yojson]
 
-type tpPort = int16 [@@deriving sexp, yojson]
+type tpPort = int16 [@@deriving sexp, compare, yojson]
 
 module Tcp = struct
 

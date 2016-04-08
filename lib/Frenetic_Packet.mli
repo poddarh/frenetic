@@ -8,46 +8,47 @@
 *)
 
 (** [int8] is the type of 8-bit integers. *)
-type int8 = int [@@deriving sexp, yojson]
+
+type int8 = int [@@deriving sexp, compare, yojson]
 
 (** [int16] is the type of 16-bit integers. *)
-type int16 = int [@@deriving sexp, yojson]
+type int16 = int [@@deriving sexp, compare, yojson]
 
 (** [int48] is the type of 48-bit integers. *)
-type int48 = int64 [@@deriving sexp, yojson]
+type int48 = int64 [@@deriving sexp, compare, yojson]
 
 (** [dlAddr] is the type of Ethernet addresses. *)
-type dlAddr = int48 [@@deriving sexp, yojson]
+type dlAddr = int48 [@@deriving sexp, compare, yojson]
 
 (** [dlTyp] is the type of Ethernet frame types. *)
-type dlTyp = int16 [@@deriving sexp, yojson]
+type dlTyp = int16 [@@deriving sexp, compare, yojson]
 
 (** [dlVlan] is the type of VLAN identifiers.  A value of [None]
     indicates that no 802.1Q (VLAN) header is set, which is distinct from
     setting the VLAN to 0.
 *)
-type dlVlan = int16 option [@@deriving sexp, yojson]
+type dlVlan = int16 option [@@deriving sexp, compare, yojson]
 
 (** [dlVlanPcp] is the type of 802.1Q (VLAN) priorities. *)
-type dlVlanPcp = int8 [@@deriving sexp, yojson]
+type dlVlanPcp = int8 [@@deriving sexp, compare, yojson]
 
 (** [dlVlanDei] is the type of 802.1Q (VLAN) drop eligible indicator. *)
-type dlVlanDei = bool [@@deriving sexp, yojson]
+type dlVlanDei = bool [@@deriving sexp, compare, yojson]
 
 (** [nwAddr] is the type of IPv4 addresses. *)
-type nwAddr = int32 [@@deriving sexp, yojson]
+type nwAddr = int32 [@@deriving sexp, compare, yojson]
 
 (** [nwProto] is the type of IPv4 protocol numbers. *)
-type nwProto = int8 [@@deriving sexp, yojson]
+type nwProto = int8 [@@deriving sexp, compare, yojson]
 
 (** [nwTos] is the type of IPv4 types of service. *)
-type nwTos = int8 [@@deriving sexp, yojson]
+type nwTos = int8 [@@deriving sexp, compare, yojson]
 
 (** [ipv6Addr] is the type of IPv6 addresses. *)
-type ipv6Addr = int64*int64 [@@deriving sexp, yojson]
+type ipv6Addr = int64*int64 [@@deriving sexp, compare, yojson]
 
 (** [tpPort] is the type of transport protocol ports. *)
-type tpPort = int16 [@@deriving sexp, yojson]
+type tpPort = int16 [@@deriving sexp, compare, yojson]
 
 (** TCP frame of a packet. *)
 module Tcp : sig

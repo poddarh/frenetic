@@ -8,10 +8,10 @@ open Frenetic_Packet
 
 exception Unsupported of string
 
-type switchId = int64 [@encoding `string] [@@deriving sexp, yojson]
-type portId = int32 [@@deriving sexp, yojson]
-type queueId = int32 [@@deriving sexp]
-type bufferId = int32 [@@deriving sexp]
+type switchId = int64 [@@deriving sexp, compare, eq, yojson]
+type portId = int32 [@@deriving sexp, compare, eq, yojson]
+type queueId = int32 [@@deriving sexp, compare, eq]
+type bufferId = int32 [@@deriving sexp, compare, eq]
 
 (* general formatters for numeric types *)
 let format_int (fmt : Format.formatter) (v:int) =

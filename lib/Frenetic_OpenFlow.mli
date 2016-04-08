@@ -33,10 +33,10 @@ open Frenetic_Packet
 
 module OF10 = Frenetic_OpenFlow0x01
 
-type switchId = int64 [@@deriving sexp, yojson]
-type portId = int32 [@@deriving sexp, yojson]
-type queueId = int32 [@@deriving sexp]
-type bufferId = int32 [@@deriving sexp]
+type switchId = int64 [@@deriving sexp, compare, eq, yojson]
+type portId = int32 [@@deriving sexp, compare, eq, yojson]
+type queueId = int32 [@@deriving sexp, compare, eq]
+type bufferId = int32 [@@deriving sexp, compare, eq]
 
 exception Unsupported of string
 

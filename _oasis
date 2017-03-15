@@ -219,6 +219,15 @@ Executable benchmark
     threads,
     frenetic
 
+Executable testpolicy
+  Install: false
+  Path: bench/src
+  CompiledObject: best
+  MainIs: TestPolicy.ml
+  BuildDepends:
+    core,
+    frenetic
+
 Document frenetic
   Title: Frenetic API docs
   Type: ocamlbuild (0.4)

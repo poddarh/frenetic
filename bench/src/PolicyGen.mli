@@ -7,6 +7,7 @@ type topo = Net.Topology.t * Topology.VertexSet.t * Topology.VertexSet.t *
   Topology.VertexSet.t
 
 val parse_topo_file : ?log:bool -> ?hostlimit:int -> string -> topo
+val hosts_of_topo : Topology.t -> ((int64 * int64) * (switchId * portId)) list
 val shortest_paths : topo -> policy
 val shortest_paths_global_policy : topo -> policy
 

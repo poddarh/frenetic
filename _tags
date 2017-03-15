@@ -1,5 +1,5 @@
 # OASIS_START
-# DO NOT EDIT (digest: ba41b7a3892fcb579fff9f31ac261b0d)
+# DO NOT EDIT (digest: 9aad188f226ac1ee38337c32f1c95411)
 # Ignore VCS directories, you can use the same kind of rule outside
 # OASIS_START/STOP if you want to exclude directories that contains
 # useless stuff for the build process
@@ -261,6 +261,21 @@ true: annot, bin_annot
 <bench/src/Main.{native,byte}>: package(threads)
 <bench/src/Main.{native,byte}>: package(yojson)
 <bench/src/Main.{native,byte}>: use_frenetic
+# Executable testpolicy
+<bench/src/TestPolicy.{native,byte}>: package(base64)
+<bench/src/TestPolicy.{native,byte}>: package(compiler-libs.common)
+<bench/src/TestPolicy.{native,byte}>: package(core)
+<bench/src/TestPolicy.{native,byte}>: package(cstruct)
+<bench/src/TestPolicy.{native,byte}>: package(ipaddr)
+<bench/src/TestPolicy.{native,byte}>: package(menhirLib)
+<bench/src/TestPolicy.{native,byte}>: package(ocamlgraph)
+<bench/src/TestPolicy.{native,byte}>: package(ppx_import)
+<bench/src/TestPolicy.{native,byte}>: package(sedlex)
+<bench/src/TestPolicy.{native,byte}>: package(str)
+<bench/src/TestPolicy.{native,byte}>: package(tcpip)
+<bench/src/TestPolicy.{native,byte}>: package(threads)
+<bench/src/TestPolicy.{native,byte}>: package(yojson)
+<bench/src/TestPolicy.{native,byte}>: use_frenetic
 <bench/src/*.ml{,i,y}>: package(base64)
 <bench/src/*.ml{,i,y}>: package(compiler-libs.common)
 <bench/src/*.ml{,i,y}>: package(core)

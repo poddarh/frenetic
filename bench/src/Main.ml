@@ -149,9 +149,13 @@ let sdx filename =
     int_sum (List.map pols ~f) - List.length pols) in
   printf "%s,%d,%f\n%!" filename tbl_size compile_time
 
-let dot_to_virtual ~in_file =
+type vtopo = BIG_SWITCH | BARBELL
+
+let dot_to_virtual ~in_file ~vtopo =
   let topo = PolicyGen.parse_topo_file ~log:false in_file in
-  let (vpol, vrel, vtopo, vingpol, vinout, ptopo, pinout) = PolicyGen.big_switch ~topo in
+  let (vpol, vrel, vtopo, vingpol, vinout, ptopo, pinout) = match vtopo with
+    | BIG_SWITCH -> PolicyGen.big_switch ~topo
+    | BARBELL -> PolicyGen.barbell ~topo in
   let open Frenetic_NetKAT_Pretty in
   let open Out_channel in
   let () = () in
@@ -190,7 +194,14 @@ let _  = match Array.to_list Sys.argv with
   | [ _; "global-routing"; in_file; out_file ] ->
     dst_based_routing ~in_file ~out_file ~kind:`Global
   | [ _; "dot-to-virtual"; in_file ] ->
-    dot_to_virtual ~in_file
+    dot_to_virtual ~in_file ~vtopo:BIG_SWITCH
+  | [ _; "dot-to-virtual"; in_file; vtopo_type ] ->
+    if vtopo_type = "1" then
+      dot_to_virtual ~in_file ~vtopo:BIG_SWITCH
+    else if vtopo_type = "2" then
+      dot_to_virtual ~in_file ~vtopo:BARBELL
+    else
+      failwith "No such configuration"
 
   (* Generates a routing policy for a k-pod fat-tree.
 

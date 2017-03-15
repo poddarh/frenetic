@@ -11,4 +11,5 @@ val shortest_paths : topo -> policy
 val shortest_paths_global_policy : topo -> policy
 
 val big_switch : topo:topo -> policy * pred * policy * policy * pred * policy * pred
+val barbell : topo:topo -> policy * pred * policy * policy * pred * policy * pred
 val print_topo : string -> topo -> string list -> unit

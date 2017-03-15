@@ -267,11 +267,8 @@ let big_switch ~topo:((topo, vertexes, switches, _) : topo) =
   in
   let vpol =
     List.map hosts ~f:(fun ((h,mac), _) ->
-      let h = match Int32.of_int64 h with
-        | Some h -> h
-        | None -> assert false in
       let test = mk_filter (Test (EthDst mac)) in
-      let action = Mod (Location (Physical h)) in
+      let action = Mod (VPort (h)) in
       mk_seq test action)
     |> mk_big_union
   in
@@ -282,5 +279,56 @@ let big_switch ~topo:((topo, vertexes, switches, _) : topo) =
       Printf.sprintf "h%Lu-s%Lu" h sw) in *)
   (vpol, vrel, vtopo, vingpol, vinout, ptopo, pinout)
 
+let assign_hosts hosts switches =
+  let switch_count = List.length switches in
+  let switch_capacity = (List.length hosts + switch_count - 1) / switch_count in
+  let mlst, _ =  List.fold_left hosts ~init:([], 0)
+      ~f:(fun (acc_list, i) host -> (host, List.nth_exn switches (i / switch_capacity)) :: acc_list, i + 1) in
+  mlst
 
+let barbell ~topo:((topo, vertexes, switches, _) : topo) =
+  (* Assuming that the hosts are sequencially assigned *)
+  let hosts = hosts_of_topo topo in
+  let pinout =
+    List.map hosts ~f:(fun ((h, mac),(sw,pt)) ->
+        mk_and (Test(Switch sw)) (Test(Location(Physical pt))))
+    |> mk_big_or
+  in
+  let vsw1 = Int64.of_int 1 in
+  let vsw2 = Int64.of_int 2 in
+  let vport1 = Int.to_int64 1000000 in
+  let vport2 = Int.to_int64 1000001 in
+  let mapped_hosts = assign_hosts hosts [vsw1; vsw2] in
+  let host_vsw_mac = List.map mapped_hosts (fun (((h, mac),(sw,pt)), vsw) -> h, (vsw, mac)) in
+
+  let (vrel, vingpol, vinout) =
+    List.fold_left mapped_hosts ~init:[] ~f:(fun acc (((h, mac),(sw,pt)), vsw) ->
+      let vloc = mk_and (Test(VSwitch vsw)) (Test(VPort h)) in
+      let set_vloc = mk_seq (Mod (VSwitch vsw)) (Mod (VPort h)) in
+      let ploc = mk_and (Test(Switch sw)) (Test(Location(Physical pt))) in
+      (mk_and vloc ploc, mk_seq (mk_filter ploc) set_vloc, vloc) :: acc)
+    |> unzip3
+    |> (fun (vrel, vingp, vinout) ->
+        (mk_big_or vrel, mk_big_union vingp, mk_big_or vinout)) in
+
+  let vpol =
+    List.map host_vsw_mac ~f:(fun (h, (vsw, mac)) ->
+        let test = mk_filter (And (Test (VSwitch vsw), Test (EthDst mac))) in
+        let action = Mod (VPort h) in
+
+        let test_for_other_switch = mk_filter (And (Test (VSwitch (if vsw1 = vsw then vsw2 else vsw1)), Test (EthDst mac))) in
+        let action_for_other_switch = Mod (VPort (if vsw1 = vsw then vport2 else vport1)) in
+
+        mk_union (mk_seq test_for_other_switch action_for_other_switch) (mk_seq test action))
+    |> mk_big_union
+  in
+
+  let vtopo = Union (VLink (vsw1, vport1, vsw2, vport2),
+                     VLink (vsw2, vport2, vsw1, vport1)) in
+
+  let ptopo = topo_policy topo in
+  (* let host_fabric =
+     List.map hosts ~f:(fun ((h,_),(sw, _)) ->
+      Printf.sprintf "h%Lu-s%Lu" h sw) in *)
+  (vpol, vrel, vtopo, vingpol, vinout, ptopo, pinout)
 

@@ -119,6 +119,7 @@ module Field = struct
     | Frenetic_NetKAT.TCPDstPort _ -> TCPDstPort
     | Frenetic_NetKAT.VFabric _ -> VFabric
     | Frenetic_NetKAT.Meta (id,_) -> fst (Env.lookup env id)
+    | Frenetic_NetKAT.From _ | Frenetic_NetKAT.Loc _ -> failwith "not supported"
 
   (* Heuristic to pick a variable order that operates by scoring the fields
      in a policy. A field receives a high score if, when a test field=X
@@ -386,6 +387,7 @@ module Pattern = struct
     | TCPDstPort(tpPort) -> (Field.TCPDstPort, Value.of_int tpPort)
     | VFabric(vfab) -> (Field.VFabric, Value.(Const vfab))
     | Meta(name,v) -> (fst (Field.Env.lookup env name), Value.(Const v))
+    | From _ | Loc _ -> failwith "not supported"
 
   let to_hv (f, v) =
     let open Field in

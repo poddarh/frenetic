@@ -52,6 +52,8 @@ type header_val =
   | VPort of vportId
   | VFabric of vfabricId
   | Meta of metaId * int64
+  | From of string
+  | Loc of string
   [@@deriving sexp]
 
 type pred =

@@ -13,7 +13,7 @@ open LexBuffer
 exception LexError of (Lexing.position * string)
 
 (** Signals a parsing error at the provided token and its start and end locations. *)
-exception ParseError of (token * Lexing.position * Lexing.position)
+exception ParseError of (string option * (token * Lexing.position * Lexing.position))
 
 (** Register exceptions for pretty printing *)
 let _ =
@@ -22,11 +22,16 @@ let _ =
     | LexError (pos, msg) ->
       let loc = { loc_start = pos; loc_end = pos; loc_ghost = false} in
       Some { loc; msg; sub=[]; if_highlight=""; }
-    | ParseError (token, loc_start, loc_end) ->
+    | ParseError (info, (token, loc_start, loc_end)) ->
       let loc = Location.{ loc_start; loc_end; loc_ghost = false} in
+      let info = match info with
+        | None -> ""
+        | Some s -> Printf.sprintf ":\n\t%s\n" s
+      in
       let msg =
-        show_token token
-        |> Printf.sprintf "parse error while reading token '%s'" in
+        Printf.sprintf "parse error%s while reading token '%s'"
+          info (show_token token)
+      in
       Some { loc; msg; sub=[]; if_highlight=""; }
     | _ -> None)
 
@@ -145,6 +150,9 @@ let token ~ppx ~loc_start buf =
   | "var" -> VAR
   | "in" -> IN
   | '`', id -> METAID (ascii buf ~skip:1)
+  (* portless extension *)
+  | "from" -> FROM
+  | "loc" -> LOC
   | _ -> illegal buf (Char.chr (next buf))
 
 (** wrapper around `token` that records start and end locations *)
@@ -164,7 +172,8 @@ let parse ?(ppx=false) buf p =
   let next_token () = last_token := loc_token ~ppx buf; !last_token in
   try MenhirLib.Convert.Simplified.traditional2revised p next_token with
   | LexError (pos, s) -> raise (LexError (pos, s))
-  | _ -> raise (ParseError (!last_token))
+  | Failure info -> raise (ParseError (Some info, !last_token))
+  | _ -> raise (ParseError (None, !last_token))
 
 let parse_string ?ppx ?pos s p =
   parse ?ppx (LexBuffer.of_ascii_string ?pos s) p

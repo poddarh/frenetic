@@ -144,7 +144,7 @@ let rec eval_pred (pkt : packet) (pr : pred) : bool = match pr with
       | TCPDstPort n -> pkt.headers.tcpDstPort = n
       | VSwitch n -> pkt.headers.vswitch = n
       | VPort n -> pkt.headers.vport = n
-      | VFabric _ | Meta _ ->
+      | VFabric _ | Meta _ | From _ | Loc _ ->
         failwith "meta fields not currently supported"
     end
   | And (pr1, pr2) -> eval_pred pkt pr1 && eval_pred pkt pr2
@@ -182,7 +182,7 @@ let rec eval (pkt : packet) (pol : policy) : PacketSet.t = match pol with
         { pkt with headers = { pkt.headers with vswitch = n }}
       | VPort n ->
         { pkt with headers = { pkt.headers with vport = n }}
-      | VFabric _ | Meta _ ->
+      | VFabric _ | Meta _ | From _ | Loc _ ->
         failwith "meta fields not currently supported" in
     PacketSet.singleton pkt'
   | Union (pol1, pol2) ->

@@ -170,7 +170,7 @@ let openflow13_fault_tolerant_controller : Command.t =
       run (Frenetic_OpenFlow0x04_Plugin.fault_tolerant_main
         openflow_port policy_file topology_file))
 
-let start_controller : Command.t =
+let portless_controller : Command.t =
   Command.basic
     ~summary:"Starts a controller with specified topology and installed rules generated from portless policy."
     Command.Spec.(empty
@@ -180,7 +180,7 @@ let start_controller : Command.t =
                   ++ default_spec)
     (fun openflow_port topology_name policy_file ->
        run (
-         let pol = Frenetic_NetKAT_Portless_Parser.pol_of_file policy_file in
+         let pol = Frenetic_NetKAT_Parser.Portless.pol_of_file policy_file in
          let topo = Topologies.topo_from_name topology_name in
 
          let module Controller = Frenetic_NetKAT_Controller.Make (Frenetic_OpenFlow0x01_Plugin) in
@@ -199,7 +199,7 @@ let main : Command.t =
     ; ("openflow13", openflow13_controller)
     ; ("fault-tolerant", openflow13_fault_tolerant_controller)
     ; ("dump", Dump.main)
-    ; ("start-controller", start_controller)]
+    ; ("portless-controller", portless_controller)]
 
 let () =
   Frenetic_Util.pp_exceptions ();

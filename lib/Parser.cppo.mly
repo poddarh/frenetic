@@ -36,7 +36,7 @@ let int64 ?loc ?attrs x =
 %token DUP
 
 (* fields *)
-%token SWITCH PORT VSWITCH VPORT VFABRIC ETHSRC ETHDST VLAN VLANPCP ETHTYPE IPPROTO IP4SRC IP4DST TCPSRCPORT TCPDSTPORT ABSTRACTLOC FROM SWITCHPREFIX HOSTPREFIX
+%token SWITCH PORT VSWITCH VPORT VFABRIC ETHSRC ETHDST VLAN VLANPCP ETHTYPE IPPROTO IP4SRC IP4DST TCPSRCPORT TCPDSTPORT
 
 (* meta fields *)
 %token <string> METAID
@@ -48,6 +48,9 @@ let int64 ?loc ?attrs x =
 
 (* primitives *)
 %token LPAR RPAR BEGIN END EOF
+
+(* portless extension *)
+%token FROM LOC
 
 (* antiquotations (for ppx syntax extension ) *)
 #ifdef MAKE_PPX
@@ -169,18 +172,31 @@ header_val(BINOP):
   | SWITCH; BINOP; n=int64
       AST( Switch n )
       PPX( Switch [%e n])
+#ifdef PORTLESS
+  | PORT; BINOP; _=portval
+      BOTH( raise (Failure "cannot access port field in portless mode") )
+  | FROM; BINOP; s=STRING
+      BOTH( From s )
+  | LOC; BINOP; s=STRING
+      BOTH( Loc s )
+#else
   | PORT; BINOP; p=portval
       AST( Location p )
       PPX( Location [%e p] )
+  | FROM; BINOP; _=STRING
+      BOTH( raise (Failure "from field only available in portless mode") )
+  | LOC; BINOP; _=STRING
+      BOTH( raise (Failure "loc field only available in portless mode") )
+#endif
   | VSWITCH; BINOP; n=int64
-    AST( VSwitch n )
-    PPX( VSwitch [%e n] )
+      AST( VSwitch n )
+      PPX( VSwitch [%e n] )
   | VPORT; BINOP; n=int64
-    AST( VPort n )
-    PPX( VPort [%e n] )
+      AST( VPort n )
+      PPX( VPort [%e n] )
   | VFABRIC; BINOP; n=int64
-    AST( VFabric n )
-    PPX( VFabric [%e n] )
+      AST( VFabric n )
+      PPX( VFabric [%e n] )
   | VLAN; BINOP; n=int
       AST( Vlan n )
       PPX( Vlan [%e n] )

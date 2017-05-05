@@ -1,2 +1,3 @@
 #undef MAKE_PPX
-#include "Portless_Parser.cppo.mly"
+#define PORTLESS
+#include "Parser.cppo.mly"

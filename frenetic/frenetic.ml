@@ -181,11 +181,13 @@ let portless_controller : Command.t =
     (fun openflow_port topology_name policy_file ->
        run (
          let pol = Frenetic_NetKAT_Parser.Portless.pol_of_file policy_file in
-         let topo = Topologies.topo_from_name topology_name in
+         let topo = () (* Topologies.topo_from_name topology_name *) in
 
          let module Controller = Frenetic_NetKAT_Controller.Make (Frenetic_OpenFlow0x01_Plugin) in
          Controller.start openflow_port;
-         Async.Std.Deferred.don't_wait_for (Controller.update (Frenetic_NetKAT_Portless_Compiler.compile pol topo));
+         Frenetic_NetKAT_Portless_Compiler.to_portfull topo pol
+         |> Controller.update
+         |> Async.Std.Deferred.don't_wait_for;
          never_returns (Async.Std.Scheduler.go ());
        )
     )

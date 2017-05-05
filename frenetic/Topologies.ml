@@ -1,6 +1,7 @@
 open Core.Std
-open Frenetic_NetKAT_Portless
-
+open Frenetic_NetKAT
+(* FIXME *)
+(*
 let (--) i j =
     let rec aux n acc =
       if n < i then acc else aux (n-1) (n :: acc)
@@ -56,15 +57,16 @@ let tree depth fanout =
   let topo_down = List.fold switch_with_hosts ~init:sw_links ~f:(fun acc (sw, pos) -> add_hosts sw fanout pos @ acc) in
   let topo_up = List.map topo_down (fun (x, y) -> y, x) in
   topo_up @ topo_down
-
+*)
 type topo_name =
   | Tree of int * int
   | Linear of int
   | Single of int
   | Minimal
-
+(*
 let topo_from_name name = match name with
   | Tree (x, y) -> tree x y
   | Linear x -> linear x
   | Single x -> single x
   | Minimal -> minimal
+*)

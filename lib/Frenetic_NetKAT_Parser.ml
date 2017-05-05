@@ -19,9 +19,5 @@ end
 
 include MAKE(Frenetic_NetKAT_Lexer)(Frenetic_NetKAT_Generated_Parser)
 
-
-
-
 (** portless extensions *)
 module Portless = MAKE(Frenetic_NetKAT_Lexer)(Frenetic_NetKAT_Portless_Generated_Parser)
-

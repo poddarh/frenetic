@@ -169,10 +169,9 @@ pred:
 (*********************** HEADER VALUES *************************)
 
 header_val(BINOP):
-  | SWITCH; BINOP; n=int64
-      AST( Switch n )
-      PPX( Switch [%e n])
 #ifdef PORTLESS
+  | SWITCH; BINOP; n=int64
+      BOTH( raise (Failure "cannot access switch field in portless mode") )
   | PORT; BINOP; _=portval
       BOTH( raise (Failure "cannot access port field in portless mode") )
   | FROM; BINOP; s=STRING
@@ -180,6 +179,9 @@ header_val(BINOP):
   | LOC; BINOP; s=STRING
       BOTH( Loc s )
 #else
+  | SWITCH; BINOP; n=int64
+      AST( Switch n )
+      PPX( Switch [%e n])
   | PORT; BINOP; p=portval
       AST( Location p )
       PPX( Location [%e p] )

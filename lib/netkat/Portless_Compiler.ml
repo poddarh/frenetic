@@ -48,6 +48,65 @@ let is_loc_host (topo: topo) loc =
   | Some v -> Network.Node.device (Topology.vertex_to_label network v) = Host
   | None -> failwith "no such location"
 
+let needs_fdd_modification pol =
+  let rec has_loc_or_from_test pol =
+    let rec has_loc_or_from_test_pred' pred k =
+      match pred with
+      | True | False -> k false
+      | Or (pred1, pred2)
+      | And (pred1, pred2) ->
+        has_loc_or_from_test_pred' pred1 (fun x ->
+            if x then k x
+            else has_loc_or_from_test_pred' pred2 (fun y -> k y))
+      | Neg pred -> has_loc_or_from_test_pred' pred (fun x -> k x)
+      | Test header -> match header with
+        | AbstractLoc _ | From _ -> k true
+        | _ -> k false in
+    let rec has_loc_or_from_test_pol' pol k =
+      match pol with
+      | Union (pol1, pol2)
+      | Seq (pol1, pol2) ->
+        has_loc_or_from_test_pol' pol1 (fun x ->
+            if x then k x
+            else has_loc_or_from_test_pol' pol2 (fun y -> k y))
+      | Star pol -> has_loc_or_from_test_pol' pol (fun x -> k x)
+      | Dup | Link _ | VLink _ | Mod _ | Let _ -> k false
+      | Filter pred -> has_loc_or_from_test_pred' pred k in
+    has_loc_or_from_test_pol' pol (fun x -> x) in
+
+  let has_loc_or_from_mod pol =
+    let rec has_loc_or_from_mod' pol k =
+      match pol with
+      | Union (pol1, pol2)
+      | Seq (pol1, pol2) ->
+        has_loc_or_from_mod' pol1 (fun x ->
+            if x then k x
+            else has_loc_or_from_mod' pol2 (fun y -> k y))
+      | Star pol -> has_loc_or_from_mod' pol (fun x -> k x)
+      | Dup | Link _ | VLink _ | Filter _ | Let _ -> k false
+      | Mod header -> match header with
+        | AbstractLoc _ | From _ -> k true
+        | x -> k false in
+    has_loc_or_from_mod' pol (fun x -> x) in
+
+  let rec needs_fdd_modification' pol k =
+    match pol with
+    | Union (pol1, pol2) ->
+      needs_fdd_modification' pol1 (fun x ->
+          if x then k x
+          else needs_fdd_modification' pol2 (fun y -> k y))
+    | Seq (pol1, pol2) ->
+      needs_fdd_modification' pol1 (fun x ->
+          if x then k x
+          else needs_fdd_modification' pol2 (fun y ->
+              if y then k y
+              else if has_loc_or_from_mod pol1 &&
+                      (has_loc_or_from_mod pol2 || has_loc_or_from_test pol2) then
+                k true
+              else k false))
+    | Star pol -> needs_fdd_modification' pol (fun x -> if x then has_loc_or_from_test pol else k false)
+    | Filter _  | Let _ | Dup  | Link _ | VLink _ | Mod _ -> k false in
+  needs_fdd_modification' pol (fun x -> x)
 
 let portify_pred pred (topo: topo) =
   let rec portify_pred' pred (k: pred -> pred) =
@@ -78,7 +137,7 @@ let portify_pred pred (topo: topo) =
       | x -> k (Test x) in
   portify_pred' pred (fun x -> x)
 
-let portify_pol_fdd (portless_pol_fdd: Compiler.t) (topo: topo): policy =
+let portify_pol (portless_pol: policy) ~(topo: topo): policy =
   let rec portify_pol' portless_pol k =
     match portless_pol with
     | Union (pol1, pol2) ->
@@ -103,10 +162,9 @@ let portify_pol_fdd (portless_pol_fdd: Compiler.t) (topo: topo): policy =
                  let portful_test = Test (Switch sw) in
                  let portful_mod = Mod (Location (Physical mod_pt)) in
                  Union (acc, Seq (Filter portful_test, portful_mod))))
-      | From loc -> k id
+      | From loc -> failwith "cannot modify from"
       | Switch _ | Location _ -> failwith "cannot specify switch and port for portless policies"
       | x -> k (Mod x) in
-  let portless_pol = Compiler.to_local_pol portless_pol_fdd in
   portify_pol' portless_pol (fun x -> x)
 
 let make_topo (network: Topology.t): topo =
@@ -116,7 +174,9 @@ let make_topo (network: Topology.t): topo =
       let _ = Hashtbl.add name_to_vertex_table vertex_name vertex in ()) network;
   (name_to_vertex_table, network)
 
-let compile portless_pol (network: Topology.t) =
-  let topo = make_topo network in
-  let portless_pol_fdd = Compiler.compile_local portless_pol in
-  portify_pol_fdd portless_pol_fdd topo
+let compile portless_pol ~(topo: Topology.t) =
+  let topo = make_topo topo in
+  let policy =
+    if needs_fdd_modification portless_pol then Compiler.to_local_pol (Compiler.compile_local portless_pol)
+    else portless_pol in
+  portify_pol policy ~topo

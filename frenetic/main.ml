@@ -189,7 +189,7 @@ let portless_controller : Command.t =
 
          let module Controller = Frenetic.Async.NetKAT_Controller.Make (Frenetic.Async.OpenFlow0x01_Plugin) in
          Controller.start openflow_port;
-         Frenetic.Netkat.Portless_Compiler.compile pol topo
+         Frenetic.Netkat.Portless_Compiler.compile pol ~topo
          |> Controller.update
          |> Async.Deferred.don't_wait_for;
          never_returns (Async.Scheduler.go ());

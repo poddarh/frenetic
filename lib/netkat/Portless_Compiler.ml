@@ -48,13 +48,14 @@ let is_loc_host (topo: topo) loc =
   | Some v -> Network.Node.device (Topology.vertex_to_label network v) = Host
   | None -> failwith "no such location"
 
-let needs_fdd_modification pol =
+let reorder_pol pol = Compiler.to_local_pol (Compiler.compile_local pol)
+
+let lazy_reorder_policy pol =
   let rec has_loc_or_from_test pol =
     let rec has_loc_or_from_test_pred' pred k =
       match pred with
       | True | False -> k false
-      | Or (pred1, pred2)
-      | And (pred1, pred2) ->
+      | Or (pred1, pred2) | And (pred1, pred2) ->
         has_loc_or_from_test_pred' pred1 (fun x ->
             if x then k x
             else has_loc_or_from_test_pred' pred2 (fun y -> k y))
@@ -69,44 +70,37 @@ let needs_fdd_modification pol =
         has_loc_or_from_test_pol' pol1 (fun x ->
             if x then k x
             else has_loc_or_from_test_pol' pol2 (fun y -> k y))
-      | Star pol -> has_loc_or_from_test_pol' pol (fun x -> k x)
-      | Dup | Link _ | VLink _ | Mod _ | Let _ -> k false
+      | Star _ | Dup | Link _ | VLink _ | Mod _ | Let _ -> k false
       | Filter pred -> has_loc_or_from_test_pred' pred k in
     has_loc_or_from_test_pol' pol (fun x -> x) in
 
   let has_loc_or_from_mod pol =
     let rec has_loc_or_from_mod' pol k =
       match pol with
-      | Union (pol1, pol2)
-      | Seq (pol1, pol2) ->
-        has_loc_or_from_mod' pol1 (fun x ->
+      | Union (pol1, pol2) | Seq (pol1, pol2) ->
+        has_loc_or_from_mod' pol2 (fun x ->
             if x then k x
-            else has_loc_or_from_mod' pol2 (fun y -> k y))
-      | Star pol -> has_loc_or_from_mod' pol (fun x -> k x)
-      | Dup | Link _ | VLink _ | Filter _ | Let _ -> k false
+            else has_loc_or_from_mod' pol1 (fun y -> k y))
+      | Star _ | Dup | Link _ | VLink _ | Filter _ | Let _ -> k false
       | Mod header -> match header with
         | AbstractLoc _ | From _ -> k true
         | x -> k false in
     has_loc_or_from_mod' pol (fun x -> x) in
 
-  let rec needs_fdd_modification' pol k =
+  let rec lazy_reorder_policy' pol k =
     match pol with
     | Union (pol1, pol2) ->
-      needs_fdd_modification' pol1 (fun x ->
-          if x then k x
-          else needs_fdd_modification' pol2 (fun y -> k y))
+      lazy_reorder_policy' pol1 (fun pol1' ->
+          lazy_reorder_policy' pol2 (fun pol2' -> k (Union (pol1', pol2'))))
     | Seq (pol1, pol2) ->
-      needs_fdd_modification' pol1 (fun x ->
-          if x then k x
-          else needs_fdd_modification' pol2 (fun y ->
-              if y then k y
-              else if has_loc_or_from_mod pol1 &&
-                      (has_loc_or_from_mod pol2 || has_loc_or_from_test pol2) then
-                k true
-              else k false))
-    | Star pol -> needs_fdd_modification' pol (fun x -> if x then has_loc_or_from_test pol else k false)
-    | Filter _  | Let _ | Dup  | Link _ | VLink _ | Mod _ -> k false in
-  needs_fdd_modification' pol (fun x -> x)
+      if (has_loc_or_from_mod pol1 && (has_loc_or_from_mod pol2 || has_loc_or_from_test pol2)) then
+        k (reorder_pol pol)
+      else
+        lazy_reorder_policy' pol1 (fun pol1' ->
+            lazy_reorder_policy' pol2 (fun pol2' ->
+                k (Seq (pol1, pol2))))
+    | Star _ | Filter _  | Let _ | Dup  | Link _ | VLink _ | Mod _ -> k pol in
+  lazy_reorder_policy' pol (fun x -> x)
 
 let portify_pred pred (topo: topo) =
   let rec portify_pred' pred (k: pred -> pred) =
@@ -148,11 +142,9 @@ let portify_pol (portless_pol: policy) ~(topo: topo): policy =
       portify_pol' pol1 (fun x ->
           portify_pol' pol2 (fun y ->
               k (Seq (x, y))))
-    | Star pol -> portify_pol' pol (fun x -> k (Star x))
     | Filter pred -> k (Filter (portify_pred pred topo))
     | Let meta -> portify_pol' meta.body (fun x -> k (Let {meta with body = x}))
-    | Dup -> k Dup
-    | Link _ | VLink _ -> failwith "links not supported for portless policies"
+    | Dup | Star _ | Link _ | VLink _ -> failwith "links, dup, star not supported for portless policies"
     | Mod header -> match header with
       | AbstractLoc loc ->
         let sw_port_list = connected_switches loc Outgoing topo in
@@ -176,7 +168,5 @@ let make_topo (network: Topology.t): topo =
 
 let compile portless_pol ~(topo: Topology.t) =
   let topo = make_topo topo in
-  let policy =
-    if needs_fdd_modification portless_pol then Compiler.to_local_pol (Compiler.compile_local portless_pol)
-    else portless_pol in
+  let policy = lazy_reorder_policy portless_pol in
   portify_pol policy ~topo

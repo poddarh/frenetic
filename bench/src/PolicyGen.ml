@@ -282,5 +282,27 @@ let big_switch ~topo:((topo, vertexes, switches, _) : topo) =
       Printf.sprintf "h%Lu-s%Lu" h sw) in *)
   (vpol, vrel, vtopo, vingpol, vinout, ptopo, pinout)
 
+module Portless = struct
+  (* Get a policy to go through the path edges (edges) to the destination host (to_v) *)
+  let rec get_policy edges to_v topo =
+    let vertex_to_abstract_loc vertex = Node.name (Topology.vertex_to_label topo vertex) in
+    let forwarding_pol = List.fold_left edges ~init:drop
+        ~f:(fun pol edge ->
+            let src_v, _ = Topology.edge_src edge in
+            let dst_v, _ = Topology.edge_dst edge in
+            if Node.device (Topology.vertex_to_label topo src_v) = Node.Host then
+              pol
+            else
+              Union (pol, (Seq (Filter (Test (AbstractLoc (vertex_to_abstract_loc src_v))),
+                                Mod (AbstractLoc (vertex_to_abstract_loc dst_v)))))) in
+    Seq (Filter (Test (IP4Dst (Node.ip (Topology.vertex_to_label topo to_v), 32l))), forwarding_pol)
 
+  (* Get all hosts connected by shortest paths policy - host identified by ip *)
+  let shortest_paths ((topo, vertexes, switches, hosts) : topo) =
+    Path.all_pairs_shortest_paths ~topo ~f:(fun vx1 vx2 ->
+        (* Get a path if both vertices are hosts and are different *)
+        Topology.VertexSet.mem hosts vx1 && Topology.VertexSet.mem hosts vx2 && not (vx1 = vx2))
+    |> List.map ~f:(fun (w, from_v, to_v, edges) -> get_policy edges to_v topo)
+    |> List.fold ~init:drop ~f:(fun acc p -> Union (acc, p))
+end
 

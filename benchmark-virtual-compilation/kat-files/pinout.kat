@@ -1,0 +1,8 @@
+switch = 14 and port = 1 or switch = 15 and port = 1 or
+switch = 16 and port = 1 or switch = 17 and port = 1 or
+switch = 10 and port = 1 or switch = 11 and port = 1 or
+switch = 12 and port = 1 or switch = 13 and port = 1 or
+switch = 18 and port = 1 or switch = 5 and port = 1 or switch = 4 and port = 1 or
+switch = 7 and port = 1 or switch = 6 and port = 1 or switch = 1 and port = 1 or
+switch = 0 and port = 1 or switch = 3 and port = 1 or switch = 2 and port = 1 or
+switch = 9 and port = 1 or switch = 8 and port = 1

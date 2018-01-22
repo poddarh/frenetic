@@ -1,0 +1,16 @@
+if ethDst = 00:00:00:00:00:01 then
+	if loc = s1 then loc := h1
+	else if loc = s2 then loc := s1
+	else if loc = s3 then loc := s2
+	else drop
+else if ethDst = 00:00:00:00:00:02 then
+	if loc = s2 then loc := h2
+	else if loc = s1 then loc := s2
+	else if loc = s3 then loc := s2
+	else drop
+else if ethDst = 00:00:00:00:00:03 then
+	if loc = s3 then loc := h3
+	else if loc = s2 then loc := s3
+	else if loc = s1 then loc := s2
+	else drop
+else drop

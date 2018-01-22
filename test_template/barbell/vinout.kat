@@ -1,0 +1,2 @@
+vswitch = 1 and vport = 3 or vswitch = 1 and vport = 1 or
+vswitch = 2 and vport = 2 or vswitch = 2 and vport = 0

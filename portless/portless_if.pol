@@ -1,0 +1,1 @@
+(filter loc = s1; (filter from = s2; loc:= s3) + (filter from = s3; loc:= s2))

@@ -1,0 +1,3063 @@
+drop +
+filter ipDst = 111.0.28.28;
+(drop + filter loc = "s26"; loc := "s43" + filter loc = "s43"; loc := "s30" +
+ filter loc = "s30"; loc := "s40" + filter loc = "s40"; loc := "s39" +
+ filter loc = "s39"; loc := "s28" + filter loc = "s28"; loc := "h28") +
+filter ipDst = 111.0.29.29;
+(drop + filter loc = "s26"; loc := "s43" + filter loc = "s43"; loc := "s30" +
+ filter loc = "s30"; loc := "s29" + filter loc = "s29"; loc := "h29") +
+filter ipDst = 111.0.32.32;
+(drop + filter loc = "s26"; loc := "s43" + filter loc = "s43"; loc := "s0" +
+ filter loc = "s0"; loc := "s9" + filter loc = "s9"; loc := "s5" +
+ filter loc = "s5"; loc := "s32" + filter loc = "s32"; loc := "h32") +
+filter ipDst = 111.0.30.30;
+(drop + filter loc = "s26"; loc := "s43" + filter loc = "s43"; loc := "s30" +
+ filter loc = "s30"; loc := "h30") +
+filter ipDst = 111.0.31.31;
+(drop + filter loc = "s26"; loc := "s43" + filter loc = "s43"; loc := "s31" +
+ filter loc = "s31"; loc := "h31") +
+filter ipDst = 111.0.36.36;
+(drop + filter loc = "s26"; loc := "s43" + filter loc = "s43"; loc := "s30" +
+ filter loc = "s30"; loc := "s36" + filter loc = "s36"; loc := "h36") +
+filter ipDst = 111.0.37.37;
+(drop + filter loc = "s26"; loc := "s43" + filter loc = "s43"; loc := "s37" +
+ filter loc = "s37"; loc := "h37") +
+filter ipDst = 111.0.34.34;
+(drop + filter loc = "s26"; loc := "s43" + filter loc = "s43"; loc := "s30" +
+ filter loc = "s30"; loc := "s34" + filter loc = "s34"; loc := "h34") +
+filter ipDst = 111.0.35.35;
+(drop + filter loc = "s26"; loc := "s43" + filter loc = "s43"; loc := "s30" +
+ filter loc = "s30"; loc := "s35" + filter loc = "s35"; loc := "h35") +
+filter ipDst = 111.0.38.38;
+(drop + filter loc = "s26"; loc := "s43" + filter loc = "s43"; loc := "s37" +
+ filter loc = "s37"; loc := "s38" + filter loc = "s38"; loc := "h38") +
+filter ipDst = 111.0.39.39;
+(drop + filter loc = "s26"; loc := "s43" + filter loc = "s43"; loc := "s30" +
+ filter loc = "s30"; loc := "s40" + filter loc = "s40"; loc := "s39" +
+ filter loc = "s39"; loc := "h39") +
+filter ipDst = 111.0.6.6;
+(drop + filter loc = "s26"; loc := "s43" + filter loc = "s43"; loc := "s0" +
+ filter loc = "s0"; loc := "s9" + filter loc = "s9"; loc := "s6" +
+ filter loc = "s6"; loc := "h6") +
+filter ipDst = 111.0.1.1;
+(drop + filter loc = "s26"; loc := "s43" + filter loc = "s43"; loc := "s0" +
+ filter loc = "s0"; loc := "s1" + filter loc = "s1"; loc := "h1") +
+filter ipDst = 111.0.3.3;
+(drop + filter loc = "s26"; loc := "s43" + filter loc = "s43"; loc := "s0" +
+ filter loc = "s0"; loc := "s3" + filter loc = "s3"; loc := "h3") +
+filter ipDst = 111.0.2.2;
+(drop + filter loc = "s26"; loc := "s43" + filter loc = "s43"; loc := "s0" +
+ filter loc = "s0"; loc := "s2" + filter loc = "s2"; loc := "h2") +
+filter ipDst = 111.0.9.9;
+(drop + filter loc = "s26"; loc := "s43" + filter loc = "s43"; loc := "s0" +
+ filter loc = "s0"; loc := "s9" + filter loc = "s9"; loc := "h9") +
+filter ipDst = 111.0.8.8;
+(drop + filter loc = "s26"; loc := "s43" + filter loc = "s43"; loc := "s0" +
+ filter loc = "s0"; loc := "s9" + filter loc = "s9"; loc := "s8" +
+ filter loc = "s8"; loc := "h8") +
+filter ipDst = 111.0.13.13;
+(drop + filter loc = "s26"; loc := "s43" + filter loc = "s43"; loc := "s30" +
+ filter loc = "s30"; loc := "s40" + filter loc = "s40"; loc := "s13" +
+ filter loc = "s13"; loc := "h13") +
+filter ipDst = 111.0.42.42;
+(drop + filter loc = "s26"; loc := "s43" + filter loc = "s43"; loc := "s42" +
+ filter loc = "s42"; loc := "h42") +
+filter ipDst = 111.0.24.24;
+(drop + filter loc = "s26"; loc := "s43" + filter loc = "s43"; loc := "s31" +
+ filter loc = "s31"; loc := "s24" + filter loc = "s24"; loc := "h24") +
+filter ipDst = 111.0.4.4;
+(drop + filter loc = "s26"; loc := "s43" + filter loc = "s43"; loc := "s0" +
+ filter loc = "s0"; loc := "s9" + filter loc = "s9"; loc := "s5" +
+ filter loc = "s5"; loc := "s4" + filter loc = "s4"; loc := "h4") +
+filter ipDst = 111.0.40.40;
+(drop + filter loc = "s26"; loc := "s43" + filter loc = "s43"; loc := "s30" +
+ filter loc = "s30"; loc := "s40" + filter loc = "s40"; loc := "h40") +
+filter ipDst = 111.0.41.41;
+(drop + filter loc = "s26"; loc := "s43" + filter loc = "s43"; loc := "s30" +
+ filter loc = "s30"; loc := "s40" + filter loc = "s40"; loc := "s41" +
+ filter loc = "s41"; loc := "h41") +
+filter ipDst = 111.0.5.5;
+(drop + filter loc = "s26"; loc := "s43" + filter loc = "s43"; loc := "s0" +
+ filter loc = "s0"; loc := "s9" + filter loc = "s9"; loc := "s5" +
+ filter loc = "s5"; loc := "h5") +
+filter ipDst = 111.0.43.43;
+(drop + filter loc = "s26"; loc := "s43" + filter loc = "s43"; loc := "h43") +
+filter ipDst = 111.0.44.44;
+(drop + filter loc = "s26"; loc := "s43" + filter loc = "s43"; loc := "s44" +
+ filter loc = "s44"; loc := "h44") +
+filter ipDst = 111.0.45.45;
+(drop + filter loc = "s26"; loc := "s43" + filter loc = "s43"; loc := "s45" +
+ filter loc = "s45"; loc := "h45") +
+filter ipDst = 111.0.46.46;
+(drop + filter loc = "s26"; loc := "s43" + filter loc = "s43"; loc := "s46" +
+ filter loc = "s46"; loc := "h46") +
+filter ipDst = 111.0.20.20;
+(drop + filter loc = "s26"; loc := "s43" + filter loc = "s43"; loc := "s30" +
+ filter loc = "s30"; loc := "s20" + filter loc = "s20"; loc := "h20") +
+filter ipDst = 111.0.7.7;
+(drop + filter loc = "s26"; loc := "s43" + filter loc = "s43"; loc := "s0" +
+ filter loc = "s0"; loc := "s9" + filter loc = "s9"; loc := "s7" +
+ filter loc = "s7"; loc := "h7") +
+filter ipDst = 111.0.0.0;
+(drop + filter loc = "s26"; loc := "s43" + filter loc = "s43"; loc := "s0" +
+ filter loc = "s0"; loc := "h0") +
+filter ipDst = 111.0.26.26;
+(drop + filter loc = "s28"; loc := "s39" + filter loc = "s39"; loc := "s40" +
+ filter loc = "s40"; loc := "s30" + filter loc = "s30"; loc := "s43" +
+ filter loc = "s43"; loc := "s26" + filter loc = "s26"; loc := "h26") +
+filter ipDst = 111.0.29.29;
+(drop + filter loc = "s28"; loc := "s39" + filter loc = "s39"; loc := "s40" +
+ filter loc = "s40"; loc := "s29" + filter loc = "s29"; loc := "h29") +
+filter ipDst = 111.0.32.32;
+(drop + filter loc = "s28"; loc := "s39" + filter loc = "s39"; loc := "s40" +
+ filter loc = "s40"; loc := "s24" + filter loc = "s24"; loc := "s5" +
+ filter loc = "s5"; loc := "s32" + filter loc = "s32"; loc := "h32") +
+filter ipDst = 111.0.30.30;
+(drop + filter loc = "s28"; loc := "s39" + filter loc = "s39"; loc := "s40" +
+ filter loc = "s40"; loc := "s30" + filter loc = "s30"; loc := "h30") +
+filter ipDst = 111.0.31.31;
+(drop + filter loc = "s28"; loc := "s39" + filter loc = "s39"; loc := "s40" +
+ filter loc = "s40"; loc := "s31" + filter loc = "s31"; loc := "h31") +
+filter ipDst = 111.0.36.36;
+(drop + filter loc = "s28"; loc := "s39" + filter loc = "s39"; loc := "s40" +
+ filter loc = "s40"; loc := "s30" + filter loc = "s30"; loc := "s36" +
+ filter loc = "s36"; loc := "h36") +
+filter ipDst = 111.0.37.37;
+(drop + filter loc = "s28"; loc := "s39" + filter loc = "s39"; loc := "s40" +
+ filter loc = "s40"; loc := "s30" + filter loc = "s30"; loc := "s44" +
+ filter loc = "s44"; loc := "s37" + filter loc = "s37"; loc := "h37") +
+filter ipDst = 111.0.34.34;
+(drop + filter loc = "s28"; loc := "s39" + filter loc = "s39"; loc := "s40" +
+ filter loc = "s40"; loc := "s30" + filter loc = "s30"; loc := "s34" +
+ filter loc = "s34"; loc := "h34") +
+filter ipDst = 111.0.35.35;
+(drop + filter loc = "s28"; loc := "s39" + filter loc = "s39"; loc := "s40" +
+ filter loc = "s40"; loc := "s30" + filter loc = "s30"; loc := "s35" +
+ filter loc = "s35"; loc := "h35") +
+filter ipDst = 111.0.38.38;
+(drop + filter loc = "s28"; loc := "s39" + filter loc = "s39"; loc := "s40" +
+ filter loc = "s40"; loc := "s30" + filter loc = "s30"; loc := "s44" +
+ filter loc = "s44"; loc := "s38" + filter loc = "s38"; loc := "h38") +
+filter ipDst = 111.0.39.39;
+(drop + filter loc = "s28"; loc := "s39" + filter loc = "s39"; loc := "h39") +
+filter ipDst = 111.0.6.6;
+(drop + filter loc = "s28"; loc := "s39" + filter loc = "s39"; loc := "s40" +
+ filter loc = "s40"; loc := "s24" + filter loc = "s24"; loc := "s6" +
+ filter loc = "s6"; loc := "h6") +
+filter ipDst = 111.0.1.1;
+(drop + filter loc = "s28"; loc := "s39" + filter loc = "s39"; loc := "s40" +
+ filter loc = "s40"; loc := "s24" + filter loc = "s24"; loc := "s3" +
+ filter loc = "s3"; loc := "s0" + filter loc = "s0"; loc := "s1" +
+ filter loc = "s1"; loc := "h1") +
+filter ipDst = 111.0.3.3;
+(drop + filter loc = "s28"; loc := "s39" + filter loc = "s39"; loc := "s40" +
+ filter loc = "s40"; loc := "s24" + filter loc = "s24"; loc := "s3" +
+ filter loc = "s3"; loc := "h3") +
+filter ipDst = 111.0.2.2;
+(drop + filter loc = "s28"; loc := "s39" + filter loc = "s39"; loc := "s40" +
+ filter loc = "s40"; loc := "s24" + filter loc = "s24"; loc := "s3" +
+ filter loc = "s3"; loc := "s0" + filter loc = "s0"; loc := "s2" +
+ filter loc = "s2"; loc := "h2") +
+filter ipDst = 111.0.9.9;
+(drop + filter loc = "s28"; loc := "s39" + filter loc = "s39"; loc := "s40" +
+ filter loc = "s40"; loc := "s30" + filter loc = "s30"; loc := "s9" +
+ filter loc = "s9"; loc := "h9") +
+filter ipDst = 111.0.8.8;
+(drop + filter loc = "s28"; loc := "s39" + filter loc = "s39"; loc := "s40" +
+ filter loc = "s40"; loc := "s24" + filter loc = "s24"; loc := "s5" +
+ filter loc = "s5"; loc := "s8" + filter loc = "s8"; loc := "h8") +
+filter ipDst = 111.0.13.13;
+(drop + filter loc = "s28"; loc := "s39" + filter loc = "s39"; loc := "s40" +
+ filter loc = "s40"; loc := "s13" + filter loc = "s13"; loc := "h13") +
+filter ipDst = 111.0.42.42;
+(drop + filter loc = "s28"; loc := "s39" + filter loc = "s39"; loc := "s40" +
+ filter loc = "s40"; loc := "s30" + filter loc = "s30"; loc := "s42" +
+ filter loc = "s42"; loc := "h42") +
+filter ipDst = 111.0.24.24;
+(drop + filter loc = "s28"; loc := "s39" + filter loc = "s39"; loc := "s40" +
+ filter loc = "s40"; loc := "s24" + filter loc = "s24"; loc := "h24") +
+filter ipDst = 111.0.4.4;
+(drop + filter loc = "s28"; loc := "s39" + filter loc = "s39"; loc := "s40" +
+ filter loc = "s40"; loc := "s24" + filter loc = "s24"; loc := "s5" +
+ filter loc = "s5"; loc := "s4" + filter loc = "s4"; loc := "h4") +
+filter ipDst = 111.0.40.40;
+(drop + filter loc = "s28"; loc := "s39" + filter loc = "s39"; loc := "s40" +
+ filter loc = "s40"; loc := "h40") +
+filter ipDst = 111.0.41.41;
+(drop + filter loc = "s28"; loc := "s39" + filter loc = "s39"; loc := "s40" +
+ filter loc = "s40"; loc := "s41" + filter loc = "s41"; loc := "h41") +
+filter ipDst = 111.0.5.5;
+(drop + filter loc = "s28"; loc := "s39" + filter loc = "s39"; loc := "s40" +
+ filter loc = "s40"; loc := "s24" + filter loc = "s24"; loc := "s5" +
+ filter loc = "s5"; loc := "h5") +
+filter ipDst = 111.0.43.43;
+(drop + filter loc = "s28"; loc := "s39" + filter loc = "s39"; loc := "s40" +
+ filter loc = "s40"; loc := "s30" + filter loc = "s30"; loc := "s43" +
+ filter loc = "s43"; loc := "h43") +
+filter ipDst = 111.0.44.44;
+(drop + filter loc = "s28"; loc := "s39" + filter loc = "s39"; loc := "s40" +
+ filter loc = "s40"; loc := "s30" + filter loc = "s30"; loc := "s44" +
+ filter loc = "s44"; loc := "h44") +
+filter ipDst = 111.0.45.45;
+(drop + filter loc = "s28"; loc := "s39" + filter loc = "s39"; loc := "s40" +
+ filter loc = "s40"; loc := "s30" + filter loc = "s30"; loc := "s45" +
+ filter loc = "s45"; loc := "h45") +
+filter ipDst = 111.0.46.46;
+(drop + filter loc = "s28"; loc := "s39" + filter loc = "s39"; loc := "s40" +
+ filter loc = "s40"; loc := "s24" + filter loc = "s24"; loc := "s3" +
+ filter loc = "s3"; loc := "s46" + filter loc = "s46"; loc := "h46") +
+filter ipDst = 111.0.20.20;
+(drop + filter loc = "s28"; loc := "s39" + filter loc = "s39"; loc := "s40" +
+ filter loc = "s40"; loc := "s30" + filter loc = "s30"; loc := "s20" +
+ filter loc = "s20"; loc := "h20") +
+filter ipDst = 111.0.7.7;
+(drop + filter loc = "s28"; loc := "s39" + filter loc = "s39"; loc := "s40" +
+ filter loc = "s40"; loc := "s24" + filter loc = "s24"; loc := "s7" +
+ filter loc = "s7"; loc := "h7") +
+filter ipDst = 111.0.0.0;
+(drop + filter loc = "s28"; loc := "s39" + filter loc = "s39"; loc := "s40" +
+ filter loc = "s40"; loc := "s24" + filter loc = "s24"; loc := "s3" +
+ filter loc = "s3"; loc := "s0" + filter loc = "s0"; loc := "h0") +
+filter ipDst = 111.0.26.26;
+(drop + filter loc = "s29"; loc := "s30" + filter loc = "s30"; loc := "s43" +
+ filter loc = "s43"; loc := "s26" + filter loc = "s26"; loc := "h26") +
+filter ipDst = 111.0.28.28;
+(drop + filter loc = "s29"; loc := "s40" + filter loc = "s40"; loc := "s39" +
+ filter loc = "s39"; loc := "s28" + filter loc = "s28"; loc := "h28") +
+filter ipDst = 111.0.32.32;
+(drop + filter loc = "s29"; loc := "s40" + filter loc = "s40"; loc := "s24" +
+ filter loc = "s24"; loc := "s5" + filter loc = "s5"; loc := "s32" +
+ filter loc = "s32"; loc := "h32") +
+filter ipDst = 111.0.30.30;
+(drop + filter loc = "s29"; loc := "s30" + filter loc = "s30"; loc := "h30") +
+filter ipDst = 111.0.31.31;
+(drop + filter loc = "s29"; loc := "s31" + filter loc = "s31"; loc := "h31") +
+filter ipDst = 111.0.36.36;
+(drop + filter loc = "s29"; loc := "s36" + filter loc = "s36"; loc := "h36") +
+filter ipDst = 111.0.37.37;
+(drop + filter loc = "s29"; loc := "s30" + filter loc = "s30"; loc := "s44" +
+ filter loc = "s44"; loc := "s37" + filter loc = "s37"; loc := "h37") +
+filter ipDst = 111.0.34.34;
+(drop + filter loc = "s29"; loc := "s30" + filter loc = "s30"; loc := "s34" +
+ filter loc = "s34"; loc := "h34") +
+filter ipDst = 111.0.35.35;
+(drop + filter loc = "s29"; loc := "s35" + filter loc = "s35"; loc := "h35") +
+filter ipDst = 111.0.38.38;
+(drop + filter loc = "s29"; loc := "s30" + filter loc = "s30"; loc := "s44" +
+ filter loc = "s44"; loc := "s38" + filter loc = "s38"; loc := "h38") +
+filter ipDst = 111.0.39.39;
+(drop + filter loc = "s29"; loc := "s40" + filter loc = "s40"; loc := "s39" +
+ filter loc = "s39"; loc := "h39") +
+filter ipDst = 111.0.6.6;
+(drop + filter loc = "s29"; loc := "s40" + filter loc = "s40"; loc := "s24" +
+ filter loc = "s24"; loc := "s6" + filter loc = "s6"; loc := "h6") +
+filter ipDst = 111.0.1.1;
+(drop + filter loc = "s29"; loc := "s30" + filter loc = "s30"; loc := "s45" +
+ filter loc = "s45"; loc := "s0" + filter loc = "s0"; loc := "s1" +
+ filter loc = "s1"; loc := "h1") +
+filter ipDst = 111.0.3.3;
+(drop + filter loc = "s29"; loc := "s40" + filter loc = "s40"; loc := "s24" +
+ filter loc = "s24"; loc := "s3" + filter loc = "s3"; loc := "h3") +
+filter ipDst = 111.0.2.2;
+(drop + filter loc = "s29"; loc := "s30" + filter loc = "s30"; loc := "s45" +
+ filter loc = "s45"; loc := "s0" + filter loc = "s0"; loc := "s2" +
+ filter loc = "s2"; loc := "h2") +
+filter ipDst = 111.0.9.9;
+(drop + filter loc = "s29"; loc := "s30" + filter loc = "s30"; loc := "s9" +
+ filter loc = "s9"; loc := "h9") +
+filter ipDst = 111.0.8.8;
+(drop + filter loc = "s29"; loc := "s30" + filter loc = "s30"; loc := "s9" +
+ filter loc = "s9"; loc := "s8" + filter loc = "s8"; loc := "h8") +
+filter ipDst = 111.0.13.13;
+(drop + filter loc = "s29"; loc := "s40" + filter loc = "s40"; loc := "s13" +
+ filter loc = "s13"; loc := "h13") +
+filter ipDst = 111.0.42.42;
+(drop + filter loc = "s29"; loc := "s30" + filter loc = "s30"; loc := "s42" +
+ filter loc = "s42"; loc := "h42") +
+filter ipDst = 111.0.24.24;
+(drop + filter loc = "s29"; loc := "s40" + filter loc = "s40"; loc := "s24" +
+ filter loc = "s24"; loc := "h24") +
+filter ipDst = 111.0.4.4;
+(drop + filter loc = "s29"; loc := "s40" + filter loc = "s40"; loc := "s24" +
+ filter loc = "s24"; loc := "s5" + filter loc = "s5"; loc := "s4" +
+ filter loc = "s4"; loc := "h4") +
+filter ipDst = 111.0.40.40;
+(drop + filter loc = "s29"; loc := "s40" + filter loc = "s40"; loc := "h40") +
+filter ipDst = 111.0.41.41;
+(drop + filter loc = "s29"; loc := "s40" + filter loc = "s40"; loc := "s41" +
+ filter loc = "s41"; loc := "h41") +
+filter ipDst = 111.0.5.5;
+(drop + filter loc = "s29"; loc := "s40" + filter loc = "s40"; loc := "s24" +
+ filter loc = "s24"; loc := "s5" + filter loc = "s5"; loc := "h5") +
+filter ipDst = 111.0.43.43;
+(drop + filter loc = "s29"; loc := "s30" + filter loc = "s30"; loc := "s43" +
+ filter loc = "s43"; loc := "h43") +
+filter ipDst = 111.0.44.44;
+(drop + filter loc = "s29"; loc := "s30" + filter loc = "s30"; loc := "s44" +
+ filter loc = "s44"; loc := "h44") +
+filter ipDst = 111.0.45.45;
+(drop + filter loc = "s29"; loc := "s30" + filter loc = "s30"; loc := "s45" +
+ filter loc = "s45"; loc := "h45") +
+filter ipDst = 111.0.46.46;
+(drop + filter loc = "s29"; loc := "s30" + filter loc = "s30"; loc := "s45" +
+ filter loc = "s45"; loc := "s46" + filter loc = "s46"; loc := "h46") +
+filter ipDst = 111.0.20.20;
+(drop + filter loc = "s29"; loc := "s30" + filter loc = "s30"; loc := "s20" +
+ filter loc = "s20"; loc := "h20") +
+filter ipDst = 111.0.7.7;
+(drop + filter loc = "s29"; loc := "s40" + filter loc = "s40"; loc := "s24" +
+ filter loc = "s24"; loc := "s7" + filter loc = "s7"; loc := "h7") +
+filter ipDst = 111.0.0.0;
+(drop + filter loc = "s29"; loc := "s30" + filter loc = "s30"; loc := "s45" +
+ filter loc = "s45"; loc := "s0" + filter loc = "s0"; loc := "h0") +
+filter ipDst = 111.0.26.26;
+(drop + filter loc = "s32"; loc := "s5" + filter loc = "s5"; loc := "s9" +
+ filter loc = "s9"; loc := "s0" + filter loc = "s0"; loc := "s43" +
+ filter loc = "s43"; loc := "s26" + filter loc = "s26"; loc := "h26") +
+filter ipDst = 111.0.28.28;
+(drop + filter loc = "s32"; loc := "s5" + filter loc = "s5"; loc := "s24" +
+ filter loc = "s24"; loc := "s40" + filter loc = "s40"; loc := "s39" +
+ filter loc = "s39"; loc := "s28" + filter loc = "s28"; loc := "h28") +
+filter ipDst = 111.0.29.29;
+(drop + filter loc = "s32"; loc := "s5" + filter loc = "s5"; loc := "s24" +
+ filter loc = "s24"; loc := "s40" + filter loc = "s40"; loc := "s29" +
+ filter loc = "s29"; loc := "h29") +
+filter ipDst = 111.0.30.30;
+(drop + filter loc = "s32"; loc := "s5" + filter loc = "s5"; loc := "s9" +
+ filter loc = "s9"; loc := "s30" + filter loc = "s30"; loc := "h30") +
+filter ipDst = 111.0.31.31;
+(drop + filter loc = "s32"; loc := "s5" + filter loc = "s5"; loc := "s24" +
+ filter loc = "s24"; loc := "s31" + filter loc = "s31"; loc := "h31") +
+filter ipDst = 111.0.36.36;
+(drop + filter loc = "s32"; loc := "s5" + filter loc = "s5"; loc := "s9" +
+ filter loc = "s9"; loc := "s30" + filter loc = "s30"; loc := "s36" +
+ filter loc = "s36"; loc := "h36") +
+filter ipDst = 111.0.37.37;
+(drop + filter loc = "s32"; loc := "s5" + filter loc = "s5"; loc := "s9" +
+ filter loc = "s9"; loc := "s0" + filter loc = "s0"; loc := "s37" +
+ filter loc = "s37"; loc := "h37") +
+filter ipDst = 111.0.34.34;
+(drop + filter loc = "s32"; loc := "s5" + filter loc = "s5"; loc := "s9" +
+ filter loc = "s9"; loc := "s30" + filter loc = "s30"; loc := "s34" +
+ filter loc = "s34"; loc := "h34") +
+filter ipDst = 111.0.35.35;
+(drop + filter loc = "s32"; loc := "s5" + filter loc = "s5"; loc := "s9" +
+ filter loc = "s9"; loc := "s30" + filter loc = "s30"; loc := "s35" +
+ filter loc = "s35"; loc := "h35") +
+filter ipDst = 111.0.38.38;
+(drop + filter loc = "s32"; loc := "s5" + filter loc = "s5"; loc := "s9" +
+ filter loc = "s9"; loc := "s0" + filter loc = "s0"; loc := "s37" +
+ filter loc = "s37"; loc := "s38" + filter loc = "s38"; loc := "h38") +
+filter ipDst = 111.0.39.39;
+(drop + filter loc = "s32"; loc := "s5" + filter loc = "s5"; loc := "s24" +
+ filter loc = "s24"; loc := "s40" + filter loc = "s40"; loc := "s39" +
+ filter loc = "s39"; loc := "h39") +
+filter ipDst = 111.0.6.6;
+(drop + filter loc = "s32"; loc := "s5" + filter loc = "s5"; loc := "s9" +
+ filter loc = "s9"; loc := "s6" + filter loc = "s6"; loc := "h6") +
+filter ipDst = 111.0.1.1;
+(drop + filter loc = "s32"; loc := "s5" + filter loc = "s5"; loc := "s9" +
+ filter loc = "s9"; loc := "s0" + filter loc = "s0"; loc := "s1" +
+ filter loc = "s1"; loc := "h1") +
+filter ipDst = 111.0.3.3;
+(drop + filter loc = "s32"; loc := "s5" + filter loc = "s5"; loc := "s24" +
+ filter loc = "s24"; loc := "s3" + filter loc = "s3"; loc := "h3") +
+filter ipDst = 111.0.2.2;
+(drop + filter loc = "s32"; loc := "s5" + filter loc = "s5"; loc := "s9" +
+ filter loc = "s9"; loc := "s0" + filter loc = "s0"; loc := "s2" +
+ filter loc = "s2"; loc := "h2") +
+filter ipDst = 111.0.9.9;
+(drop + filter loc = "s32"; loc := "s5" + filter loc = "s5"; loc := "s9" +
+ filter loc = "s9"; loc := "h9") +
+filter ipDst = 111.0.8.8;
+(drop + filter loc = "s32"; loc := "s5" + filter loc = "s5"; loc := "s8" +
+ filter loc = "s8"; loc := "h8") +
+filter ipDst = 111.0.13.13;
+(drop + filter loc = "s32"; loc := "s5" + filter loc = "s5"; loc := "s24" +
+ filter loc = "s24"; loc := "s40" + filter loc = "s40"; loc := "s13" +
+ filter loc = "s13"; loc := "h13") +
+filter ipDst = 111.0.42.42;
+(drop + filter loc = "s32"; loc := "s5" + filter loc = "s5"; loc := "s9" +
+ filter loc = "s9"; loc := "s30" + filter loc = "s30"; loc := "s42" +
+ filter loc = "s42"; loc := "h42") +
+filter ipDst = 111.0.24.24;
+(drop + filter loc = "s32"; loc := "s5" + filter loc = "s5"; loc := "s24" +
+ filter loc = "s24"; loc := "h24") +
+filter ipDst = 111.0.4.4;
+(drop + filter loc = "s32"; loc := "s5" + filter loc = "s5"; loc := "s4" +
+ filter loc = "s4"; loc := "h4") +
+filter ipDst = 111.0.40.40;
+(drop + filter loc = "s32"; loc := "s5" + filter loc = "s5"; loc := "s24" +
+ filter loc = "s24"; loc := "s40" + filter loc = "s40"; loc := "h40") +
+filter ipDst = 111.0.41.41;
+(drop + filter loc = "s32"; loc := "s5" + filter loc = "s5"; loc := "s24" +
+ filter loc = "s24"; loc := "s40" + filter loc = "s40"; loc := "s41" +
+ filter loc = "s41"; loc := "h41") +
+filter ipDst = 111.0.5.5;
+(drop + filter loc = "s32"; loc := "s5" + filter loc = "s5"; loc := "h5") +
+filter ipDst = 111.0.43.43;
+(drop + filter loc = "s32"; loc := "s5" + filter loc = "s5"; loc := "s9" +
+ filter loc = "s9"; loc := "s0" + filter loc = "s0"; loc := "s43" +
+ filter loc = "s43"; loc := "h43") +
+filter ipDst = 111.0.44.44;
+(drop + filter loc = "s32"; loc := "s5" + filter loc = "s5"; loc := "s9" +
+ filter loc = "s9"; loc := "s0" + filter loc = "s0"; loc := "s44" +
+ filter loc = "s44"; loc := "h44") +
+filter ipDst = 111.0.45.45;
+(drop + filter loc = "s32"; loc := "s5" + filter loc = "s5"; loc := "s9" +
+ filter loc = "s9"; loc := "s0" + filter loc = "s0"; loc := "s45" +
+ filter loc = "s45"; loc := "h45") +
+filter ipDst = 111.0.46.46;
+(drop + filter loc = "s32"; loc := "s5" + filter loc = "s5"; loc := "s24" +
+ filter loc = "s24"; loc := "s3" + filter loc = "s3"; loc := "s46" +
+ filter loc = "s46"; loc := "h46") +
+filter ipDst = 111.0.20.20;
+(drop + filter loc = "s32"; loc := "s5" + filter loc = "s5"; loc := "s9" +
+ filter loc = "s9"; loc := "s30" + filter loc = "s30"; loc := "s20" +
+ filter loc = "s20"; loc := "h20") +
+filter ipDst = 111.0.7.7;
+(drop + filter loc = "s32"; loc := "s5" + filter loc = "s5"; loc := "s9" +
+ filter loc = "s9"; loc := "s7" + filter loc = "s7"; loc := "h7") +
+filter ipDst = 111.0.0.0;
+(drop + filter loc = "s32"; loc := "s5" + filter loc = "s5"; loc := "s9" +
+ filter loc = "s9"; loc := "s0" + filter loc = "s0"; loc := "h0") +
+filter ipDst = 111.0.26.26;
+(drop + filter loc = "s30"; loc := "s43" + filter loc = "s43"; loc := "s26" +
+ filter loc = "s26"; loc := "h26") +
+filter ipDst = 111.0.28.28;
+(drop + filter loc = "s30"; loc := "s40" + filter loc = "s40"; loc := "s39" +
+ filter loc = "s39"; loc := "s28" + filter loc = "s28"; loc := "h28") +
+filter ipDst = 111.0.29.29;
+(drop + filter loc = "s30"; loc := "s29" + filter loc = "s29"; loc := "h29") +
+filter ipDst = 111.0.32.32;
+(drop + filter loc = "s30"; loc := "s9" + filter loc = "s9"; loc := "s5" +
+ filter loc = "s5"; loc := "s32" + filter loc = "s32"; loc := "h32") +
+filter ipDst = 111.0.31.31;
+(drop + filter loc = "s30"; loc := "s31" + filter loc = "s31"; loc := "h31") +
+filter ipDst = 111.0.36.36;
+(drop + filter loc = "s30"; loc := "s36" + filter loc = "s36"; loc := "h36") +
+filter ipDst = 111.0.37.37;
+(drop + filter loc = "s30"; loc := "s44" + filter loc = "s44"; loc := "s37" +
+ filter loc = "s37"; loc := "h37") +
+filter ipDst = 111.0.34.34;
+(drop + filter loc = "s30"; loc := "s34" + filter loc = "s34"; loc := "h34") +
+filter ipDst = 111.0.35.35;
+(drop + filter loc = "s30"; loc := "s35" + filter loc = "s35"; loc := "h35") +
+filter ipDst = 111.0.38.38;
+(drop + filter loc = "s30"; loc := "s44" + filter loc = "s44"; loc := "s38" +
+ filter loc = "s38"; loc := "h38") +
+filter ipDst = 111.0.39.39;
+(drop + filter loc = "s30"; loc := "s40" + filter loc = "s40"; loc := "s39" +
+ filter loc = "s39"; loc := "h39") +
+filter ipDst = 111.0.6.6;
+(drop + filter loc = "s30"; loc := "s9" + filter loc = "s9"; loc := "s6" +
+ filter loc = "s6"; loc := "h6") +
+filter ipDst = 111.0.1.1;
+(drop + filter loc = "s30"; loc := "s45" + filter loc = "s45"; loc := "s0" +
+ filter loc = "s0"; loc := "s1" + filter loc = "s1"; loc := "h1") +
+filter ipDst = 111.0.3.3;
+(drop + filter loc = "s30"; loc := "s45" + filter loc = "s45"; loc := "s3" +
+ filter loc = "s3"; loc := "h3") +
+filter ipDst = 111.0.2.2;
+(drop + filter loc = "s30"; loc := "s45" + filter loc = "s45"; loc := "s0" +
+ filter loc = "s0"; loc := "s2" + filter loc = "s2"; loc := "h2") +
+filter ipDst = 111.0.9.9;
+(drop + filter loc = "s30"; loc := "s9" + filter loc = "s9"; loc := "h9") +
+filter ipDst = 111.0.8.8;
+(drop + filter loc = "s30"; loc := "s9" + filter loc = "s9"; loc := "s8" +
+ filter loc = "s8"; loc := "h8") +
+filter ipDst = 111.0.13.13;
+(drop + filter loc = "s30"; loc := "s40" + filter loc = "s40"; loc := "s13" +
+ filter loc = "s13"; loc := "h13") +
+filter ipDst = 111.0.42.42;
+(drop + filter loc = "s30"; loc := "s42" + filter loc = "s42"; loc := "h42") +
+filter ipDst = 111.0.24.24;
+(drop + filter loc = "s30"; loc := "s40" + filter loc = "s40"; loc := "s24" +
+ filter loc = "s24"; loc := "h24") +
+filter ipDst = 111.0.4.4;
+(drop + filter loc = "s30"; loc := "s9" + filter loc = "s9"; loc := "s5" +
+ filter loc = "s5"; loc := "s4" + filter loc = "s4"; loc := "h4") +
+filter ipDst = 111.0.40.40;
+(drop + filter loc = "s30"; loc := "s40" + filter loc = "s40"; loc := "h40") +
+filter ipDst = 111.0.41.41;
+(drop + filter loc = "s30"; loc := "s40" + filter loc = "s40"; loc := "s41" +
+ filter loc = "s41"; loc := "h41") +
+filter ipDst = 111.0.5.5;
+(drop + filter loc = "s30"; loc := "s9" + filter loc = "s9"; loc := "s5" +
+ filter loc = "s5"; loc := "h5") +
+filter ipDst = 111.0.43.43;
+(drop + filter loc = "s30"; loc := "s43" + filter loc = "s43"; loc := "h43") +
+filter ipDst = 111.0.44.44;
+(drop + filter loc = "s30"; loc := "s44" + filter loc = "s44"; loc := "h44") +
+filter ipDst = 111.0.45.45;
+(drop + filter loc = "s30"; loc := "s45" + filter loc = "s45"; loc := "h45") +
+filter ipDst = 111.0.46.46;
+(drop + filter loc = "s30"; loc := "s45" + filter loc = "s45"; loc := "s46" +
+ filter loc = "s46"; loc := "h46") +
+filter ipDst = 111.0.20.20;
+(drop + filter loc = "s30"; loc := "s20" + filter loc = "s20"; loc := "h20") +
+filter ipDst = 111.0.7.7;
+(drop + filter loc = "s30"; loc := "s9" + filter loc = "s9"; loc := "s7" +
+ filter loc = "s7"; loc := "h7") +
+filter ipDst = 111.0.0.0;
+(drop + filter loc = "s30"; loc := "s45" + filter loc = "s45"; loc := "s0" +
+ filter loc = "s0"; loc := "h0") +
+filter ipDst = 111.0.26.26;
+(drop + filter loc = "s31"; loc := "s43" + filter loc = "s43"; loc := "s26" +
+ filter loc = "s26"; loc := "h26") +
+filter ipDst = 111.0.28.28;
+(drop + filter loc = "s31"; loc := "s40" + filter loc = "s40"; loc := "s39" +
+ filter loc = "s39"; loc := "s28" + filter loc = "s28"; loc := "h28") +
+filter ipDst = 111.0.29.29;
+(drop + filter loc = "s31"; loc := "s29" + filter loc = "s29"; loc := "h29") +
+filter ipDst = 111.0.32.32;
+(drop + filter loc = "s31"; loc := "s24" + filter loc = "s24"; loc := "s5" +
+ filter loc = "s5"; loc := "s32" + filter loc = "s32"; loc := "h32") +
+filter ipDst = 111.0.30.30;
+(drop + filter loc = "s31"; loc := "s30" + filter loc = "s30"; loc := "h30") +
+filter ipDst = 111.0.36.36;
+(drop + filter loc = "s31"; loc := "s30" + filter loc = "s30"; loc := "s36" +
+ filter loc = "s36"; loc := "h36") +
+filter ipDst = 111.0.37.37;
+(drop + filter loc = "s31"; loc := "s44" + filter loc = "s44"; loc := "s37" +
+ filter loc = "s37"; loc := "h37") +
+filter ipDst = 111.0.34.34;
+(drop + filter loc = "s31"; loc := "s30" + filter loc = "s30"; loc := "s34" +
+ filter loc = "s34"; loc := "h34") +
+filter ipDst = 111.0.35.35;
+(drop + filter loc = "s31"; loc := "s30" + filter loc = "s30"; loc := "s35" +
+ filter loc = "s35"; loc := "h35") +
+filter ipDst = 111.0.38.38;
+(drop + filter loc = "s31"; loc := "s44" + filter loc = "s44"; loc := "s38" +
+ filter loc = "s38"; loc := "h38") +
+filter ipDst = 111.0.39.39;
+(drop + filter loc = "s31"; loc := "s40" + filter loc = "s40"; loc := "s39" +
+ filter loc = "s39"; loc := "h39") +
+filter ipDst = 111.0.6.6;
+(drop + filter loc = "s31"; loc := "s24" + filter loc = "s24"; loc := "s6" +
+ filter loc = "s6"; loc := "h6") +
+filter ipDst = 111.0.1.1;
+(drop + filter loc = "s31"; loc := "s45" + filter loc = "s45"; loc := "s0" +
+ filter loc = "s0"; loc := "s1" + filter loc = "s1"; loc := "h1") +
+filter ipDst = 111.0.3.3;
+(drop + filter loc = "s31"; loc := "s45" + filter loc = "s45"; loc := "s3" +
+ filter loc = "s3"; loc := "h3") +
+filter ipDst = 111.0.2.2;
+(drop + filter loc = "s31"; loc := "s45" + filter loc = "s45"; loc := "s0" +
+ filter loc = "s0"; loc := "s2" + filter loc = "s2"; loc := "h2") +
+filter ipDst = 111.0.9.9;
+(drop + filter loc = "s31"; loc := "s30" + filter loc = "s30"; loc := "s9" +
+ filter loc = "s9"; loc := "h9") +
+filter ipDst = 111.0.8.8;
+(drop + filter loc = "s31"; loc := "s24" + filter loc = "s24"; loc := "s5" +
+ filter loc = "s5"; loc := "s8" + filter loc = "s8"; loc := "h8") +
+filter ipDst = 111.0.13.13;
+(drop + filter loc = "s31"; loc := "s40" + filter loc = "s40"; loc := "s13" +
+ filter loc = "s13"; loc := "h13") +
+filter ipDst = 111.0.42.42;
+(drop + filter loc = "s31"; loc := "s43" + filter loc = "s43"; loc := "s42" +
+ filter loc = "s42"; loc := "h42") +
+filter ipDst = 111.0.24.24;
+(drop + filter loc = "s31"; loc := "s24" + filter loc = "s24"; loc := "h24") +
+filter ipDst = 111.0.4.4;
+(drop + filter loc = "s31"; loc := "s24" + filter loc = "s24"; loc := "s5" +
+ filter loc = "s5"; loc := "s4" + filter loc = "s4"; loc := "h4") +
+filter ipDst = 111.0.40.40;
+(drop + filter loc = "s31"; loc := "s40" + filter loc = "s40"; loc := "h40") +
+filter ipDst = 111.0.41.41;
+(drop + filter loc = "s31"; loc := "s40" + filter loc = "s40"; loc := "s41" +
+ filter loc = "s41"; loc := "h41") +
+filter ipDst = 111.0.5.5;
+(drop + filter loc = "s31"; loc := "s24" + filter loc = "s24"; loc := "s5" +
+ filter loc = "s5"; loc := "h5") +
+filter ipDst = 111.0.43.43;
+(drop + filter loc = "s31"; loc := "s43" + filter loc = "s43"; loc := "h43") +
+filter ipDst = 111.0.44.44;
+(drop + filter loc = "s31"; loc := "s44" + filter loc = "s44"; loc := "h44") +
+filter ipDst = 111.0.45.45;
+(drop + filter loc = "s31"; loc := "s45" + filter loc = "s45"; loc := "h45") +
+filter ipDst = 111.0.46.46;
+(drop + filter loc = "s31"; loc := "s45" + filter loc = "s45"; loc := "s46" +
+ filter loc = "s46"; loc := "h46") +
+filter ipDst = 111.0.20.20;
+(drop + filter loc = "s31"; loc := "s20" + filter loc = "s20"; loc := "h20") +
+filter ipDst = 111.0.7.7;
+(drop + filter loc = "s31"; loc := "s24" + filter loc = "s24"; loc := "s7" +
+ filter loc = "s7"; loc := "h7") +
+filter ipDst = 111.0.0.0;
+(drop + filter loc = "s31"; loc := "s45" + filter loc = "s45"; loc := "s0" +
+ filter loc = "s0"; loc := "h0") +
+filter ipDst = 111.0.26.26;
+(drop + filter loc = "s36"; loc := "s30" + filter loc = "s30"; loc := "s43" +
+ filter loc = "s43"; loc := "s26" + filter loc = "s26"; loc := "h26") +
+filter ipDst = 111.0.28.28;
+(drop + filter loc = "s36"; loc := "s30" + filter loc = "s30"; loc := "s40" +
+ filter loc = "s40"; loc := "s39" + filter loc = "s39"; loc := "s28" +
+ filter loc = "s28"; loc := "h28") +
+filter ipDst = 111.0.29.29;
+(drop + filter loc = "s36"; loc := "s29" + filter loc = "s29"; loc := "h29") +
+filter ipDst = 111.0.32.32;
+(drop + filter loc = "s36"; loc := "s30" + filter loc = "s30"; loc := "s9" +
+ filter loc = "s9"; loc := "s5" + filter loc = "s5"; loc := "s32" +
+ filter loc = "s32"; loc := "h32") +
+filter ipDst = 111.0.30.30;
+(drop + filter loc = "s36"; loc := "s30" + filter loc = "s30"; loc := "h30") +
+filter ipDst = 111.0.31.31;
+(drop + filter loc = "s36"; loc := "s30" + filter loc = "s30"; loc := "s31" +
+ filter loc = "s31"; loc := "h31") +
+filter ipDst = 111.0.37.37;
+(drop + filter loc = "s36"; loc := "s30" + filter loc = "s30"; loc := "s44" +
+ filter loc = "s44"; loc := "s37" + filter loc = "s37"; loc := "h37") +
+filter ipDst = 111.0.34.34;
+(drop + filter loc = "s36"; loc := "s30" + filter loc = "s30"; loc := "s34" +
+ filter loc = "s34"; loc := "h34") +
+filter ipDst = 111.0.35.35;
+(drop + filter loc = "s36"; loc := "s30" + filter loc = "s30"; loc := "s35" +
+ filter loc = "s35"; loc := "h35") +
+filter ipDst = 111.0.38.38;
+(drop + filter loc = "s36"; loc := "s30" + filter loc = "s30"; loc := "s44" +
+ filter loc = "s44"; loc := "s38" + filter loc = "s38"; loc := "h38") +
+filter ipDst = 111.0.39.39;
+(drop + filter loc = "s36"; loc := "s30" + filter loc = "s30"; loc := "s40" +
+ filter loc = "s40"; loc := "s39" + filter loc = "s39"; loc := "h39") +
+filter ipDst = 111.0.6.6;
+(drop + filter loc = "s36"; loc := "s30" + filter loc = "s30"; loc := "s9" +
+ filter loc = "s9"; loc := "s6" + filter loc = "s6"; loc := "h6") +
+filter ipDst = 111.0.1.1;
+(drop + filter loc = "s36"; loc := "s30" + filter loc = "s30"; loc := "s45" +
+ filter loc = "s45"; loc := "s0" + filter loc = "s0"; loc := "s1" +
+ filter loc = "s1"; loc := "h1") +
+filter ipDst = 111.0.3.3;
+(drop + filter loc = "s36"; loc := "s30" + filter loc = "s30"; loc := "s45" +
+ filter loc = "s45"; loc := "s3" + filter loc = "s3"; loc := "h3") +
+filter ipDst = 111.0.2.2;
+(drop + filter loc = "s36"; loc := "s30" + filter loc = "s30"; loc := "s45" +
+ filter loc = "s45"; loc := "s0" + filter loc = "s0"; loc := "s2" +
+ filter loc = "s2"; loc := "h2") +
+filter ipDst = 111.0.9.9;
+(drop + filter loc = "s36"; loc := "s30" + filter loc = "s30"; loc := "s9" +
+ filter loc = "s9"; loc := "h9") +
+filter ipDst = 111.0.8.8;
+(drop + filter loc = "s36"; loc := "s30" + filter loc = "s30"; loc := "s9" +
+ filter loc = "s9"; loc := "s8" + filter loc = "s8"; loc := "h8") +
+filter ipDst = 111.0.13.13;
+(drop + filter loc = "s36"; loc := "s30" + filter loc = "s30"; loc := "s40" +
+ filter loc = "s40"; loc := "s13" + filter loc = "s13"; loc := "h13") +
+filter ipDst = 111.0.42.42;
+(drop + filter loc = "s36"; loc := "s30" + filter loc = "s30"; loc := "s42" +
+ filter loc = "s42"; loc := "h42") +
+filter ipDst = 111.0.24.24;
+(drop + filter loc = "s36"; loc := "s30" + filter loc = "s30"; loc := "s40" +
+ filter loc = "s40"; loc := "s24" + filter loc = "s24"; loc := "h24") +
+filter ipDst = 111.0.4.4;
+(drop + filter loc = "s36"; loc := "s30" + filter loc = "s30"; loc := "s9" +
+ filter loc = "s9"; loc := "s5" + filter loc = "s5"; loc := "s4" +
+ filter loc = "s4"; loc := "h4") +
+filter ipDst = 111.0.40.40;
+(drop + filter loc = "s36"; loc := "s30" + filter loc = "s30"; loc := "s40" +
+ filter loc = "s40"; loc := "h40") +
+filter ipDst = 111.0.41.41;
+(drop + filter loc = "s36"; loc := "s30" + filter loc = "s30"; loc := "s40" +
+ filter loc = "s40"; loc := "s41" + filter loc = "s41"; loc := "h41") +
+filter ipDst = 111.0.5.5;
+(drop + filter loc = "s36"; loc := "s30" + filter loc = "s30"; loc := "s9" +
+ filter loc = "s9"; loc := "s5" + filter loc = "s5"; loc := "h5") +
+filter ipDst = 111.0.43.43;
+(drop + filter loc = "s36"; loc := "s30" + filter loc = "s30"; loc := "s43" +
+ filter loc = "s43"; loc := "h43") +
+filter ipDst = 111.0.44.44;
+(drop + filter loc = "s36"; loc := "s30" + filter loc = "s30"; loc := "s44" +
+ filter loc = "s44"; loc := "h44") +
+filter ipDst = 111.0.45.45;
+(drop + filter loc = "s36"; loc := "s30" + filter loc = "s30"; loc := "s45" +
+ filter loc = "s45"; loc := "h45") +
+filter ipDst = 111.0.46.46;
+(drop + filter loc = "s36"; loc := "s30" + filter loc = "s30"; loc := "s45" +
+ filter loc = "s45"; loc := "s46" + filter loc = "s46"; loc := "h46") +
+filter ipDst = 111.0.20.20;
+(drop + filter loc = "s36"; loc := "s30" + filter loc = "s30"; loc := "s20" +
+ filter loc = "s20"; loc := "h20") +
+filter ipDst = 111.0.7.7;
+(drop + filter loc = "s36"; loc := "s30" + filter loc = "s30"; loc := "s9" +
+ filter loc = "s9"; loc := "s7" + filter loc = "s7"; loc := "h7") +
+filter ipDst = 111.0.0.0;
+(drop + filter loc = "s36"; loc := "s30" + filter loc = "s30"; loc := "s45" +
+ filter loc = "s45"; loc := "s0" + filter loc = "s0"; loc := "h0") +
+filter ipDst = 111.0.26.26;
+(drop + filter loc = "s37"; loc := "s43" + filter loc = "s43"; loc := "s26" +
+ filter loc = "s26"; loc := "h26") +
+filter ipDst = 111.0.28.28;
+(drop + filter loc = "s37"; loc := "s44" + filter loc = "s44"; loc := "s30" +
+ filter loc = "s30"; loc := "s40" + filter loc = "s40"; loc := "s39" +
+ filter loc = "s39"; loc := "s28" + filter loc = "s28"; loc := "h28") +
+filter ipDst = 111.0.29.29;
+(drop + filter loc = "s37"; loc := "s44" + filter loc = "s44"; loc := "s30" +
+ filter loc = "s30"; loc := "s29" + filter loc = "s29"; loc := "h29") +
+filter ipDst = 111.0.32.32;
+(drop + filter loc = "s37"; loc := "s0" + filter loc = "s0"; loc := "s9" +
+ filter loc = "s9"; loc := "s5" + filter loc = "s5"; loc := "s32" +
+ filter loc = "s32"; loc := "h32") +
+filter ipDst = 111.0.30.30;
+(drop + filter loc = "s37"; loc := "s44" + filter loc = "s44"; loc := "s30" +
+ filter loc = "s30"; loc := "h30") +
+filter ipDst = 111.0.31.31;
+(drop + filter loc = "s37"; loc := "s44" + filter loc = "s44"; loc := "s31" +
+ filter loc = "s31"; loc := "h31") +
+filter ipDst = 111.0.36.36;
+(drop + filter loc = "s37"; loc := "s44" + filter loc = "s44"; loc := "s30" +
+ filter loc = "s30"; loc := "s36" + filter loc = "s36"; loc := "h36") +
+filter ipDst = 111.0.34.34;
+(drop + filter loc = "s37"; loc := "s44" + filter loc = "s44"; loc := "s30" +
+ filter loc = "s30"; loc := "s34" + filter loc = "s34"; loc := "h34") +
+filter ipDst = 111.0.35.35;
+(drop + filter loc = "s37"; loc := "s44" + filter loc = "s44"; loc := "s30" +
+ filter loc = "s30"; loc := "s35" + filter loc = "s35"; loc := "h35") +
+filter ipDst = 111.0.38.38;
+(drop + filter loc = "s37"; loc := "s38" + filter loc = "s38"; loc := "h38") +
+filter ipDst = 111.0.39.39;
+(drop + filter loc = "s37"; loc := "s44" + filter loc = "s44"; loc := "s30" +
+ filter loc = "s30"; loc := "s40" + filter loc = "s40"; loc := "s39" +
+ filter loc = "s39"; loc := "h39") +
+filter ipDst = 111.0.6.6;
+(drop + filter loc = "s37"; loc := "s0" + filter loc = "s0"; loc := "s9" +
+ filter loc = "s9"; loc := "s6" + filter loc = "s6"; loc := "h6") +
+filter ipDst = 111.0.1.1;
+(drop + filter loc = "s37"; loc := "s1" + filter loc = "s1"; loc := "h1") +
+filter ipDst = 111.0.3.3;
+(drop + filter loc = "s37"; loc := "s0" + filter loc = "s0"; loc := "s3" +
+ filter loc = "s3"; loc := "h3") +
+filter ipDst = 111.0.2.2;
+(drop + filter loc = "s37"; loc := "s2" + filter loc = "s2"; loc := "h2") +
+filter ipDst = 111.0.9.9;
+(drop + filter loc = "s37"; loc := "s0" + filter loc = "s0"; loc := "s9" +
+ filter loc = "s9"; loc := "h9") +
+filter ipDst = 111.0.8.8;
+(drop + filter loc = "s37"; loc := "s0" + filter loc = "s0"; loc := "s9" +
+ filter loc = "s9"; loc := "s8" + filter loc = "s8"; loc := "h8") +
+filter ipDst = 111.0.13.13;
+(drop + filter loc = "s37"; loc := "s44" + filter loc = "s44"; loc := "s30" +
+ filter loc = "s30"; loc := "s40" + filter loc = "s40"; loc := "s13" +
+ filter loc = "s13"; loc := "h13") +
+filter ipDst = 111.0.42.42;
+(drop + filter loc = "s37"; loc := "s43" + filter loc = "s43"; loc := "s42" +
+ filter loc = "s42"; loc := "h42") +
+filter ipDst = 111.0.24.24;
+(drop + filter loc = "s37"; loc := "s0" + filter loc = "s0"; loc := "s3" +
+ filter loc = "s3"; loc := "s24" + filter loc = "s24"; loc := "h24") +
+filter ipDst = 111.0.4.4;
+(drop + filter loc = "s37"; loc := "s0" + filter loc = "s0"; loc := "s9" +
+ filter loc = "s9"; loc := "s5" + filter loc = "s5"; loc := "s4" +
+ filter loc = "s4"; loc := "h4") +
+filter ipDst = 111.0.40.40;
+(drop + filter loc = "s37"; loc := "s44" + filter loc = "s44"; loc := "s30" +
+ filter loc = "s30"; loc := "s40" + filter loc = "s40"; loc := "h40") +
+filter ipDst = 111.0.41.41;
+(drop + filter loc = "s37"; loc := "s44" + filter loc = "s44"; loc := "s30" +
+ filter loc = "s30"; loc := "s40" + filter loc = "s40"; loc := "s41" +
+ filter loc = "s41"; loc := "h41") +
+filter ipDst = 111.0.5.5;
+(drop + filter loc = "s37"; loc := "s0" + filter loc = "s0"; loc := "s9" +
+ filter loc = "s9"; loc := "s5" + filter loc = "s5"; loc := "h5") +
+filter ipDst = 111.0.43.43;
+(drop + filter loc = "s37"; loc := "s43" + filter loc = "s43"; loc := "h43") +
+filter ipDst = 111.0.44.44;
+(drop + filter loc = "s37"; loc := "s44" + filter loc = "s44"; loc := "h44") +
+filter ipDst = 111.0.45.45;
+(drop + filter loc = "s37"; loc := "s0" + filter loc = "s0"; loc := "s45" +
+ filter loc = "s45"; loc := "h45") +
+filter ipDst = 111.0.46.46;
+(drop + filter loc = "s37"; loc := "s46" + filter loc = "s46"; loc := "h46") +
+filter ipDst = 111.0.20.20;
+(drop + filter loc = "s37"; loc := "s44" + filter loc = "s44"; loc := "s30" +
+ filter loc = "s30"; loc := "s20" + filter loc = "s20"; loc := "h20") +
+filter ipDst = 111.0.7.7;
+(drop + filter loc = "s37"; loc := "s0" + filter loc = "s0"; loc := "s9" +
+ filter loc = "s9"; loc := "s7" + filter loc = "s7"; loc := "h7") +
+filter ipDst = 111.0.0.0;
+(drop + filter loc = "s37"; loc := "s0" + filter loc = "s0"; loc := "h0") +
+filter ipDst = 111.0.26.26;
+(drop + filter loc = "s34"; loc := "s30" + filter loc = "s30"; loc := "s43" +
+ filter loc = "s43"; loc := "s26" + filter loc = "s26"; loc := "h26") +
+filter ipDst = 111.0.28.28;
+(drop + filter loc = "s34"; loc := "s30" + filter loc = "s30"; loc := "s40" +
+ filter loc = "s40"; loc := "s39" + filter loc = "s39"; loc := "s28" +
+ filter loc = "s28"; loc := "h28") +
+filter ipDst = 111.0.29.29;
+(drop + filter loc = "s34"; loc := "s30" + filter loc = "s30"; loc := "s29" +
+ filter loc = "s29"; loc := "h29") +
+filter ipDst = 111.0.32.32;
+(drop + filter loc = "s34"; loc := "s30" + filter loc = "s30"; loc := "s9" +
+ filter loc = "s9"; loc := "s5" + filter loc = "s5"; loc := "s32" +
+ filter loc = "s32"; loc := "h32") +
+filter ipDst = 111.0.30.30;
+(drop + filter loc = "s34"; loc := "s30" + filter loc = "s30"; loc := "h30") +
+filter ipDst = 111.0.31.31;
+(drop + filter loc = "s34"; loc := "s30" + filter loc = "s30"; loc := "s31" +
+ filter loc = "s31"; loc := "h31") +
+filter ipDst = 111.0.36.36;
+(drop + filter loc = "s34"; loc := "s30" + filter loc = "s30"; loc := "s36" +
+ filter loc = "s36"; loc := "h36") +
+filter ipDst = 111.0.37.37;
+(drop + filter loc = "s34"; loc := "s30" + filter loc = "s30"; loc := "s44" +
+ filter loc = "s44"; loc := "s37" + filter loc = "s37"; loc := "h37") +
+filter ipDst = 111.0.35.35;
+(drop + filter loc = "s34"; loc := "s30" + filter loc = "s30"; loc := "s35" +
+ filter loc = "s35"; loc := "h35") +
+filter ipDst = 111.0.38.38;
+(drop + filter loc = "s34"; loc := "s30" + filter loc = "s30"; loc := "s44" +
+ filter loc = "s44"; loc := "s38" + filter loc = "s38"; loc := "h38") +
+filter ipDst = 111.0.39.39;
+(drop + filter loc = "s34"; loc := "s30" + filter loc = "s30"; loc := "s40" +
+ filter loc = "s40"; loc := "s39" + filter loc = "s39"; loc := "h39") +
+filter ipDst = 111.0.6.6;
+(drop + filter loc = "s34"; loc := "s30" + filter loc = "s30"; loc := "s9" +
+ filter loc = "s9"; loc := "s6" + filter loc = "s6"; loc := "h6") +
+filter ipDst = 111.0.1.1;
+(drop + filter loc = "s34"; loc := "s30" + filter loc = "s30"; loc := "s45" +
+ filter loc = "s45"; loc := "s0" + filter loc = "s0"; loc := "s1" +
+ filter loc = "s1"; loc := "h1") +
+filter ipDst = 111.0.3.3;
+(drop + filter loc = "s34"; loc := "s30" + filter loc = "s30"; loc := "s45" +
+ filter loc = "s45"; loc := "s3" + filter loc = "s3"; loc := "h3") +
+filter ipDst = 111.0.2.2;
+(drop + filter loc = "s34"; loc := "s30" + filter loc = "s30"; loc := "s45" +
+ filter loc = "s45"; loc := "s0" + filter loc = "s0"; loc := "s2" +
+ filter loc = "s2"; loc := "h2") +
+filter ipDst = 111.0.9.9;
+(drop + filter loc = "s34"; loc := "s30" + filter loc = "s30"; loc := "s9" +
+ filter loc = "s9"; loc := "h9") +
+filter ipDst = 111.0.8.8;
+(drop + filter loc = "s34"; loc := "s30" + filter loc = "s30"; loc := "s9" +
+ filter loc = "s9"; loc := "s8" + filter loc = "s8"; loc := "h8") +
+filter ipDst = 111.0.13.13;
+(drop + filter loc = "s34"; loc := "s30" + filter loc = "s30"; loc := "s40" +
+ filter loc = "s40"; loc := "s13" + filter loc = "s13"; loc := "h13") +
+filter ipDst = 111.0.42.42;
+(drop + filter loc = "s34"; loc := "s30" + filter loc = "s30"; loc := "s42" +
+ filter loc = "s42"; loc := "h42") +
+filter ipDst = 111.0.24.24;
+(drop + filter loc = "s34"; loc := "s30" + filter loc = "s30"; loc := "s40" +
+ filter loc = "s40"; loc := "s24" + filter loc = "s24"; loc := "h24") +
+filter ipDst = 111.0.4.4;
+(drop + filter loc = "s34"; loc := "s30" + filter loc = "s30"; loc := "s9" +
+ filter loc = "s9"; loc := "s5" + filter loc = "s5"; loc := "s4" +
+ filter loc = "s4"; loc := "h4") +
+filter ipDst = 111.0.40.40;
+(drop + filter loc = "s34"; loc := "s30" + filter loc = "s30"; loc := "s40" +
+ filter loc = "s40"; loc := "h40") +
+filter ipDst = 111.0.41.41;
+(drop + filter loc = "s34"; loc := "s30" + filter loc = "s30"; loc := "s40" +
+ filter loc = "s40"; loc := "s41" + filter loc = "s41"; loc := "h41") +
+filter ipDst = 111.0.5.5;
+(drop + filter loc = "s34"; loc := "s30" + filter loc = "s30"; loc := "s9" +
+ filter loc = "s9"; loc := "s5" + filter loc = "s5"; loc := "h5") +
+filter ipDst = 111.0.43.43;
+(drop + filter loc = "s34"; loc := "s30" + filter loc = "s30"; loc := "s43" +
+ filter loc = "s43"; loc := "h43") +
+filter ipDst = 111.0.44.44;
+(drop + filter loc = "s34"; loc := "s30" + filter loc = "s30"; loc := "s44" +
+ filter loc = "s44"; loc := "h44") +
+filter ipDst = 111.0.45.45;
+(drop + filter loc = "s34"; loc := "s30" + filter loc = "s30"; loc := "s45" +
+ filter loc = "s45"; loc := "h45") +
+filter ipDst = 111.0.46.46;
+(drop + filter loc = "s34"; loc := "s30" + filter loc = "s30"; loc := "s45" +
+ filter loc = "s45"; loc := "s46" + filter loc = "s46"; loc := "h46") +
+filter ipDst = 111.0.20.20;
+(drop + filter loc = "s34"; loc := "s30" + filter loc = "s30"; loc := "s20" +
+ filter loc = "s20"; loc := "h20") +
+filter ipDst = 111.0.7.7;
+(drop + filter loc = "s34"; loc := "s30" + filter loc = "s30"; loc := "s9" +
+ filter loc = "s9"; loc := "s7" + filter loc = "s7"; loc := "h7") +
+filter ipDst = 111.0.0.0;
+(drop + filter loc = "s34"; loc := "s30" + filter loc = "s30"; loc := "s45" +
+ filter loc = "s45"; loc := "s0" + filter loc = "s0"; loc := "h0") +
+filter ipDst = 111.0.26.26;
+(drop + filter loc = "s35"; loc := "s30" + filter loc = "s30"; loc := "s43" +
+ filter loc = "s43"; loc := "s26" + filter loc = "s26"; loc := "h26") +
+filter ipDst = 111.0.28.28;
+(drop + filter loc = "s35"; loc := "s30" + filter loc = "s30"; loc := "s40" +
+ filter loc = "s40"; loc := "s39" + filter loc = "s39"; loc := "s28" +
+ filter loc = "s28"; loc := "h28") +
+filter ipDst = 111.0.29.29;
+(drop + filter loc = "s35"; loc := "s29" + filter loc = "s29"; loc := "h29") +
+filter ipDst = 111.0.32.32;
+(drop + filter loc = "s35"; loc := "s30" + filter loc = "s30"; loc := "s9" +
+ filter loc = "s9"; loc := "s5" + filter loc = "s5"; loc := "s32" +
+ filter loc = "s32"; loc := "h32") +
+filter ipDst = 111.0.30.30;
+(drop + filter loc = "s35"; loc := "s30" + filter loc = "s30"; loc := "h30") +
+filter ipDst = 111.0.31.31;
+(drop + filter loc = "s35"; loc := "s30" + filter loc = "s30"; loc := "s31" +
+ filter loc = "s31"; loc := "h31") +
+filter ipDst = 111.0.36.36;
+(drop + filter loc = "s35"; loc := "s30" + filter loc = "s30"; loc := "s36" +
+ filter loc = "s36"; loc := "h36") +
+filter ipDst = 111.0.37.37;
+(drop + filter loc = "s35"; loc := "s30" + filter loc = "s30"; loc := "s44" +
+ filter loc = "s44"; loc := "s37" + filter loc = "s37"; loc := "h37") +
+filter ipDst = 111.0.34.34;
+(drop + filter loc = "s35"; loc := "s30" + filter loc = "s30"; loc := "s34" +
+ filter loc = "s34"; loc := "h34") +
+filter ipDst = 111.0.38.38;
+(drop + filter loc = "s35"; loc := "s30" + filter loc = "s30"; loc := "s44" +
+ filter loc = "s44"; loc := "s38" + filter loc = "s38"; loc := "h38") +
+filter ipDst = 111.0.39.39;
+(drop + filter loc = "s35"; loc := "s30" + filter loc = "s30"; loc := "s40" +
+ filter loc = "s40"; loc := "s39" + filter loc = "s39"; loc := "h39") +
+filter ipDst = 111.0.6.6;
+(drop + filter loc = "s35"; loc := "s30" + filter loc = "s30"; loc := "s9" +
+ filter loc = "s9"; loc := "s6" + filter loc = "s6"; loc := "h6") +
+filter ipDst = 111.0.1.1;
+(drop + filter loc = "s35"; loc := "s30" + filter loc = "s30"; loc := "s45" +
+ filter loc = "s45"; loc := "s0" + filter loc = "s0"; loc := "s1" +
+ filter loc = "s1"; loc := "h1") +
+filter ipDst = 111.0.3.3;
+(drop + filter loc = "s35"; loc := "s30" + filter loc = "s30"; loc := "s45" +
+ filter loc = "s45"; loc := "s3" + filter loc = "s3"; loc := "h3") +
+filter ipDst = 111.0.2.2;
+(drop + filter loc = "s35"; loc := "s30" + filter loc = "s30"; loc := "s45" +
+ filter loc = "s45"; loc := "s0" + filter loc = "s0"; loc := "s2" +
+ filter loc = "s2"; loc := "h2") +
+filter ipDst = 111.0.9.9;
+(drop + filter loc = "s35"; loc := "s30" + filter loc = "s30"; loc := "s9" +
+ filter loc = "s9"; loc := "h9") +
+filter ipDst = 111.0.8.8;
+(drop + filter loc = "s35"; loc := "s30" + filter loc = "s30"; loc := "s9" +
+ filter loc = "s9"; loc := "s8" + filter loc = "s8"; loc := "h8") +
+filter ipDst = 111.0.13.13;
+(drop + filter loc = "s35"; loc := "s30" + filter loc = "s30"; loc := "s40" +
+ filter loc = "s40"; loc := "s13" + filter loc = "s13"; loc := "h13") +
+filter ipDst = 111.0.42.42;
+(drop + filter loc = "s35"; loc := "s30" + filter loc = "s30"; loc := "s42" +
+ filter loc = "s42"; loc := "h42") +
+filter ipDst = 111.0.24.24;
+(drop + filter loc = "s35"; loc := "s30" + filter loc = "s30"; loc := "s40" +
+ filter loc = "s40"; loc := "s24" + filter loc = "s24"; loc := "h24") +
+filter ipDst = 111.0.4.4;
+(drop + filter loc = "s35"; loc := "s30" + filter loc = "s30"; loc := "s9" +
+ filter loc = "s9"; loc := "s5" + filter loc = "s5"; loc := "s4" +
+ filter loc = "s4"; loc := "h4") +
+filter ipDst = 111.0.40.40;
+(drop + filter loc = "s35"; loc := "s30" + filter loc = "s30"; loc := "s40" +
+ filter loc = "s40"; loc := "h40") +
+filter ipDst = 111.0.41.41;
+(drop + filter loc = "s35"; loc := "s30" + filter loc = "s30"; loc := "s40" +
+ filter loc = "s40"; loc := "s41" + filter loc = "s41"; loc := "h41") +
+filter ipDst = 111.0.5.5;
+(drop + filter loc = "s35"; loc := "s30" + filter loc = "s30"; loc := "s9" +
+ filter loc = "s9"; loc := "s5" + filter loc = "s5"; loc := "h5") +
+filter ipDst = 111.0.43.43;
+(drop + filter loc = "s35"; loc := "s30" + filter loc = "s30"; loc := "s43" +
+ filter loc = "s43"; loc := "h43") +
+filter ipDst = 111.0.44.44;
+(drop + filter loc = "s35"; loc := "s30" + filter loc = "s30"; loc := "s44" +
+ filter loc = "s44"; loc := "h44") +
+filter ipDst = 111.0.45.45;
+(drop + filter loc = "s35"; loc := "s30" + filter loc = "s30"; loc := "s45" +
+ filter loc = "s45"; loc := "h45") +
+filter ipDst = 111.0.46.46;
+(drop + filter loc = "s35"; loc := "s30" + filter loc = "s30"; loc := "s45" +
+ filter loc = "s45"; loc := "s46" + filter loc = "s46"; loc := "h46") +
+filter ipDst = 111.0.20.20;
+(drop + filter loc = "s35"; loc := "s30" + filter loc = "s30"; loc := "s20" +
+ filter loc = "s20"; loc := "h20") +
+filter ipDst = 111.0.7.7;
+(drop + filter loc = "s35"; loc := "s30" + filter loc = "s30"; loc := "s9" +
+ filter loc = "s9"; loc := "s7" + filter loc = "s7"; loc := "h7") +
+filter ipDst = 111.0.0.0;
+(drop + filter loc = "s35"; loc := "s30" + filter loc = "s30"; loc := "s45" +
+ filter loc = "s45"; loc := "s0" + filter loc = "s0"; loc := "h0") +
+filter ipDst = 111.0.26.26;
+(drop + filter loc = "s38"; loc := "s37" + filter loc = "s37"; loc := "s43" +
+ filter loc = "s43"; loc := "s26" + filter loc = "s26"; loc := "h26") +
+filter ipDst = 111.0.28.28;
+(drop + filter loc = "s38"; loc := "s44" + filter loc = "s44"; loc := "s30" +
+ filter loc = "s30"; loc := "s40" + filter loc = "s40"; loc := "s39" +
+ filter loc = "s39"; loc := "s28" + filter loc = "s28"; loc := "h28") +
+filter ipDst = 111.0.29.29;
+(drop + filter loc = "s38"; loc := "s44" + filter loc = "s44"; loc := "s30" +
+ filter loc = "s30"; loc := "s29" + filter loc = "s29"; loc := "h29") +
+filter ipDst = 111.0.32.32;
+(drop + filter loc = "s38"; loc := "s37" + filter loc = "s37"; loc := "s0" +
+ filter loc = "s0"; loc := "s9" + filter loc = "s9"; loc := "s5" +
+ filter loc = "s5"; loc := "s32" + filter loc = "s32"; loc := "h32") +
+filter ipDst = 111.0.30.30;
+(drop + filter loc = "s38"; loc := "s44" + filter loc = "s44"; loc := "s30" +
+ filter loc = "s30"; loc := "h30") +
+filter ipDst = 111.0.31.31;
+(drop + filter loc = "s38"; loc := "s44" + filter loc = "s44"; loc := "s31" +
+ filter loc = "s31"; loc := "h31") +
+filter ipDst = 111.0.36.36;
+(drop + filter loc = "s38"; loc := "s44" + filter loc = "s44"; loc := "s30" +
+ filter loc = "s30"; loc := "s36" + filter loc = "s36"; loc := "h36") +
+filter ipDst = 111.0.37.37;
+(drop + filter loc = "s38"; loc := "s37" + filter loc = "s37"; loc := "h37") +
+filter ipDst = 111.0.34.34;
+(drop + filter loc = "s38"; loc := "s44" + filter loc = "s44"; loc := "s30" +
+ filter loc = "s30"; loc := "s34" + filter loc = "s34"; loc := "h34") +
+filter ipDst = 111.0.35.35;
+(drop + filter loc = "s38"; loc := "s44" + filter loc = "s44"; loc := "s30" +
+ filter loc = "s30"; loc := "s35" + filter loc = "s35"; loc := "h35") +
+filter ipDst = 111.0.39.39;
+(drop + filter loc = "s38"; loc := "s44" + filter loc = "s44"; loc := "s30" +
+ filter loc = "s30"; loc := "s40" + filter loc = "s40"; loc := "s39" +
+ filter loc = "s39"; loc := "h39") +
+filter ipDst = 111.0.6.6;
+(drop + filter loc = "s38"; loc := "s37" + filter loc = "s37"; loc := "s0" +
+ filter loc = "s0"; loc := "s9" + filter loc = "s9"; loc := "s6" +
+ filter loc = "s6"; loc := "h6") +
+filter ipDst = 111.0.1.1;
+(drop + filter loc = "s38"; loc := "s37" + filter loc = "s37"; loc := "s1" +
+ filter loc = "s1"; loc := "h1") +
+filter ipDst = 111.0.3.3;
+(drop + filter loc = "s38"; loc := "s37" + filter loc = "s37"; loc := "s0" +
+ filter loc = "s0"; loc := "s3" + filter loc = "s3"; loc := "h3") +
+filter ipDst = 111.0.2.2;
+(drop + filter loc = "s38"; loc := "s37" + filter loc = "s37"; loc := "s2" +
+ filter loc = "s2"; loc := "h2") +
+filter ipDst = 111.0.9.9;
+(drop + filter loc = "s38"; loc := "s37" + filter loc = "s37"; loc := "s0" +
+ filter loc = "s0"; loc := "s9" + filter loc = "s9"; loc := "h9") +
+filter ipDst = 111.0.8.8;
+(drop + filter loc = "s38"; loc := "s37" + filter loc = "s37"; loc := "s0" +
+ filter loc = "s0"; loc := "s9" + filter loc = "s9"; loc := "s8" +
+ filter loc = "s8"; loc := "h8") +
+filter ipDst = 111.0.13.13;
+(drop + filter loc = "s38"; loc := "s44" + filter loc = "s44"; loc := "s30" +
+ filter loc = "s30"; loc := "s40" + filter loc = "s40"; loc := "s13" +
+ filter loc = "s13"; loc := "h13") +
+filter ipDst = 111.0.42.42;
+(drop + filter loc = "s38"; loc := "s37" + filter loc = "s37"; loc := "s43" +
+ filter loc = "s43"; loc := "s42" + filter loc = "s42"; loc := "h42") +
+filter ipDst = 111.0.24.24;
+(drop + filter loc = "s38"; loc := "s44" + filter loc = "s44"; loc := "s31" +
+ filter loc = "s31"; loc := "s24" + filter loc = "s24"; loc := "h24") +
+filter ipDst = 111.0.4.4;
+(drop + filter loc = "s38"; loc := "s37" + filter loc = "s37"; loc := "s0" +
+ filter loc = "s0"; loc := "s9" + filter loc = "s9"; loc := "s5" +
+ filter loc = "s5"; loc := "s4" + filter loc = "s4"; loc := "h4") +
+filter ipDst = 111.0.40.40;
+(drop + filter loc = "s38"; loc := "s44" + filter loc = "s44"; loc := "s30" +
+ filter loc = "s30"; loc := "s40" + filter loc = "s40"; loc := "h40") +
+filter ipDst = 111.0.41.41;
+(drop + filter loc = "s38"; loc := "s44" + filter loc = "s44"; loc := "s30" +
+ filter loc = "s30"; loc := "s40" + filter loc = "s40"; loc := "s41" +
+ filter loc = "s41"; loc := "h41") +
+filter ipDst = 111.0.5.5;
+(drop + filter loc = "s38"; loc := "s37" + filter loc = "s37"; loc := "s0" +
+ filter loc = "s0"; loc := "s9" + filter loc = "s9"; loc := "s5" +
+ filter loc = "s5"; loc := "h5") +
+filter ipDst = 111.0.43.43;
+(drop + filter loc = "s38"; loc := "s37" + filter loc = "s37"; loc := "s43" +
+ filter loc = "s43"; loc := "h43") +
+filter ipDst = 111.0.44.44;
+(drop + filter loc = "s38"; loc := "s44" + filter loc = "s44"; loc := "h44") +
+filter ipDst = 111.0.45.45;
+(drop + filter loc = "s38"; loc := "s37" + filter loc = "s37"; loc := "s0" +
+ filter loc = "s0"; loc := "s45" + filter loc = "s45"; loc := "h45") +
+filter ipDst = 111.0.46.46;
+(drop + filter loc = "s38"; loc := "s37" + filter loc = "s37"; loc := "s46" +
+ filter loc = "s46"; loc := "h46") +
+filter ipDst = 111.0.20.20;
+(drop + filter loc = "s38"; loc := "s44" + filter loc = "s44"; loc := "s30" +
+ filter loc = "s30"; loc := "s20" + filter loc = "s20"; loc := "h20") +
+filter ipDst = 111.0.7.7;
+(drop + filter loc = "s38"; loc := "s37" + filter loc = "s37"; loc := "s0" +
+ filter loc = "s0"; loc := "s9" + filter loc = "s9"; loc := "s7" +
+ filter loc = "s7"; loc := "h7") +
+filter ipDst = 111.0.0.0;
+(drop + filter loc = "s38"; loc := "s37" + filter loc = "s37"; loc := "s0" +
+ filter loc = "s0"; loc := "h0") +
+filter ipDst = 111.0.26.26;
+(drop + filter loc = "s39"; loc := "s40" + filter loc = "s40"; loc := "s30" +
+ filter loc = "s30"; loc := "s43" + filter loc = "s43"; loc := "s26" +
+ filter loc = "s26"; loc := "h26") +
+filter ipDst = 111.0.28.28;
+(drop + filter loc = "s39"; loc := "s28" + filter loc = "s28"; loc := "h28") +
+filter ipDst = 111.0.29.29;
+(drop + filter loc = "s39"; loc := "s40" + filter loc = "s40"; loc := "s29" +
+ filter loc = "s29"; loc := "h29") +
+filter ipDst = 111.0.32.32;
+(drop + filter loc = "s39"; loc := "s40" + filter loc = "s40"; loc := "s24" +
+ filter loc = "s24"; loc := "s5" + filter loc = "s5"; loc := "s32" +
+ filter loc = "s32"; loc := "h32") +
+filter ipDst = 111.0.30.30;
+(drop + filter loc = "s39"; loc := "s40" + filter loc = "s40"; loc := "s30" +
+ filter loc = "s30"; loc := "h30") +
+filter ipDst = 111.0.31.31;
+(drop + filter loc = "s39"; loc := "s40" + filter loc = "s40"; loc := "s31" +
+ filter loc = "s31"; loc := "h31") +
+filter ipDst = 111.0.36.36;
+(drop + filter loc = "s39"; loc := "s40" + filter loc = "s40"; loc := "s30" +
+ filter loc = "s30"; loc := "s36" + filter loc = "s36"; loc := "h36") +
+filter ipDst = 111.0.37.37;
+(drop + filter loc = "s39"; loc := "s40" + filter loc = "s40"; loc := "s30" +
+ filter loc = "s30"; loc := "s44" + filter loc = "s44"; loc := "s37" +
+ filter loc = "s37"; loc := "h37") +
+filter ipDst = 111.0.34.34;
+(drop + filter loc = "s39"; loc := "s40" + filter loc = "s40"; loc := "s30" +
+ filter loc = "s30"; loc := "s34" + filter loc = "s34"; loc := "h34") +
+filter ipDst = 111.0.35.35;
+(drop + filter loc = "s39"; loc := "s40" + filter loc = "s40"; loc := "s30" +
+ filter loc = "s30"; loc := "s35" + filter loc = "s35"; loc := "h35") +
+filter ipDst = 111.0.38.38;
+(drop + filter loc = "s39"; loc := "s40" + filter loc = "s40"; loc := "s30" +
+ filter loc = "s30"; loc := "s44" + filter loc = "s44"; loc := "s38" +
+ filter loc = "s38"; loc := "h38") +
+filter ipDst = 111.0.6.6;
+(drop + filter loc = "s39"; loc := "s40" + filter loc = "s40"; loc := "s24" +
+ filter loc = "s24"; loc := "s6" + filter loc = "s6"; loc := "h6") +
+filter ipDst = 111.0.1.1;
+(drop + filter loc = "s39"; loc := "s40" + filter loc = "s40"; loc := "s24" +
+ filter loc = "s24"; loc := "s3" + filter loc = "s3"; loc := "s0" +
+ filter loc = "s0"; loc := "s1" + filter loc = "s1"; loc := "h1") +
+filter ipDst = 111.0.3.3;
+(drop + filter loc = "s39"; loc := "s40" + filter loc = "s40"; loc := "s24" +
+ filter loc = "s24"; loc := "s3" + filter loc = "s3"; loc := "h3") +
+filter ipDst = 111.0.2.2;
+(drop + filter loc = "s39"; loc := "s40" + filter loc = "s40"; loc := "s24" +
+ filter loc = "s24"; loc := "s3" + filter loc = "s3"; loc := "s0" +
+ filter loc = "s0"; loc := "s2" + filter loc = "s2"; loc := "h2") +
+filter ipDst = 111.0.9.9;
+(drop + filter loc = "s39"; loc := "s40" + filter loc = "s40"; loc := "s30" +
+ filter loc = "s30"; loc := "s9" + filter loc = "s9"; loc := "h9") +
+filter ipDst = 111.0.8.8;
+(drop + filter loc = "s39"; loc := "s40" + filter loc = "s40"; loc := "s24" +
+ filter loc = "s24"; loc := "s5" + filter loc = "s5"; loc := "s8" +
+ filter loc = "s8"; loc := "h8") +
+filter ipDst = 111.0.13.13;
+(drop + filter loc = "s39"; loc := "s40" + filter loc = "s40"; loc := "s13" +
+ filter loc = "s13"; loc := "h13") +
+filter ipDst = 111.0.42.42;
+(drop + filter loc = "s39"; loc := "s40" + filter loc = "s40"; loc := "s30" +
+ filter loc = "s30"; loc := "s42" + filter loc = "s42"; loc := "h42") +
+filter ipDst = 111.0.24.24;
+(drop + filter loc = "s39"; loc := "s40" + filter loc = "s40"; loc := "s24" +
+ filter loc = "s24"; loc := "h24") +
+filter ipDst = 111.0.4.4;
+(drop + filter loc = "s39"; loc := "s40" + filter loc = "s40"; loc := "s24" +
+ filter loc = "s24"; loc := "s5" + filter loc = "s5"; loc := "s4" +
+ filter loc = "s4"; loc := "h4") +
+filter ipDst = 111.0.40.40;
+(drop + filter loc = "s39"; loc := "s40" + filter loc = "s40"; loc := "h40") +
+filter ipDst = 111.0.41.41;
+(drop + filter loc = "s39"; loc := "s40" + filter loc = "s40"; loc := "s41" +
+ filter loc = "s41"; loc := "h41") +
+filter ipDst = 111.0.5.5;
+(drop + filter loc = "s39"; loc := "s40" + filter loc = "s40"; loc := "s24" +
+ filter loc = "s24"; loc := "s5" + filter loc = "s5"; loc := "h5") +
+filter ipDst = 111.0.43.43;
+(drop + filter loc = "s39"; loc := "s40" + filter loc = "s40"; loc := "s30" +
+ filter loc = "s30"; loc := "s43" + filter loc = "s43"; loc := "h43") +
+filter ipDst = 111.0.44.44;
+(drop + filter loc = "s39"; loc := "s40" + filter loc = "s40"; loc := "s30" +
+ filter loc = "s30"; loc := "s44" + filter loc = "s44"; loc := "h44") +
+filter ipDst = 111.0.45.45;
+(drop + filter loc = "s39"; loc := "s40" + filter loc = "s40"; loc := "s30" +
+ filter loc = "s30"; loc := "s45" + filter loc = "s45"; loc := "h45") +
+filter ipDst = 111.0.46.46;
+(drop + filter loc = "s39"; loc := "s40" + filter loc = "s40"; loc := "s24" +
+ filter loc = "s24"; loc := "s3" + filter loc = "s3"; loc := "s46" +
+ filter loc = "s46"; loc := "h46") +
+filter ipDst = 111.0.20.20;
+(drop + filter loc = "s39"; loc := "s40" + filter loc = "s40"; loc := "s30" +
+ filter loc = "s30"; loc := "s20" + filter loc = "s20"; loc := "h20") +
+filter ipDst = 111.0.7.7;
+(drop + filter loc = "s39"; loc := "s40" + filter loc = "s40"; loc := "s24" +
+ filter loc = "s24"; loc := "s7" + filter loc = "s7"; loc := "h7") +
+filter ipDst = 111.0.0.0;
+(drop + filter loc = "s39"; loc := "s40" + filter loc = "s40"; loc := "s24" +
+ filter loc = "s24"; loc := "s3" + filter loc = "s3"; loc := "s0" +
+ filter loc = "s0"; loc := "h0") +
+filter ipDst = 111.0.26.26;
+(drop + filter loc = "s6"; loc := "s9" + filter loc = "s9"; loc := "s0" +
+ filter loc = "s0"; loc := "s43" + filter loc = "s43"; loc := "s26" +
+ filter loc = "s26"; loc := "h26") +
+filter ipDst = 111.0.28.28;
+(drop + filter loc = "s6"; loc := "s24" + filter loc = "s24"; loc := "s40" +
+ filter loc = "s40"; loc := "s39" + filter loc = "s39"; loc := "s28" +
+ filter loc = "s28"; loc := "h28") +
+filter ipDst = 111.0.29.29;
+(drop + filter loc = "s6"; loc := "s24" + filter loc = "s24"; loc := "s40" +
+ filter loc = "s40"; loc := "s29" + filter loc = "s29"; loc := "h29") +
+filter ipDst = 111.0.32.32;
+(drop + filter loc = "s6"; loc := "s9" + filter loc = "s9"; loc := "s5" +
+ filter loc = "s5"; loc := "s32" + filter loc = "s32"; loc := "h32") +
+filter ipDst = 111.0.30.30;
+(drop + filter loc = "s6"; loc := "s9" + filter loc = "s9"; loc := "s30" +
+ filter loc = "s30"; loc := "h30") +
+filter ipDst = 111.0.31.31;
+(drop + filter loc = "s6"; loc := "s24" + filter loc = "s24"; loc := "s31" +
+ filter loc = "s31"; loc := "h31") +
+filter ipDst = 111.0.36.36;
+(drop + filter loc = "s6"; loc := "s9" + filter loc = "s9"; loc := "s30" +
+ filter loc = "s30"; loc := "s36" + filter loc = "s36"; loc := "h36") +
+filter ipDst = 111.0.37.37;
+(drop + filter loc = "s6"; loc := "s9" + filter loc = "s9"; loc := "s0" +
+ filter loc = "s0"; loc := "s37" + filter loc = "s37"; loc := "h37") +
+filter ipDst = 111.0.34.34;
+(drop + filter loc = "s6"; loc := "s9" + filter loc = "s9"; loc := "s30" +
+ filter loc = "s30"; loc := "s34" + filter loc = "s34"; loc := "h34") +
+filter ipDst = 111.0.35.35;
+(drop + filter loc = "s6"; loc := "s9" + filter loc = "s9"; loc := "s30" +
+ filter loc = "s30"; loc := "s35" + filter loc = "s35"; loc := "h35") +
+filter ipDst = 111.0.38.38;
+(drop + filter loc = "s6"; loc := "s9" + filter loc = "s9"; loc := "s0" +
+ filter loc = "s0"; loc := "s37" + filter loc = "s37"; loc := "s38" +
+ filter loc = "s38"; loc := "h38") +
+filter ipDst = 111.0.39.39;
+(drop + filter loc = "s6"; loc := "s24" + filter loc = "s24"; loc := "s40" +
+ filter loc = "s40"; loc := "s39" + filter loc = "s39"; loc := "h39") +
+filter ipDst = 111.0.1.1;
+(drop + filter loc = "s6"; loc := "s9" + filter loc = "s9"; loc := "s0" +
+ filter loc = "s0"; loc := "s1" + filter loc = "s1"; loc := "h1") +
+filter ipDst = 111.0.3.3;
+(drop + filter loc = "s6"; loc := "s24" + filter loc = "s24"; loc := "s3" +
+ filter loc = "s3"; loc := "h3") +
+filter ipDst = 111.0.2.2;
+(drop + filter loc = "s6"; loc := "s9" + filter loc = "s9"; loc := "s0" +
+ filter loc = "s0"; loc := "s2" + filter loc = "s2"; loc := "h2") +
+filter ipDst = 111.0.9.9;
+(drop + filter loc = "s6"; loc := "s9" + filter loc = "s9"; loc := "h9") +
+filter ipDst = 111.0.8.8;
+(drop + filter loc = "s6"; loc := "s9" + filter loc = "s9"; loc := "s8" +
+ filter loc = "s8"; loc := "h8") +
+filter ipDst = 111.0.13.13;
+(drop + filter loc = "s6"; loc := "s24" + filter loc = "s24"; loc := "s40" +
+ filter loc = "s40"; loc := "s13" + filter loc = "s13"; loc := "h13") +
+filter ipDst = 111.0.42.42;
+(drop + filter loc = "s6"; loc := "s9" + filter loc = "s9"; loc := "s30" +
+ filter loc = "s30"; loc := "s42" + filter loc = "s42"; loc := "h42") +
+filter ipDst = 111.0.24.24;
+(drop + filter loc = "s6"; loc := "s24" + filter loc = "s24"; loc := "h24") +
+filter ipDst = 111.0.4.4;
+(drop + filter loc = "s6"; loc := "s4" + filter loc = "s4"; loc := "h4") +
+filter ipDst = 111.0.40.40;
+(drop + filter loc = "s6"; loc := "s24" + filter loc = "s24"; loc := "s40" +
+ filter loc = "s40"; loc := "h40") +
+filter ipDst = 111.0.41.41;
+(drop + filter loc = "s6"; loc := "s24" + filter loc = "s24"; loc := "s40" +
+ filter loc = "s40"; loc := "s41" + filter loc = "s41"; loc := "h41") +
+filter ipDst = 111.0.5.5;
+(drop + filter loc = "s6"; loc := "s9" + filter loc = "s9"; loc := "s5" +
+ filter loc = "s5"; loc := "h5") +
+filter ipDst = 111.0.43.43;
+(drop + filter loc = "s6"; loc := "s9" + filter loc = "s9"; loc := "s0" +
+ filter loc = "s0"; loc := "s43" + filter loc = "s43"; loc := "h43") +
+filter ipDst = 111.0.44.44;
+(drop + filter loc = "s6"; loc := "s9" + filter loc = "s9"; loc := "s0" +
+ filter loc = "s0"; loc := "s44" + filter loc = "s44"; loc := "h44") +
+filter ipDst = 111.0.45.45;
+(drop + filter loc = "s6"; loc := "s9" + filter loc = "s9"; loc := "s0" +
+ filter loc = "s0"; loc := "s45" + filter loc = "s45"; loc := "h45") +
+filter ipDst = 111.0.46.46;
+(drop + filter loc = "s6"; loc := "s24" + filter loc = "s24"; loc := "s3" +
+ filter loc = "s3"; loc := "s46" + filter loc = "s46"; loc := "h46") +
+filter ipDst = 111.0.20.20;
+(drop + filter loc = "s6"; loc := "s9" + filter loc = "s9"; loc := "s30" +
+ filter loc = "s30"; loc := "s20" + filter loc = "s20"; loc := "h20") +
+filter ipDst = 111.0.7.7;
+(drop + filter loc = "s6"; loc := "s9" + filter loc = "s9"; loc := "s7" +
+ filter loc = "s7"; loc := "h7") +
+filter ipDst = 111.0.0.0;
+(drop + filter loc = "s6"; loc := "s9" + filter loc = "s9"; loc := "s0" +
+ filter loc = "s0"; loc := "h0") +
+filter ipDst = 111.0.26.26;
+(drop + filter loc = "s1"; loc := "s0" + filter loc = "s0"; loc := "s43" +
+ filter loc = "s43"; loc := "s26" + filter loc = "s26"; loc := "h26") +
+filter ipDst = 111.0.28.28;
+(drop + filter loc = "s1"; loc := "s0" + filter loc = "s0"; loc := "s3" +
+ filter loc = "s3"; loc := "s24" + filter loc = "s24"; loc := "s40" +
+ filter loc = "s40"; loc := "s39" + filter loc = "s39"; loc := "s28" +
+ filter loc = "s28"; loc := "h28") +
+filter ipDst = 111.0.29.29;
+(drop + filter loc = "s1"; loc := "s0" + filter loc = "s0"; loc := "s45" +
+ filter loc = "s45"; loc := "s30" + filter loc = "s30"; loc := "s29" +
+ filter loc = "s29"; loc := "h29") +
+filter ipDst = 111.0.32.32;
+(drop + filter loc = "s1"; loc := "s0" + filter loc = "s0"; loc := "s9" +
+ filter loc = "s9"; loc := "s5" + filter loc = "s5"; loc := "s32" +
+ filter loc = "s32"; loc := "h32") +
+filter ipDst = 111.0.30.30;
+(drop + filter loc = "s1"; loc := "s0" + filter loc = "s0"; loc := "s45" +
+ filter loc = "s45"; loc := "s30" + filter loc = "s30"; loc := "h30") +
+filter ipDst = 111.0.31.31;
+(drop + filter loc = "s1"; loc := "s0" + filter loc = "s0"; loc := "s45" +
+ filter loc = "s45"; loc := "s31" + filter loc = "s31"; loc := "h31") +
+filter ipDst = 111.0.36.36;
+(drop + filter loc = "s1"; loc := "s0" + filter loc = "s0"; loc := "s45" +
+ filter loc = "s45"; loc := "s30" + filter loc = "s30"; loc := "s36" +
+ filter loc = "s36"; loc := "h36") +
+filter ipDst = 111.0.37.37;
+(drop + filter loc = "s1"; loc := "s37" + filter loc = "s37"; loc := "h37") +
+filter ipDst = 111.0.34.34;
+(drop + filter loc = "s1"; loc := "s0" + filter loc = "s0"; loc := "s45" +
+ filter loc = "s45"; loc := "s30" + filter loc = "s30"; loc := "s34" +
+ filter loc = "s34"; loc := "h34") +
+filter ipDst = 111.0.35.35;
+(drop + filter loc = "s1"; loc := "s0" + filter loc = "s0"; loc := "s45" +
+ filter loc = "s45"; loc := "s30" + filter loc = "s30"; loc := "s35" +
+ filter loc = "s35"; loc := "h35") +
+filter ipDst = 111.0.38.38;
+(drop + filter loc = "s1"; loc := "s37" + filter loc = "s37"; loc := "s38" +
+ filter loc = "s38"; loc := "h38") +
+filter ipDst = 111.0.39.39;
+(drop + filter loc = "s1"; loc := "s0" + filter loc = "s0"; loc := "s3" +
+ filter loc = "s3"; loc := "s24" + filter loc = "s24"; loc := "s40" +
+ filter loc = "s40"; loc := "s39" + filter loc = "s39"; loc := "h39") +
+filter ipDst = 111.0.6.6;
+(drop + filter loc = "s1"; loc := "s0" + filter loc = "s0"; loc := "s9" +
+ filter loc = "s9"; loc := "s6" + filter loc = "s6"; loc := "h6") +
+filter ipDst = 111.0.3.3;
+(drop + filter loc = "s1"; loc := "s0" + filter loc = "s0"; loc := "s3" +
+ filter loc = "s3"; loc := "h3") +
+filter ipDst = 111.0.2.2;
+(drop + filter loc = "s1"; loc := "s2" + filter loc = "s2"; loc := "h2") +
+filter ipDst = 111.0.9.9;
+(drop + filter loc = "s1"; loc := "s0" + filter loc = "s0"; loc := "s9" +
+ filter loc = "s9"; loc := "h9") +
+filter ipDst = 111.0.8.8;
+(drop + filter loc = "s1"; loc := "s0" + filter loc = "s0"; loc := "s9" +
+ filter loc = "s9"; loc := "s8" + filter loc = "s8"; loc := "h8") +
+filter ipDst = 111.0.13.13;
+(drop + filter loc = "s1"; loc := "s0" + filter loc = "s0"; loc := "s3" +
+ filter loc = "s3"; loc := "s24" + filter loc = "s24"; loc := "s40" +
+ filter loc = "s40"; loc := "s13" + filter loc = "s13"; loc := "h13") +
+filter ipDst = 111.0.42.42;
+(drop + filter loc = "s1"; loc := "s0" + filter loc = "s0"; loc := "s43" +
+ filter loc = "s43"; loc := "s42" + filter loc = "s42"; loc := "h42") +
+filter ipDst = 111.0.24.24;
+(drop + filter loc = "s1"; loc := "s0" + filter loc = "s0"; loc := "s3" +
+ filter loc = "s3"; loc := "s24" + filter loc = "s24"; loc := "h24") +
+filter ipDst = 111.0.4.4;
+(drop + filter loc = "s1"; loc := "s0" + filter loc = "s0"; loc := "s9" +
+ filter loc = "s9"; loc := "s5" + filter loc = "s5"; loc := "s4" +
+ filter loc = "s4"; loc := "h4") +
+filter ipDst = 111.0.40.40;
+(drop + filter loc = "s1"; loc := "s0" + filter loc = "s0"; loc := "s3" +
+ filter loc = "s3"; loc := "s24" + filter loc = "s24"; loc := "s40" +
+ filter loc = "s40"; loc := "h40") +
+filter ipDst = 111.0.41.41;
+(drop + filter loc = "s1"; loc := "s0" + filter loc = "s0"; loc := "s3" +
+ filter loc = "s3"; loc := "s24" + filter loc = "s24"; loc := "s40" +
+ filter loc = "s40"; loc := "s41" + filter loc = "s41"; loc := "h41") +
+filter ipDst = 111.0.5.5;
+(drop + filter loc = "s1"; loc := "s0" + filter loc = "s0"; loc := "s9" +
+ filter loc = "s9"; loc := "s5" + filter loc = "s5"; loc := "h5") +
+filter ipDst = 111.0.43.43;
+(drop + filter loc = "s1"; loc := "s0" + filter loc = "s0"; loc := "s43" +
+ filter loc = "s43"; loc := "h43") +
+filter ipDst = 111.0.44.44;
+(drop + filter loc = "s1"; loc := "s0" + filter loc = "s0"; loc := "s44" +
+ filter loc = "s44"; loc := "h44") +
+filter ipDst = 111.0.45.45;
+(drop + filter loc = "s1"; loc := "s0" + filter loc = "s0"; loc := "s45" +
+ filter loc = "s45"; loc := "h45") +
+filter ipDst = 111.0.46.46;
+(drop + filter loc = "s1"; loc := "s37" + filter loc = "s37"; loc := "s46" +
+ filter loc = "s46"; loc := "h46") +
+filter ipDst = 111.0.20.20;
+(drop + filter loc = "s1"; loc := "s0" + filter loc = "s0"; loc := "s45" +
+ filter loc = "s45"; loc := "s30" + filter loc = "s30"; loc := "s20" +
+ filter loc = "s20"; loc := "h20") +
+filter ipDst = 111.0.7.7;
+(drop + filter loc = "s1"; loc := "s0" + filter loc = "s0"; loc := "s9" +
+ filter loc = "s9"; loc := "s7" + filter loc = "s7"; loc := "h7") +
+filter ipDst = 111.0.0.0;
+(drop + filter loc = "s1"; loc := "s0" + filter loc = "s0"; loc := "h0") +
+filter ipDst = 111.0.26.26;
+(drop + filter loc = "s3"; loc := "s0" + filter loc = "s0"; loc := "s43" +
+ filter loc = "s43"; loc := "s26" + filter loc = "s26"; loc := "h26") +
+filter ipDst = 111.0.28.28;
+(drop + filter loc = "s3"; loc := "s24" + filter loc = "s24"; loc := "s40" +
+ filter loc = "s40"; loc := "s39" + filter loc = "s39"; loc := "s28" +
+ filter loc = "s28"; loc := "h28") +
+filter ipDst = 111.0.29.29;
+(drop + filter loc = "s3"; loc := "s24" + filter loc = "s24"; loc := "s40" +
+ filter loc = "s40"; loc := "s29" + filter loc = "s29"; loc := "h29") +
+filter ipDst = 111.0.32.32;
+(drop + filter loc = "s3"; loc := "s24" + filter loc = "s24"; loc := "s5" +
+ filter loc = "s5"; loc := "s32" + filter loc = "s32"; loc := "h32") +
+filter ipDst = 111.0.30.30;
+(drop + filter loc = "s3"; loc := "s45" + filter loc = "s45"; loc := "s30" +
+ filter loc = "s30"; loc := "h30") +
+filter ipDst = 111.0.31.31;
+(drop + filter loc = "s3"; loc := "s45" + filter loc = "s45"; loc := "s31" +
+ filter loc = "s31"; loc := "h31") +
+filter ipDst = 111.0.36.36;
+(drop + filter loc = "s3"; loc := "s45" + filter loc = "s45"; loc := "s30" +
+ filter loc = "s30"; loc := "s36" + filter loc = "s36"; loc := "h36") +
+filter ipDst = 111.0.37.37;
+(drop + filter loc = "s3"; loc := "s0" + filter loc = "s0"; loc := "s37" +
+ filter loc = "s37"; loc := "h37") +
+filter ipDst = 111.0.34.34;
+(drop + filter loc = "s3"; loc := "s45" + filter loc = "s45"; loc := "s30" +
+ filter loc = "s30"; loc := "s34" + filter loc = "s34"; loc := "h34") +
+filter ipDst = 111.0.35.35;
+(drop + filter loc = "s3"; loc := "s45" + filter loc = "s45"; loc := "s30" +
+ filter loc = "s30"; loc := "s35" + filter loc = "s35"; loc := "h35") +
+filter ipDst = 111.0.38.38;
+(drop + filter loc = "s3"; loc := "s0" + filter loc = "s0"; loc := "s37" +
+ filter loc = "s37"; loc := "s38" + filter loc = "s38"; loc := "h38") +
+filter ipDst = 111.0.39.39;
+(drop + filter loc = "s3"; loc := "s24" + filter loc = "s24"; loc := "s40" +
+ filter loc = "s40"; loc := "s39" + filter loc = "s39"; loc := "h39") +
+filter ipDst = 111.0.6.6;
+(drop + filter loc = "s3"; loc := "s24" + filter loc = "s24"; loc := "s6" +
+ filter loc = "s6"; loc := "h6") +
+filter ipDst = 111.0.1.1;
+(drop + filter loc = "s3"; loc := "s0" + filter loc = "s0"; loc := "s1" +
+ filter loc = "s1"; loc := "h1") +
+filter ipDst = 111.0.2.2;
+(drop + filter loc = "s3"; loc := "s0" + filter loc = "s0"; loc := "s2" +
+ filter loc = "s2"; loc := "h2") +
+filter ipDst = 111.0.9.9;
+(drop + filter loc = "s3"; loc := "s0" + filter loc = "s0"; loc := "s9" +
+ filter loc = "s9"; loc := "h9") +
+filter ipDst = 111.0.8.8;
+(drop + filter loc = "s3"; loc := "s0" + filter loc = "s0"; loc := "s9" +
+ filter loc = "s9"; loc := "s8" + filter loc = "s8"; loc := "h8") +
+filter ipDst = 111.0.13.13;
+(drop + filter loc = "s3"; loc := "s24" + filter loc = "s24"; loc := "s40" +
+ filter loc = "s40"; loc := "s13" + filter loc = "s13"; loc := "h13") +
+filter ipDst = 111.0.42.42;
+(drop + filter loc = "s3"; loc := "s0" + filter loc = "s0"; loc := "s43" +
+ filter loc = "s43"; loc := "s42" + filter loc = "s42"; loc := "h42") +
+filter ipDst = 111.0.24.24;
+(drop + filter loc = "s3"; loc := "s24" + filter loc = "s24"; loc := "h24") +
+filter ipDst = 111.0.4.4;
+(drop + filter loc = "s3"; loc := "s24" + filter loc = "s24"; loc := "s5" +
+ filter loc = "s5"; loc := "s4" + filter loc = "s4"; loc := "h4") +
+filter ipDst = 111.0.40.40;
+(drop + filter loc = "s3"; loc := "s24" + filter loc = "s24"; loc := "s40" +
+ filter loc = "s40"; loc := "h40") +
+filter ipDst = 111.0.41.41;
+(drop + filter loc = "s3"; loc := "s24" + filter loc = "s24"; loc := "s40" +
+ filter loc = "s40"; loc := "s41" + filter loc = "s41"; loc := "h41") +
+filter ipDst = 111.0.5.5;
+(drop + filter loc = "s3"; loc := "s24" + filter loc = "s24"; loc := "s5" +
+ filter loc = "s5"; loc := "h5") +
+filter ipDst = 111.0.43.43;
+(drop + filter loc = "s3"; loc := "s0" + filter loc = "s0"; loc := "s43" +
+ filter loc = "s43"; loc := "h43") +
+filter ipDst = 111.0.44.44;
+(drop + filter loc = "s3"; loc := "s0" + filter loc = "s0"; loc := "s44" +
+ filter loc = "s44"; loc := "h44") +
+filter ipDst = 111.0.45.45;
+(drop + filter loc = "s3"; loc := "s45" + filter loc = "s45"; loc := "h45") +
+filter ipDst = 111.0.46.46;
+(drop + filter loc = "s3"; loc := "s46" + filter loc = "s46"; loc := "h46") +
+filter ipDst = 111.0.20.20;
+(drop + filter loc = "s3"; loc := "s45" + filter loc = "s45"; loc := "s30" +
+ filter loc = "s30"; loc := "s20" + filter loc = "s20"; loc := "h20") +
+filter ipDst = 111.0.7.7;
+(drop + filter loc = "s3"; loc := "s24" + filter loc = "s24"; loc := "s7" +
+ filter loc = "s7"; loc := "h7") +
+filter ipDst = 111.0.0.0;
+(drop + filter loc = "s3"; loc := "s0" + filter loc = "s0"; loc := "h0") +
+filter ipDst = 111.0.26.26;
+(drop + filter loc = "s2"; loc := "s0" + filter loc = "s0"; loc := "s43" +
+ filter loc = "s43"; loc := "s26" + filter loc = "s26"; loc := "h26") +
+filter ipDst = 111.0.28.28;
+(drop + filter loc = "s2"; loc := "s0" + filter loc = "s0"; loc := "s3" +
+ filter loc = "s3"; loc := "s24" + filter loc = "s24"; loc := "s40" +
+ filter loc = "s40"; loc := "s39" + filter loc = "s39"; loc := "s28" +
+ filter loc = "s28"; loc := "h28") +
+filter ipDst = 111.0.29.29;
+(drop + filter loc = "s2"; loc := "s0" + filter loc = "s0"; loc := "s45" +
+ filter loc = "s45"; loc := "s30" + filter loc = "s30"; loc := "s29" +
+ filter loc = "s29"; loc := "h29") +
+filter ipDst = 111.0.32.32;
+(drop + filter loc = "s2"; loc := "s0" + filter loc = "s0"; loc := "s9" +
+ filter loc = "s9"; loc := "s5" + filter loc = "s5"; loc := "s32" +
+ filter loc = "s32"; loc := "h32") +
+filter ipDst = 111.0.30.30;
+(drop + filter loc = "s2"; loc := "s0" + filter loc = "s0"; loc := "s45" +
+ filter loc = "s45"; loc := "s30" + filter loc = "s30"; loc := "h30") +
+filter ipDst = 111.0.31.31;
+(drop + filter loc = "s2"; loc := "s0" + filter loc = "s0"; loc := "s45" +
+ filter loc = "s45"; loc := "s31" + filter loc = "s31"; loc := "h31") +
+filter ipDst = 111.0.36.36;
+(drop + filter loc = "s2"; loc := "s0" + filter loc = "s0"; loc := "s45" +
+ filter loc = "s45"; loc := "s30" + filter loc = "s30"; loc := "s36" +
+ filter loc = "s36"; loc := "h36") +
+filter ipDst = 111.0.37.37;
+(drop + filter loc = "s2"; loc := "s37" + filter loc = "s37"; loc := "h37") +
+filter ipDst = 111.0.34.34;
+(drop + filter loc = "s2"; loc := "s0" + filter loc = "s0"; loc := "s45" +
+ filter loc = "s45"; loc := "s30" + filter loc = "s30"; loc := "s34" +
+ filter loc = "s34"; loc := "h34") +
+filter ipDst = 111.0.35.35;
+(drop + filter loc = "s2"; loc := "s0" + filter loc = "s0"; loc := "s45" +
+ filter loc = "s45"; loc := "s30" + filter loc = "s30"; loc := "s35" +
+ filter loc = "s35"; loc := "h35") +
+filter ipDst = 111.0.38.38;
+(drop + filter loc = "s2"; loc := "s37" + filter loc = "s37"; loc := "s38" +
+ filter loc = "s38"; loc := "h38") +
+filter ipDst = 111.0.39.39;
+(drop + filter loc = "s2"; loc := "s0" + filter loc = "s0"; loc := "s3" +
+ filter loc = "s3"; loc := "s24" + filter loc = "s24"; loc := "s40" +
+ filter loc = "s40"; loc := "s39" + filter loc = "s39"; loc := "h39") +
+filter ipDst = 111.0.6.6;
+(drop + filter loc = "s2"; loc := "s0" + filter loc = "s0"; loc := "s9" +
+ filter loc = "s9"; loc := "s6" + filter loc = "s6"; loc := "h6") +
+filter ipDst = 111.0.1.1;
+(drop + filter loc = "s2"; loc := "s1" + filter loc = "s1"; loc := "h1") +
+filter ipDst = 111.0.3.3;
+(drop + filter loc = "s2"; loc := "s0" + filter loc = "s0"; loc := "s3" +
+ filter loc = "s3"; loc := "h3") +
+filter ipDst = 111.0.9.9;
+(drop + filter loc = "s2"; loc := "s0" + filter loc = "s0"; loc := "s9" +
+ filter loc = "s9"; loc := "h9") +
+filter ipDst = 111.0.8.8;
+(drop + filter loc = "s2"; loc := "s0" + filter loc = "s0"; loc := "s9" +
+ filter loc = "s9"; loc := "s8" + filter loc = "s8"; loc := "h8") +
+filter ipDst = 111.0.13.13;
+(drop + filter loc = "s2"; loc := "s0" + filter loc = "s0"; loc := "s3" +
+ filter loc = "s3"; loc := "s24" + filter loc = "s24"; loc := "s40" +
+ filter loc = "s40"; loc := "s13" + filter loc = "s13"; loc := "h13") +
+filter ipDst = 111.0.42.42;
+(drop + filter loc = "s2"; loc := "s0" + filter loc = "s0"; loc := "s43" +
+ filter loc = "s43"; loc := "s42" + filter loc = "s42"; loc := "h42") +
+filter ipDst = 111.0.24.24;
+(drop + filter loc = "s2"; loc := "s0" + filter loc = "s0"; loc := "s3" +
+ filter loc = "s3"; loc := "s24" + filter loc = "s24"; loc := "h24") +
+filter ipDst = 111.0.4.4;
+(drop + filter loc = "s2"; loc := "s0" + filter loc = "s0"; loc := "s9" +
+ filter loc = "s9"; loc := "s5" + filter loc = "s5"; loc := "s4" +
+ filter loc = "s4"; loc := "h4") +
+filter ipDst = 111.0.40.40;
+(drop + filter loc = "s2"; loc := "s0" + filter loc = "s0"; loc := "s3" +
+ filter loc = "s3"; loc := "s24" + filter loc = "s24"; loc := "s40" +
+ filter loc = "s40"; loc := "h40") +
+filter ipDst = 111.0.41.41;
+(drop + filter loc = "s2"; loc := "s0" + filter loc = "s0"; loc := "s3" +
+ filter loc = "s3"; loc := "s24" + filter loc = "s24"; loc := "s40" +
+ filter loc = "s40"; loc := "s41" + filter loc = "s41"; loc := "h41") +
+filter ipDst = 111.0.5.5;
+(drop + filter loc = "s2"; loc := "s0" + filter loc = "s0"; loc := "s9" +
+ filter loc = "s9"; loc := "s5" + filter loc = "s5"; loc := "h5") +
+filter ipDst = 111.0.43.43;
+(drop + filter loc = "s2"; loc := "s0" + filter loc = "s0"; loc := "s43" +
+ filter loc = "s43"; loc := "h43") +
+filter ipDst = 111.0.44.44;
+(drop + filter loc = "s2"; loc := "s0" + filter loc = "s0"; loc := "s44" +
+ filter loc = "s44"; loc := "h44") +
+filter ipDst = 111.0.45.45;
+(drop + filter loc = "s2"; loc := "s0" + filter loc = "s0"; loc := "s45" +
+ filter loc = "s45"; loc := "h45") +
+filter ipDst = 111.0.46.46;
+(drop + filter loc = "s2"; loc := "s37" + filter loc = "s37"; loc := "s46" +
+ filter loc = "s46"; loc := "h46") +
+filter ipDst = 111.0.20.20;
+(drop + filter loc = "s2"; loc := "s0" + filter loc = "s0"; loc := "s45" +
+ filter loc = "s45"; loc := "s30" + filter loc = "s30"; loc := "s20" +
+ filter loc = "s20"; loc := "h20") +
+filter ipDst = 111.0.7.7;
+(drop + filter loc = "s2"; loc := "s0" + filter loc = "s0"; loc := "s9" +
+ filter loc = "s9"; loc := "s7" + filter loc = "s7"; loc := "h7") +
+filter ipDst = 111.0.0.0;
+(drop + filter loc = "s2"; loc := "s0" + filter loc = "s0"; loc := "h0") +
+filter ipDst = 111.0.26.26;
+(drop + filter loc = "s9"; loc := "s0" + filter loc = "s0"; loc := "s43" +
+ filter loc = "s43"; loc := "s26" + filter loc = "s26"; loc := "h26") +
+filter ipDst = 111.0.28.28;
+(drop + filter loc = "s9"; loc := "s30" + filter loc = "s30"; loc := "s40" +
+ filter loc = "s40"; loc := "s39" + filter loc = "s39"; loc := "s28" +
+ filter loc = "s28"; loc := "h28") +
+filter ipDst = 111.0.29.29;
+(drop + filter loc = "s9"; loc := "s30" + filter loc = "s30"; loc := "s29" +
+ filter loc = "s29"; loc := "h29") +
+filter ipDst = 111.0.32.32;
+(drop + filter loc = "s9"; loc := "s5" + filter loc = "s5"; loc := "s32" +
+ filter loc = "s32"; loc := "h32") +
+filter ipDst = 111.0.30.30;
+(drop + filter loc = "s9"; loc := "s30" + filter loc = "s30"; loc := "h30") +
+filter ipDst = 111.0.31.31;
+(drop + filter loc = "s9"; loc := "s30" + filter loc = "s30"; loc := "s31" +
+ filter loc = "s31"; loc := "h31") +
+filter ipDst = 111.0.36.36;
+(drop + filter loc = "s9"; loc := "s30" + filter loc = "s30"; loc := "s36" +
+ filter loc = "s36"; loc := "h36") +
+filter ipDst = 111.0.37.37;
+(drop + filter loc = "s9"; loc := "s0" + filter loc = "s0"; loc := "s37" +
+ filter loc = "s37"; loc := "h37") +
+filter ipDst = 111.0.34.34;
+(drop + filter loc = "s9"; loc := "s30" + filter loc = "s30"; loc := "s34" +
+ filter loc = "s34"; loc := "h34") +
+filter ipDst = 111.0.35.35;
+(drop + filter loc = "s9"; loc := "s30" + filter loc = "s30"; loc := "s35" +
+ filter loc = "s35"; loc := "h35") +
+filter ipDst = 111.0.38.38;
+(drop + filter loc = "s9"; loc := "s0" + filter loc = "s0"; loc := "s37" +
+ filter loc = "s37"; loc := "s38" + filter loc = "s38"; loc := "h38") +
+filter ipDst = 111.0.39.39;
+(drop + filter loc = "s9"; loc := "s30" + filter loc = "s30"; loc := "s40" +
+ filter loc = "s40"; loc := "s39" + filter loc = "s39"; loc := "h39") +
+filter ipDst = 111.0.6.6;
+(drop + filter loc = "s9"; loc := "s6" + filter loc = "s6"; loc := "h6") +
+filter ipDst = 111.0.1.1;
+(drop + filter loc = "s9"; loc := "s0" + filter loc = "s0"; loc := "s1" +
+ filter loc = "s1"; loc := "h1") +
+filter ipDst = 111.0.3.3;
+(drop + filter loc = "s9"; loc := "s0" + filter loc = "s0"; loc := "s3" +
+ filter loc = "s3"; loc := "h3") +
+filter ipDst = 111.0.2.2;
+(drop + filter loc = "s9"; loc := "s0" + filter loc = "s0"; loc := "s2" +
+ filter loc = "s2"; loc := "h2") +
+filter ipDst = 111.0.8.8;
+(drop + filter loc = "s9"; loc := "s8" + filter loc = "s8"; loc := "h8") +
+filter ipDst = 111.0.13.13;
+(drop + filter loc = "s9"; loc := "s30" + filter loc = "s30"; loc := "s40" +
+ filter loc = "s40"; loc := "s13" + filter loc = "s13"; loc := "h13") +
+filter ipDst = 111.0.42.42;
+(drop + filter loc = "s9"; loc := "s30" + filter loc = "s30"; loc := "s42" +
+ filter loc = "s42"; loc := "h42") +
+filter ipDst = 111.0.24.24;
+(drop + filter loc = "s9"; loc := "s7" + filter loc = "s7"; loc := "s24" +
+ filter loc = "s24"; loc := "h24") +
+filter ipDst = 111.0.4.4;
+(drop + filter loc = "s9"; loc := "s5" + filter loc = "s5"; loc := "s4" +
+ filter loc = "s4"; loc := "h4") +
+filter ipDst = 111.0.40.40;
+(drop + filter loc = "s9"; loc := "s30" + filter loc = "s30"; loc := "s40" +
+ filter loc = "s40"; loc := "h40") +
+filter ipDst = 111.0.41.41;
+(drop + filter loc = "s9"; loc := "s30" + filter loc = "s30"; loc := "s40" +
+ filter loc = "s40"; loc := "s41" + filter loc = "s41"; loc := "h41") +
+filter ipDst = 111.0.5.5;
+(drop + filter loc = "s9"; loc := "s5" + filter loc = "s5"; loc := "h5") +
+filter ipDst = 111.0.43.43;
+(drop + filter loc = "s9"; loc := "s0" + filter loc = "s0"; loc := "s43" +
+ filter loc = "s43"; loc := "h43") +
+filter ipDst = 111.0.44.44;
+(drop + filter loc = "s9"; loc := "s0" + filter loc = "s0"; loc := "s44" +
+ filter loc = "s44"; loc := "h44") +
+filter ipDst = 111.0.45.45;
+(drop + filter loc = "s9"; loc := "s0" + filter loc = "s0"; loc := "s45" +
+ filter loc = "s45"; loc := "h45") +
+filter ipDst = 111.0.46.46;
+(drop + filter loc = "s9"; loc := "s0" + filter loc = "s0"; loc := "s37" +
+ filter loc = "s37"; loc := "s46" + filter loc = "s46"; loc := "h46") +
+filter ipDst = 111.0.20.20;
+(drop + filter loc = "s9"; loc := "s30" + filter loc = "s30"; loc := "s20" +
+ filter loc = "s20"; loc := "h20") +
+filter ipDst = 111.0.7.7;
+(drop + filter loc = "s9"; loc := "s7" + filter loc = "s7"; loc := "h7") +
+filter ipDst = 111.0.0.0;
+(drop + filter loc = "s9"; loc := "s0" + filter loc = "s0"; loc := "h0") +
+filter ipDst = 111.0.26.26;
+(drop + filter loc = "s8"; loc := "s9" + filter loc = "s9"; loc := "s0" +
+ filter loc = "s0"; loc := "s43" + filter loc = "s43"; loc := "s26" +
+ filter loc = "s26"; loc := "h26") +
+filter ipDst = 111.0.28.28;
+(drop + filter loc = "s8"; loc := "s5" + filter loc = "s5"; loc := "s24" +
+ filter loc = "s24"; loc := "s40" + filter loc = "s40"; loc := "s39" +
+ filter loc = "s39"; loc := "s28" + filter loc = "s28"; loc := "h28") +
+filter ipDst = 111.0.29.29;
+(drop + filter loc = "s8"; loc := "s9" + filter loc = "s9"; loc := "s30" +
+ filter loc = "s30"; loc := "s29" + filter loc = "s29"; loc := "h29") +
+filter ipDst = 111.0.32.32;
+(drop + filter loc = "s8"; loc := "s5" + filter loc = "s5"; loc := "s32" +
+ filter loc = "s32"; loc := "h32") +
+filter ipDst = 111.0.30.30;
+(drop + filter loc = "s8"; loc := "s9" + filter loc = "s9"; loc := "s30" +
+ filter loc = "s30"; loc := "h30") +
+filter ipDst = 111.0.31.31;
+(drop + filter loc = "s8"; loc := "s5" + filter loc = "s5"; loc := "s24" +
+ filter loc = "s24"; loc := "s31" + filter loc = "s31"; loc := "h31") +
+filter ipDst = 111.0.36.36;
+(drop + filter loc = "s8"; loc := "s9" + filter loc = "s9"; loc := "s30" +
+ filter loc = "s30"; loc := "s36" + filter loc = "s36"; loc := "h36") +
+filter ipDst = 111.0.37.37;
+(drop + filter loc = "s8"; loc := "s9" + filter loc = "s9"; loc := "s0" +
+ filter loc = "s0"; loc := "s37" + filter loc = "s37"; loc := "h37") +
+filter ipDst = 111.0.34.34;
+(drop + filter loc = "s8"; loc := "s9" + filter loc = "s9"; loc := "s30" +
+ filter loc = "s30"; loc := "s34" + filter loc = "s34"; loc := "h34") +
+filter ipDst = 111.0.35.35;
+(drop + filter loc = "s8"; loc := "s9" + filter loc = "s9"; loc := "s30" +
+ filter loc = "s30"; loc := "s35" + filter loc = "s35"; loc := "h35") +
+filter ipDst = 111.0.38.38;
+(drop + filter loc = "s8"; loc := "s9" + filter loc = "s9"; loc := "s0" +
+ filter loc = "s0"; loc := "s37" + filter loc = "s37"; loc := "s38" +
+ filter loc = "s38"; loc := "h38") +
+filter ipDst = 111.0.39.39;
+(drop + filter loc = "s8"; loc := "s5" + filter loc = "s5"; loc := "s24" +
+ filter loc = "s24"; loc := "s40" + filter loc = "s40"; loc := "s39" +
+ filter loc = "s39"; loc := "h39") +
+filter ipDst = 111.0.6.6;
+(drop + filter loc = "s8"; loc := "s9" + filter loc = "s9"; loc := "s6" +
+ filter loc = "s6"; loc := "h6") +
+filter ipDst = 111.0.1.1;
+(drop + filter loc = "s8"; loc := "s9" + filter loc = "s9"; loc := "s0" +
+ filter loc = "s0"; loc := "s1" + filter loc = "s1"; loc := "h1") +
+filter ipDst = 111.0.3.3;
+(drop + filter loc = "s8"; loc := "s9" + filter loc = "s9"; loc := "s0" +
+ filter loc = "s0"; loc := "s3" + filter loc = "s3"; loc := "h3") +
+filter ipDst = 111.0.2.2;
+(drop + filter loc = "s8"; loc := "s9" + filter loc = "s9"; loc := "s0" +
+ filter loc = "s0"; loc := "s2" + filter loc = "s2"; loc := "h2") +
+filter ipDst = 111.0.9.9;
+(drop + filter loc = "s8"; loc := "s9" + filter loc = "s9"; loc := "h9") +
+filter ipDst = 111.0.13.13;
+(drop + filter loc = "s8"; loc := "s5" + filter loc = "s5"; loc := "s24" +
+ filter loc = "s24"; loc := "s40" + filter loc = "s40"; loc := "s13" +
+ filter loc = "s13"; loc := "h13") +
+filter ipDst = 111.0.42.42;
+(drop + filter loc = "s8"; loc := "s9" + filter loc = "s9"; loc := "s30" +
+ filter loc = "s30"; loc := "s42" + filter loc = "s42"; loc := "h42") +
+filter ipDst = 111.0.24.24;
+(drop + filter loc = "s8"; loc := "s5" + filter loc = "s5"; loc := "s24" +
+ filter loc = "s24"; loc := "h24") +
+filter ipDst = 111.0.4.4;
+(drop + filter loc = "s8"; loc := "s5" + filter loc = "s5"; loc := "s4" +
+ filter loc = "s4"; loc := "h4") +
+filter ipDst = 111.0.40.40;
+(drop + filter loc = "s8"; loc := "s5" + filter loc = "s5"; loc := "s24" +
+ filter loc = "s24"; loc := "s40" + filter loc = "s40"; loc := "h40") +
+filter ipDst = 111.0.41.41;
+(drop + filter loc = "s8"; loc := "s5" + filter loc = "s5"; loc := "s24" +
+ filter loc = "s24"; loc := "s40" + filter loc = "s40"; loc := "s41" +
+ filter loc = "s41"; loc := "h41") +
+filter ipDst = 111.0.5.5;
+(drop + filter loc = "s8"; loc := "s5" + filter loc = "s5"; loc := "h5") +
+filter ipDst = 111.0.43.43;
+(drop + filter loc = "s8"; loc := "s9" + filter loc = "s9"; loc := "s0" +
+ filter loc = "s0"; loc := "s43" + filter loc = "s43"; loc := "h43") +
+filter ipDst = 111.0.44.44;
+(drop + filter loc = "s8"; loc := "s9" + filter loc = "s9"; loc := "s0" +
+ filter loc = "s0"; loc := "s44" + filter loc = "s44"; loc := "h44") +
+filter ipDst = 111.0.45.45;
+(drop + filter loc = "s8"; loc := "s9" + filter loc = "s9"; loc := "s0" +
+ filter loc = "s0"; loc := "s45" + filter loc = "s45"; loc := "h45") +
+filter ipDst = 111.0.46.46;
+(drop + filter loc = "s8"; loc := "s9" + filter loc = "s9"; loc := "s0" +
+ filter loc = "s0"; loc := "s37" + filter loc = "s37"; loc := "s46" +
+ filter loc = "s46"; loc := "h46") +
+filter ipDst = 111.0.20.20;
+(drop + filter loc = "s8"; loc := "s9" + filter loc = "s9"; loc := "s30" +
+ filter loc = "s30"; loc := "s20" + filter loc = "s20"; loc := "h20") +
+filter ipDst = 111.0.7.7;
+(drop + filter loc = "s8"; loc := "s9" + filter loc = "s9"; loc := "s7" +
+ filter loc = "s7"; loc := "h7") +
+filter ipDst = 111.0.0.0;
+(drop + filter loc = "s8"; loc := "s9" + filter loc = "s9"; loc := "s0" +
+ filter loc = "s0"; loc := "h0") +
+filter ipDst = 111.0.26.26;
+(drop + filter loc = "s13"; loc := "s40" + filter loc = "s40"; loc := "s30" +
+ filter loc = "s30"; loc := "s43" + filter loc = "s43"; loc := "s26" +
+ filter loc = "s26"; loc := "h26") +
+filter ipDst = 111.0.28.28;
+(drop + filter loc = "s13"; loc := "s40" + filter loc = "s40"; loc := "s39" +
+ filter loc = "s39"; loc := "s28" + filter loc = "s28"; loc := "h28") +
+filter ipDst = 111.0.29.29;
+(drop + filter loc = "s13"; loc := "s40" + filter loc = "s40"; loc := "s29" +
+ filter loc = "s29"; loc := "h29") +
+filter ipDst = 111.0.32.32;
+(drop + filter loc = "s13"; loc := "s40" + filter loc = "s40"; loc := "s24" +
+ filter loc = "s24"; loc := "s5" + filter loc = "s5"; loc := "s32" +
+ filter loc = "s32"; loc := "h32") +
+filter ipDst = 111.0.30.30;
+(drop + filter loc = "s13"; loc := "s40" + filter loc = "s40"; loc := "s30" +
+ filter loc = "s30"; loc := "h30") +
+filter ipDst = 111.0.31.31;
+(drop + filter loc = "s13"; loc := "s40" + filter loc = "s40"; loc := "s31" +
+ filter loc = "s31"; loc := "h31") +
+filter ipDst = 111.0.36.36;
+(drop + filter loc = "s13"; loc := "s40" + filter loc = "s40"; loc := "s30" +
+ filter loc = "s30"; loc := "s36" + filter loc = "s36"; loc := "h36") +
+filter ipDst = 111.0.37.37;
+(drop + filter loc = "s13"; loc := "s40" + filter loc = "s40"; loc := "s30" +
+ filter loc = "s30"; loc := "s44" + filter loc = "s44"; loc := "s37" +
+ filter loc = "s37"; loc := "h37") +
+filter ipDst = 111.0.34.34;
+(drop + filter loc = "s13"; loc := "s40" + filter loc = "s40"; loc := "s30" +
+ filter loc = "s30"; loc := "s34" + filter loc = "s34"; loc := "h34") +
+filter ipDst = 111.0.35.35;
+(drop + filter loc = "s13"; loc := "s40" + filter loc = "s40"; loc := "s30" +
+ filter loc = "s30"; loc := "s35" + filter loc = "s35"; loc := "h35") +
+filter ipDst = 111.0.38.38;
+(drop + filter loc = "s13"; loc := "s40" + filter loc = "s40"; loc := "s30" +
+ filter loc = "s30"; loc := "s44" + filter loc = "s44"; loc := "s38" +
+ filter loc = "s38"; loc := "h38") +
+filter ipDst = 111.0.39.39;
+(drop + filter loc = "s13"; loc := "s40" + filter loc = "s40"; loc := "s39" +
+ filter loc = "s39"; loc := "h39") +
+filter ipDst = 111.0.6.6;
+(drop + filter loc = "s13"; loc := "s40" + filter loc = "s40"; loc := "s24" +
+ filter loc = "s24"; loc := "s6" + filter loc = "s6"; loc := "h6") +
+filter ipDst = 111.0.1.1;
+(drop + filter loc = "s13"; loc := "s40" + filter loc = "s40"; loc := "s24" +
+ filter loc = "s24"; loc := "s3" + filter loc = "s3"; loc := "s0" +
+ filter loc = "s0"; loc := "s1" + filter loc = "s1"; loc := "h1") +
+filter ipDst = 111.0.3.3;
+(drop + filter loc = "s13"; loc := "s40" + filter loc = "s40"; loc := "s24" +
+ filter loc = "s24"; loc := "s3" + filter loc = "s3"; loc := "h3") +
+filter ipDst = 111.0.2.2;
+(drop + filter loc = "s13"; loc := "s40" + filter loc = "s40"; loc := "s24" +
+ filter loc = "s24"; loc := "s3" + filter loc = "s3"; loc := "s0" +
+ filter loc = "s0"; loc := "s2" + filter loc = "s2"; loc := "h2") +
+filter ipDst = 111.0.9.9;
+(drop + filter loc = "s13"; loc := "s40" + filter loc = "s40"; loc := "s30" +
+ filter loc = "s30"; loc := "s9" + filter loc = "s9"; loc := "h9") +
+filter ipDst = 111.0.8.8;
+(drop + filter loc = "s13"; loc := "s40" + filter loc = "s40"; loc := "s24" +
+ filter loc = "s24"; loc := "s5" + filter loc = "s5"; loc := "s8" +
+ filter loc = "s8"; loc := "h8") +
+filter ipDst = 111.0.42.42;
+(drop + filter loc = "s13"; loc := "s40" + filter loc = "s40"; loc := "s30" +
+ filter loc = "s30"; loc := "s42" + filter loc = "s42"; loc := "h42") +
+filter ipDst = 111.0.24.24;
+(drop + filter loc = "s13"; loc := "s40" + filter loc = "s40"; loc := "s24" +
+ filter loc = "s24"; loc := "h24") +
+filter ipDst = 111.0.4.4;
+(drop + filter loc = "s13"; loc := "s40" + filter loc = "s40"; loc := "s24" +
+ filter loc = "s24"; loc := "s5" + filter loc = "s5"; loc := "s4" +
+ filter loc = "s4"; loc := "h4") +
+filter ipDst = 111.0.40.40;
+(drop + filter loc = "s13"; loc := "s40" + filter loc = "s40"; loc := "h40") +
+filter ipDst = 111.0.41.41;
+(drop + filter loc = "s13"; loc := "s40" + filter loc = "s40"; loc := "s41" +
+ filter loc = "s41"; loc := "h41") +
+filter ipDst = 111.0.5.5;
+(drop + filter loc = "s13"; loc := "s40" + filter loc = "s40"; loc := "s24" +
+ filter loc = "s24"; loc := "s5" + filter loc = "s5"; loc := "h5") +
+filter ipDst = 111.0.43.43;
+(drop + filter loc = "s13"; loc := "s40" + filter loc = "s40"; loc := "s30" +
+ filter loc = "s30"; loc := "s43" + filter loc = "s43"; loc := "h43") +
+filter ipDst = 111.0.44.44;
+(drop + filter loc = "s13"; loc := "s40" + filter loc = "s40"; loc := "s30" +
+ filter loc = "s30"; loc := "s44" + filter loc = "s44"; loc := "h44") +
+filter ipDst = 111.0.45.45;
+(drop + filter loc = "s13"; loc := "s40" + filter loc = "s40"; loc := "s30" +
+ filter loc = "s30"; loc := "s45" + filter loc = "s45"; loc := "h45") +
+filter ipDst = 111.0.46.46;
+(drop + filter loc = "s13"; loc := "s40" + filter loc = "s40"; loc := "s24" +
+ filter loc = "s24"; loc := "s3" + filter loc = "s3"; loc := "s46" +
+ filter loc = "s46"; loc := "h46") +
+filter ipDst = 111.0.20.20;
+(drop + filter loc = "s13"; loc := "s40" + filter loc = "s40"; loc := "s30" +
+ filter loc = "s30"; loc := "s20" + filter loc = "s20"; loc := "h20") +
+filter ipDst = 111.0.7.7;
+(drop + filter loc = "s13"; loc := "s40" + filter loc = "s40"; loc := "s24" +
+ filter loc = "s24"; loc := "s7" + filter loc = "s7"; loc := "h7") +
+filter ipDst = 111.0.0.0;
+(drop + filter loc = "s13"; loc := "s40" + filter loc = "s40"; loc := "s24" +
+ filter loc = "s24"; loc := "s3" + filter loc = "s3"; loc := "s0" +
+ filter loc = "s0"; loc := "h0") +
+filter ipDst = 111.0.26.26;
+(drop + filter loc = "s42"; loc := "s43" + filter loc = "s43"; loc := "s26" +
+ filter loc = "s26"; loc := "h26") +
+filter ipDst = 111.0.28.28;
+(drop + filter loc = "s42"; loc := "s30" + filter loc = "s30"; loc := "s40" +
+ filter loc = "s40"; loc := "s39" + filter loc = "s39"; loc := "s28" +
+ filter loc = "s28"; loc := "h28") +
+filter ipDst = 111.0.29.29;
+(drop + filter loc = "s42"; loc := "s30" + filter loc = "s30"; loc := "s29" +
+ filter loc = "s29"; loc := "h29") +
+filter ipDst = 111.0.32.32;
+(drop + filter loc = "s42"; loc := "s30" + filter loc = "s30"; loc := "s9" +
+ filter loc = "s9"; loc := "s5" + filter loc = "s5"; loc := "s32" +
+ filter loc = "s32"; loc := "h32") +
+filter ipDst = 111.0.30.30;
+(drop + filter loc = "s42"; loc := "s30" + filter loc = "s30"; loc := "h30") +
+filter ipDst = 111.0.31.31;
+(drop + filter loc = "s42"; loc := "s43" + filter loc = "s43"; loc := "s31" +
+ filter loc = "s31"; loc := "h31") +
+filter ipDst = 111.0.36.36;
+(drop + filter loc = "s42"; loc := "s30" + filter loc = "s30"; loc := "s36" +
+ filter loc = "s36"; loc := "h36") +
+filter ipDst = 111.0.37.37;
+(drop + filter loc = "s42"; loc := "s43" + filter loc = "s43"; loc := "s37" +
+ filter loc = "s37"; loc := "h37") +
+filter ipDst = 111.0.34.34;
+(drop + filter loc = "s42"; loc := "s30" + filter loc = "s30"; loc := "s34" +
+ filter loc = "s34"; loc := "h34") +
+filter ipDst = 111.0.35.35;
+(drop + filter loc = "s42"; loc := "s30" + filter loc = "s30"; loc := "s35" +
+ filter loc = "s35"; loc := "h35") +
+filter ipDst = 111.0.38.38;
+(drop + filter loc = "s42"; loc := "s43" + filter loc = "s43"; loc := "s37" +
+ filter loc = "s37"; loc := "s38" + filter loc = "s38"; loc := "h38") +
+filter ipDst = 111.0.39.39;
+(drop + filter loc = "s42"; loc := "s30" + filter loc = "s30"; loc := "s40" +
+ filter loc = "s40"; loc := "s39" + filter loc = "s39"; loc := "h39") +
+filter ipDst = 111.0.6.6;
+(drop + filter loc = "s42"; loc := "s30" + filter loc = "s30"; loc := "s9" +
+ filter loc = "s9"; loc := "s6" + filter loc = "s6"; loc := "h6") +
+filter ipDst = 111.0.1.1;
+(drop + filter loc = "s42"; loc := "s43" + filter loc = "s43"; loc := "s0" +
+ filter loc = "s0"; loc := "s1" + filter loc = "s1"; loc := "h1") +
+filter ipDst = 111.0.3.3;
+(drop + filter loc = "s42"; loc := "s43" + filter loc = "s43"; loc := "s0" +
+ filter loc = "s0"; loc := "s3" + filter loc = "s3"; loc := "h3") +
+filter ipDst = 111.0.2.2;
+(drop + filter loc = "s42"; loc := "s43" + filter loc = "s43"; loc := "s0" +
+ filter loc = "s0"; loc := "s2" + filter loc = "s2"; loc := "h2") +
+filter ipDst = 111.0.9.9;
+(drop + filter loc = "s42"; loc := "s30" + filter loc = "s30"; loc := "s9" +
+ filter loc = "s9"; loc := "h9") +
+filter ipDst = 111.0.8.8;
+(drop + filter loc = "s42"; loc := "s30" + filter loc = "s30"; loc := "s9" +
+ filter loc = "s9"; loc := "s8" + filter loc = "s8"; loc := "h8") +
+filter ipDst = 111.0.13.13;
+(drop + filter loc = "s42"; loc := "s30" + filter loc = "s30"; loc := "s40" +
+ filter loc = "s40"; loc := "s13" + filter loc = "s13"; loc := "h13") +
+filter ipDst = 111.0.24.24;
+(drop + filter loc = "s42"; loc := "s30" + filter loc = "s30"; loc := "s40" +
+ filter loc = "s40"; loc := "s24" + filter loc = "s24"; loc := "h24") +
+filter ipDst = 111.0.4.4;
+(drop + filter loc = "s42"; loc := "s30" + filter loc = "s30"; loc := "s9" +
+ filter loc = "s9"; loc := "s5" + filter loc = "s5"; loc := "s4" +
+ filter loc = "s4"; loc := "h4") +
+filter ipDst = 111.0.40.40;
+(drop + filter loc = "s42"; loc := "s30" + filter loc = "s30"; loc := "s40" +
+ filter loc = "s40"; loc := "h40") +
+filter ipDst = 111.0.41.41;
+(drop + filter loc = "s42"; loc := "s30" + filter loc = "s30"; loc := "s40" +
+ filter loc = "s40"; loc := "s41" + filter loc = "s41"; loc := "h41") +
+filter ipDst = 111.0.5.5;
+(drop + filter loc = "s42"; loc := "s30" + filter loc = "s30"; loc := "s9" +
+ filter loc = "s9"; loc := "s5" + filter loc = "s5"; loc := "h5") +
+filter ipDst = 111.0.43.43;
+(drop + filter loc = "s42"; loc := "s43" + filter loc = "s43"; loc := "h43") +
+filter ipDst = 111.0.44.44;
+(drop + filter loc = "s42"; loc := "s43" + filter loc = "s43"; loc := "s44" +
+ filter loc = "s44"; loc := "h44") +
+filter ipDst = 111.0.45.45;
+(drop + filter loc = "s42"; loc := "s43" + filter loc = "s43"; loc := "s45" +
+ filter loc = "s45"; loc := "h45") +
+filter ipDst = 111.0.46.46;
+(drop + filter loc = "s42"; loc := "s43" + filter loc = "s43"; loc := "s46" +
+ filter loc = "s46"; loc := "h46") +
+filter ipDst = 111.0.20.20;
+(drop + filter loc = "s42"; loc := "s30" + filter loc = "s30"; loc := "s20" +
+ filter loc = "s20"; loc := "h20") +
+filter ipDst = 111.0.7.7;
+(drop + filter loc = "s42"; loc := "s30" + filter loc = "s30"; loc := "s9" +
+ filter loc = "s9"; loc := "s7" + filter loc = "s7"; loc := "h7") +
+filter ipDst = 111.0.0.0;
+(drop + filter loc = "s42"; loc := "s43" + filter loc = "s43"; loc := "s0" +
+ filter loc = "s0"; loc := "h0") +
+filter ipDst = 111.0.26.26;
+(drop + filter loc = "s24"; loc := "s31" + filter loc = "s31"; loc := "s43" +
+ filter loc = "s43"; loc := "s26" + filter loc = "s26"; loc := "h26") +
+filter ipDst = 111.0.28.28;
+(drop + filter loc = "s24"; loc := "s40" + filter loc = "s40"; loc := "s39" +
+ filter loc = "s39"; loc := "s28" + filter loc = "s28"; loc := "h28") +
+filter ipDst = 111.0.29.29;
+(drop + filter loc = "s24"; loc := "s40" + filter loc = "s40"; loc := "s29" +
+ filter loc = "s29"; loc := "h29") +
+filter ipDst = 111.0.32.32;
+(drop + filter loc = "s24"; loc := "s5" + filter loc = "s5"; loc := "s32" +
+ filter loc = "s32"; loc := "h32") +
+filter ipDst = 111.0.30.30;
+(drop + filter loc = "s24"; loc := "s40" + filter loc = "s40"; loc := "s30" +
+ filter loc = "s30"; loc := "h30") +
+filter ipDst = 111.0.31.31;
+(drop + filter loc = "s24"; loc := "s31" + filter loc = "s31"; loc := "h31") +
+filter ipDst = 111.0.36.36;
+(drop + filter loc = "s24"; loc := "s40" + filter loc = "s40"; loc := "s30" +
+ filter loc = "s30"; loc := "s36" + filter loc = "s36"; loc := "h36") +
+filter ipDst = 111.0.37.37;
+(drop + filter loc = "s24"; loc := "s3" + filter loc = "s3"; loc := "s0" +
+ filter loc = "s0"; loc := "s37" + filter loc = "s37"; loc := "h37") +
+filter ipDst = 111.0.34.34;
+(drop + filter loc = "s24"; loc := "s40" + filter loc = "s40"; loc := "s30" +
+ filter loc = "s30"; loc := "s34" + filter loc = "s34"; loc := "h34") +
+filter ipDst = 111.0.35.35;
+(drop + filter loc = "s24"; loc := "s40" + filter loc = "s40"; loc := "s30" +
+ filter loc = "s30"; loc := "s35" + filter loc = "s35"; loc := "h35") +
+filter ipDst = 111.0.38.38;
+(drop + filter loc = "s24"; loc := "s31" + filter loc = "s31"; loc := "s44" +
+ filter loc = "s44"; loc := "s38" + filter loc = "s38"; loc := "h38") +
+filter ipDst = 111.0.39.39;
+(drop + filter loc = "s24"; loc := "s40" + filter loc = "s40"; loc := "s39" +
+ filter loc = "s39"; loc := "h39") +
+filter ipDst = 111.0.6.6;
+(drop + filter loc = "s24"; loc := "s6" + filter loc = "s6"; loc := "h6") +
+filter ipDst = 111.0.1.1;
+(drop + filter loc = "s24"; loc := "s3" + filter loc = "s3"; loc := "s0" +
+ filter loc = "s0"; loc := "s1" + filter loc = "s1"; loc := "h1") +
+filter ipDst = 111.0.3.3;
+(drop + filter loc = "s24"; loc := "s3" + filter loc = "s3"; loc := "h3") +
+filter ipDst = 111.0.2.2;
+(drop + filter loc = "s24"; loc := "s3" + filter loc = "s3"; loc := "s0" +
+ filter loc = "s0"; loc := "s2" + filter loc = "s2"; loc := "h2") +
+filter ipDst = 111.0.9.9;
+(drop + filter loc = "s24"; loc := "s7" + filter loc = "s7"; loc := "s9" +
+ filter loc = "s9"; loc := "h9") +
+filter ipDst = 111.0.8.8;
+(drop + filter loc = "s24"; loc := "s5" + filter loc = "s5"; loc := "s8" +
+ filter loc = "s8"; loc := "h8") +
+filter ipDst = 111.0.13.13;
+(drop + filter loc = "s24"; loc := "s40" + filter loc = "s40"; loc := "s13" +
+ filter loc = "s13"; loc := "h13") +
+filter ipDst = 111.0.42.42;
+(drop + filter loc = "s24"; loc := "s40" + filter loc = "s40"; loc := "s30" +
+ filter loc = "s30"; loc := "s42" + filter loc = "s42"; loc := "h42") +
+filter ipDst = 111.0.4.4;
+(drop + filter loc = "s24"; loc := "s5" + filter loc = "s5"; loc := "s4" +
+ filter loc = "s4"; loc := "h4") +
+filter ipDst = 111.0.40.40;
+(drop + filter loc = "s24"; loc := "s40" + filter loc = "s40"; loc := "h40") +
+filter ipDst = 111.0.41.41;
+(drop + filter loc = "s24"; loc := "s40" + filter loc = "s40"; loc := "s41" +
+ filter loc = "s41"; loc := "h41") +
+filter ipDst = 111.0.5.5;
+(drop + filter loc = "s24"; loc := "s5" + filter loc = "s5"; loc := "h5") +
+filter ipDst = 111.0.43.43;
+(drop + filter loc = "s24"; loc := "s31" + filter loc = "s31"; loc := "s43" +
+ filter loc = "s43"; loc := "h43") +
+filter ipDst = 111.0.44.44;
+(drop + filter loc = "s24"; loc := "s31" + filter loc = "s31"; loc := "s44" +
+ filter loc = "s44"; loc := "h44") +
+filter ipDst = 111.0.45.45;
+(drop + filter loc = "s24"; loc := "s3" + filter loc = "s3"; loc := "s45" +
+ filter loc = "s45"; loc := "h45") +
+filter ipDst = 111.0.46.46;
+(drop + filter loc = "s24"; loc := "s3" + filter loc = "s3"; loc := "s46" +
+ filter loc = "s46"; loc := "h46") +
+filter ipDst = 111.0.20.20;
+(drop + filter loc = "s24"; loc := "s31" + filter loc = "s31"; loc := "s20" +
+ filter loc = "s20"; loc := "h20") +
+filter ipDst = 111.0.7.7;
+(drop + filter loc = "s24"; loc := "s7" + filter loc = "s7"; loc := "h7") +
+filter ipDst = 111.0.0.0;
+(drop + filter loc = "s24"; loc := "s3" + filter loc = "s3"; loc := "s0" +
+ filter loc = "s0"; loc := "h0") +
+filter ipDst = 111.0.26.26;
+(drop + filter loc = "s4"; loc := "s5" + filter loc = "s5"; loc := "s9" +
+ filter loc = "s9"; loc := "s0" + filter loc = "s0"; loc := "s43" +
+ filter loc = "s43"; loc := "s26" + filter loc = "s26"; loc := "h26") +
+filter ipDst = 111.0.28.28;
+(drop + filter loc = "s4"; loc := "s5" + filter loc = "s5"; loc := "s24" +
+ filter loc = "s24"; loc := "s40" + filter loc = "s40"; loc := "s39" +
+ filter loc = "s39"; loc := "s28" + filter loc = "s28"; loc := "h28") +
+filter ipDst = 111.0.29.29;
+(drop + filter loc = "s4"; loc := "s5" + filter loc = "s5"; loc := "s24" +
+ filter loc = "s24"; loc := "s40" + filter loc = "s40"; loc := "s29" +
+ filter loc = "s29"; loc := "h29") +
+filter ipDst = 111.0.32.32;
+(drop + filter loc = "s4"; loc := "s5" + filter loc = "s5"; loc := "s32" +
+ filter loc = "s32"; loc := "h32") +
+filter ipDst = 111.0.30.30;
+(drop + filter loc = "s4"; loc := "s5" + filter loc = "s5"; loc := "s9" +
+ filter loc = "s9"; loc := "s30" + filter loc = "s30"; loc := "h30") +
+filter ipDst = 111.0.31.31;
+(drop + filter loc = "s4"; loc := "s5" + filter loc = "s5"; loc := "s24" +
+ filter loc = "s24"; loc := "s31" + filter loc = "s31"; loc := "h31") +
+filter ipDst = 111.0.36.36;
+(drop + filter loc = "s4"; loc := "s5" + filter loc = "s5"; loc := "s9" +
+ filter loc = "s9"; loc := "s30" + filter loc = "s30"; loc := "s36" +
+ filter loc = "s36"; loc := "h36") +
+filter ipDst = 111.0.37.37;
+(drop + filter loc = "s4"; loc := "s5" + filter loc = "s5"; loc := "s9" +
+ filter loc = "s9"; loc := "s0" + filter loc = "s0"; loc := "s37" +
+ filter loc = "s37"; loc := "h37") +
+filter ipDst = 111.0.34.34;
+(drop + filter loc = "s4"; loc := "s5" + filter loc = "s5"; loc := "s9" +
+ filter loc = "s9"; loc := "s30" + filter loc = "s30"; loc := "s34" +
+ filter loc = "s34"; loc := "h34") +
+filter ipDst = 111.0.35.35;
+(drop + filter loc = "s4"; loc := "s5" + filter loc = "s5"; loc := "s9" +
+ filter loc = "s9"; loc := "s30" + filter loc = "s30"; loc := "s35" +
+ filter loc = "s35"; loc := "h35") +
+filter ipDst = 111.0.38.38;
+(drop + filter loc = "s4"; loc := "s5" + filter loc = "s5"; loc := "s9" +
+ filter loc = "s9"; loc := "s0" + filter loc = "s0"; loc := "s37" +
+ filter loc = "s37"; loc := "s38" + filter loc = "s38"; loc := "h38") +
+filter ipDst = 111.0.39.39;
+(drop + filter loc = "s4"; loc := "s5" + filter loc = "s5"; loc := "s24" +
+ filter loc = "s24"; loc := "s40" + filter loc = "s40"; loc := "s39" +
+ filter loc = "s39"; loc := "h39") +
+filter ipDst = 111.0.6.6;
+(drop + filter loc = "s4"; loc := "s6" + filter loc = "s6"; loc := "h6") +
+filter ipDst = 111.0.1.1;
+(drop + filter loc = "s4"; loc := "s5" + filter loc = "s5"; loc := "s9" +
+ filter loc = "s9"; loc := "s0" + filter loc = "s0"; loc := "s1" +
+ filter loc = "s1"; loc := "h1") +
+filter ipDst = 111.0.3.3;
+(drop + filter loc = "s4"; loc := "s5" + filter loc = "s5"; loc := "s24" +
+ filter loc = "s24"; loc := "s3" + filter loc = "s3"; loc := "h3") +
+filter ipDst = 111.0.2.2;
+(drop + filter loc = "s4"; loc := "s5" + filter loc = "s5"; loc := "s9" +
+ filter loc = "s9"; loc := "s0" + filter loc = "s0"; loc := "s2" +
+ filter loc = "s2"; loc := "h2") +
+filter ipDst = 111.0.9.9;
+(drop + filter loc = "s4"; loc := "s5" + filter loc = "s5"; loc := "s9" +
+ filter loc = "s9"; loc := "h9") +
+filter ipDst = 111.0.8.8;
+(drop + filter loc = "s4"; loc := "s5" + filter loc = "s5"; loc := "s8" +
+ filter loc = "s8"; loc := "h8") +
+filter ipDst = 111.0.13.13;
+(drop + filter loc = "s4"; loc := "s5" + filter loc = "s5"; loc := "s24" +
+ filter loc = "s24"; loc := "s40" + filter loc = "s40"; loc := "s13" +
+ filter loc = "s13"; loc := "h13") +
+filter ipDst = 111.0.42.42;
+(drop + filter loc = "s4"; loc := "s5" + filter loc = "s5"; loc := "s9" +
+ filter loc = "s9"; loc := "s30" + filter loc = "s30"; loc := "s42" +
+ filter loc = "s42"; loc := "h42") +
+filter ipDst = 111.0.24.24;
+(drop + filter loc = "s4"; loc := "s5" + filter loc = "s5"; loc := "s24" +
+ filter loc = "s24"; loc := "h24") +
+filter ipDst = 111.0.40.40;
+(drop + filter loc = "s4"; loc := "s5" + filter loc = "s5"; loc := "s24" +
+ filter loc = "s24"; loc := "s40" + filter loc = "s40"; loc := "h40") +
+filter ipDst = 111.0.41.41;
+(drop + filter loc = "s4"; loc := "s5" + filter loc = "s5"; loc := "s24" +
+ filter loc = "s24"; loc := "s40" + filter loc = "s40"; loc := "s41" +
+ filter loc = "s41"; loc := "h41") +
+filter ipDst = 111.0.5.5;
+(drop + filter loc = "s4"; loc := "s5" + filter loc = "s5"; loc := "h5") +
+filter ipDst = 111.0.43.43;
+(drop + filter loc = "s4"; loc := "s5" + filter loc = "s5"; loc := "s9" +
+ filter loc = "s9"; loc := "s0" + filter loc = "s0"; loc := "s43" +
+ filter loc = "s43"; loc := "h43") +
+filter ipDst = 111.0.44.44;
+(drop + filter loc = "s4"; loc := "s5" + filter loc = "s5"; loc := "s9" +
+ filter loc = "s9"; loc := "s0" + filter loc = "s0"; loc := "s44" +
+ filter loc = "s44"; loc := "h44") +
+filter ipDst = 111.0.45.45;
+(drop + filter loc = "s4"; loc := "s5" + filter loc = "s5"; loc := "s9" +
+ filter loc = "s9"; loc := "s0" + filter loc = "s0"; loc := "s45" +
+ filter loc = "s45"; loc := "h45") +
+filter ipDst = 111.0.46.46;
+(drop + filter loc = "s4"; loc := "s5" + filter loc = "s5"; loc := "s24" +
+ filter loc = "s24"; loc := "s3" + filter loc = "s3"; loc := "s46" +
+ filter loc = "s46"; loc := "h46") +
+filter ipDst = 111.0.20.20;
+(drop + filter loc = "s4"; loc := "s5" + filter loc = "s5"; loc := "s9" +
+ filter loc = "s9"; loc := "s30" + filter loc = "s30"; loc := "s20" +
+ filter loc = "s20"; loc := "h20") +
+filter ipDst = 111.0.7.7;
+(drop + filter loc = "s4"; loc := "s5" + filter loc = "s5"; loc := "s9" +
+ filter loc = "s9"; loc := "s7" + filter loc = "s7"; loc := "h7") +
+filter ipDst = 111.0.0.0;
+(drop + filter loc = "s4"; loc := "s5" + filter loc = "s5"; loc := "s9" +
+ filter loc = "s9"; loc := "s0" + filter loc = "s0"; loc := "h0") +
+filter ipDst = 111.0.26.26;
+(drop + filter loc = "s40"; loc := "s30" + filter loc = "s30"; loc := "s43" +
+ filter loc = "s43"; loc := "s26" + filter loc = "s26"; loc := "h26") +
+filter ipDst = 111.0.28.28;
+(drop + filter loc = "s40"; loc := "s39" + filter loc = "s39"; loc := "s28" +
+ filter loc = "s28"; loc := "h28") +
+filter ipDst = 111.0.29.29;
+(drop + filter loc = "s40"; loc := "s29" + filter loc = "s29"; loc := "h29") +
+filter ipDst = 111.0.32.32;
+(drop + filter loc = "s40"; loc := "s24" + filter loc = "s24"; loc := "s5" +
+ filter loc = "s5"; loc := "s32" + filter loc = "s32"; loc := "h32") +
+filter ipDst = 111.0.30.30;
+(drop + filter loc = "s40"; loc := "s30" + filter loc = "s30"; loc := "h30") +
+filter ipDst = 111.0.31.31;
+(drop + filter loc = "s40"; loc := "s31" + filter loc = "s31"; loc := "h31") +
+filter ipDst = 111.0.36.36;
+(drop + filter loc = "s40"; loc := "s30" + filter loc = "s30"; loc := "s36" +
+ filter loc = "s36"; loc := "h36") +
+filter ipDst = 111.0.37.37;
+(drop + filter loc = "s40"; loc := "s30" + filter loc = "s30"; loc := "s44" +
+ filter loc = "s44"; loc := "s37" + filter loc = "s37"; loc := "h37") +
+filter ipDst = 111.0.34.34;
+(drop + filter loc = "s40"; loc := "s30" + filter loc = "s30"; loc := "s34" +
+ filter loc = "s34"; loc := "h34") +
+filter ipDst = 111.0.35.35;
+(drop + filter loc = "s40"; loc := "s30" + filter loc = "s30"; loc := "s35" +
+ filter loc = "s35"; loc := "h35") +
+filter ipDst = 111.0.38.38;
+(drop + filter loc = "s40"; loc := "s30" + filter loc = "s30"; loc := "s44" +
+ filter loc = "s44"; loc := "s38" + filter loc = "s38"; loc := "h38") +
+filter ipDst = 111.0.39.39;
+(drop + filter loc = "s40"; loc := "s39" + filter loc = "s39"; loc := "h39") +
+filter ipDst = 111.0.6.6;
+(drop + filter loc = "s40"; loc := "s24" + filter loc = "s24"; loc := "s6" +
+ filter loc = "s6"; loc := "h6") +
+filter ipDst = 111.0.1.1;
+(drop + filter loc = "s40"; loc := "s24" + filter loc = "s24"; loc := "s3" +
+ filter loc = "s3"; loc := "s0" + filter loc = "s0"; loc := "s1" +
+ filter loc = "s1"; loc := "h1") +
+filter ipDst = 111.0.3.3;
+(drop + filter loc = "s40"; loc := "s24" + filter loc = "s24"; loc := "s3" +
+ filter loc = "s3"; loc := "h3") +
+filter ipDst = 111.0.2.2;
+(drop + filter loc = "s40"; loc := "s24" + filter loc = "s24"; loc := "s3" +
+ filter loc = "s3"; loc := "s0" + filter loc = "s0"; loc := "s2" +
+ filter loc = "s2"; loc := "h2") +
+filter ipDst = 111.0.9.9;
+(drop + filter loc = "s40"; loc := "s30" + filter loc = "s30"; loc := "s9" +
+ filter loc = "s9"; loc := "h9") +
+filter ipDst = 111.0.8.8;
+(drop + filter loc = "s40"; loc := "s24" + filter loc = "s24"; loc := "s5" +
+ filter loc = "s5"; loc := "s8" + filter loc = "s8"; loc := "h8") +
+filter ipDst = 111.0.13.13;
+(drop + filter loc = "s40"; loc := "s13" + filter loc = "s13"; loc := "h13") +
+filter ipDst = 111.0.42.42;
+(drop + filter loc = "s40"; loc := "s30" + filter loc = "s30"; loc := "s42" +
+ filter loc = "s42"; loc := "h42") +
+filter ipDst = 111.0.24.24;
+(drop + filter loc = "s40"; loc := "s24" + filter loc = "s24"; loc := "h24") +
+filter ipDst = 111.0.4.4;
+(drop + filter loc = "s40"; loc := "s24" + filter loc = "s24"; loc := "s5" +
+ filter loc = "s5"; loc := "s4" + filter loc = "s4"; loc := "h4") +
+filter ipDst = 111.0.41.41;
+(drop + filter loc = "s40"; loc := "s41" + filter loc = "s41"; loc := "h41") +
+filter ipDst = 111.0.5.5;
+(drop + filter loc = "s40"; loc := "s24" + filter loc = "s24"; loc := "s5" +
+ filter loc = "s5"; loc := "h5") +
+filter ipDst = 111.0.43.43;
+(drop + filter loc = "s40"; loc := "s30" + filter loc = "s30"; loc := "s43" +
+ filter loc = "s43"; loc := "h43") +
+filter ipDst = 111.0.44.44;
+(drop + filter loc = "s40"; loc := "s30" + filter loc = "s30"; loc := "s44" +
+ filter loc = "s44"; loc := "h44") +
+filter ipDst = 111.0.45.45;
+(drop + filter loc = "s40"; loc := "s30" + filter loc = "s30"; loc := "s45" +
+ filter loc = "s45"; loc := "h45") +
+filter ipDst = 111.0.46.46;
+(drop + filter loc = "s40"; loc := "s24" + filter loc = "s24"; loc := "s3" +
+ filter loc = "s3"; loc := "s46" + filter loc = "s46"; loc := "h46") +
+filter ipDst = 111.0.20.20;
+(drop + filter loc = "s40"; loc := "s30" + filter loc = "s30"; loc := "s20" +
+ filter loc = "s20"; loc := "h20") +
+filter ipDst = 111.0.7.7;
+(drop + filter loc = "s40"; loc := "s24" + filter loc = "s24"; loc := "s7" +
+ filter loc = "s7"; loc := "h7") +
+filter ipDst = 111.0.0.0;
+(drop + filter loc = "s40"; loc := "s24" + filter loc = "s24"; loc := "s3" +
+ filter loc = "s3"; loc := "s0" + filter loc = "s0"; loc := "h0") +
+filter ipDst = 111.0.26.26;
+(drop + filter loc = "s41"; loc := "s40" + filter loc = "s40"; loc := "s30" +
+ filter loc = "s30"; loc := "s43" + filter loc = "s43"; loc := "s26" +
+ filter loc = "s26"; loc := "h26") +
+filter ipDst = 111.0.28.28;
+(drop + filter loc = "s41"; loc := "s40" + filter loc = "s40"; loc := "s39" +
+ filter loc = "s39"; loc := "s28" + filter loc = "s28"; loc := "h28") +
+filter ipDst = 111.0.29.29;
+(drop + filter loc = "s41"; loc := "s40" + filter loc = "s40"; loc := "s29" +
+ filter loc = "s29"; loc := "h29") +
+filter ipDst = 111.0.32.32;
+(drop + filter loc = "s41"; loc := "s40" + filter loc = "s40"; loc := "s24" +
+ filter loc = "s24"; loc := "s5" + filter loc = "s5"; loc := "s32" +
+ filter loc = "s32"; loc := "h32") +
+filter ipDst = 111.0.30.30;
+(drop + filter loc = "s41"; loc := "s40" + filter loc = "s40"; loc := "s30" +
+ filter loc = "s30"; loc := "h30") +
+filter ipDst = 111.0.31.31;
+(drop + filter loc = "s41"; loc := "s40" + filter loc = "s40"; loc := "s31" +
+ filter loc = "s31"; loc := "h31") +
+filter ipDst = 111.0.36.36;
+(drop + filter loc = "s41"; loc := "s40" + filter loc = "s40"; loc := "s30" +
+ filter loc = "s30"; loc := "s36" + filter loc = "s36"; loc := "h36") +
+filter ipDst = 111.0.37.37;
+(drop + filter loc = "s41"; loc := "s40" + filter loc = "s40"; loc := "s30" +
+ filter loc = "s30"; loc := "s44" + filter loc = "s44"; loc := "s37" +
+ filter loc = "s37"; loc := "h37") +
+filter ipDst = 111.0.34.34;
+(drop + filter loc = "s41"; loc := "s40" + filter loc = "s40"; loc := "s30" +
+ filter loc = "s30"; loc := "s34" + filter loc = "s34"; loc := "h34") +
+filter ipDst = 111.0.35.35;
+(drop + filter loc = "s41"; loc := "s40" + filter loc = "s40"; loc := "s30" +
+ filter loc = "s30"; loc := "s35" + filter loc = "s35"; loc := "h35") +
+filter ipDst = 111.0.38.38;
+(drop + filter loc = "s41"; loc := "s40" + filter loc = "s40"; loc := "s30" +
+ filter loc = "s30"; loc := "s44" + filter loc = "s44"; loc := "s38" +
+ filter loc = "s38"; loc := "h38") +
+filter ipDst = 111.0.39.39;
+(drop + filter loc = "s41"; loc := "s40" + filter loc = "s40"; loc := "s39" +
+ filter loc = "s39"; loc := "h39") +
+filter ipDst = 111.0.6.6;
+(drop + filter loc = "s41"; loc := "s40" + filter loc = "s40"; loc := "s24" +
+ filter loc = "s24"; loc := "s6" + filter loc = "s6"; loc := "h6") +
+filter ipDst = 111.0.1.1;
+(drop + filter loc = "s41"; loc := "s40" + filter loc = "s40"; loc := "s24" +
+ filter loc = "s24"; loc := "s3" + filter loc = "s3"; loc := "s0" +
+ filter loc = "s0"; loc := "s1" + filter loc = "s1"; loc := "h1") +
+filter ipDst = 111.0.3.3;
+(drop + filter loc = "s41"; loc := "s40" + filter loc = "s40"; loc := "s24" +
+ filter loc = "s24"; loc := "s3" + filter loc = "s3"; loc := "h3") +
+filter ipDst = 111.0.2.2;
+(drop + filter loc = "s41"; loc := "s40" + filter loc = "s40"; loc := "s24" +
+ filter loc = "s24"; loc := "s3" + filter loc = "s3"; loc := "s0" +
+ filter loc = "s0"; loc := "s2" + filter loc = "s2"; loc := "h2") +
+filter ipDst = 111.0.9.9;
+(drop + filter loc = "s41"; loc := "s40" + filter loc = "s40"; loc := "s30" +
+ filter loc = "s30"; loc := "s9" + filter loc = "s9"; loc := "h9") +
+filter ipDst = 111.0.8.8;
+(drop + filter loc = "s41"; loc := "s40" + filter loc = "s40"; loc := "s24" +
+ filter loc = "s24"; loc := "s5" + filter loc = "s5"; loc := "s8" +
+ filter loc = "s8"; loc := "h8") +
+filter ipDst = 111.0.13.13;
+(drop + filter loc = "s41"; loc := "s40" + filter loc = "s40"; loc := "s13" +
+ filter loc = "s13"; loc := "h13") +
+filter ipDst = 111.0.42.42;
+(drop + filter loc = "s41"; loc := "s40" + filter loc = "s40"; loc := "s30" +
+ filter loc = "s30"; loc := "s42" + filter loc = "s42"; loc := "h42") +
+filter ipDst = 111.0.24.24;
+(drop + filter loc = "s41"; loc := "s40" + filter loc = "s40"; loc := "s24" +
+ filter loc = "s24"; loc := "h24") +
+filter ipDst = 111.0.4.4;
+(drop + filter loc = "s41"; loc := "s40" + filter loc = "s40"; loc := "s24" +
+ filter loc = "s24"; loc := "s5" + filter loc = "s5"; loc := "s4" +
+ filter loc = "s4"; loc := "h4") +
+filter ipDst = 111.0.40.40;
+(drop + filter loc = "s41"; loc := "s40" + filter loc = "s40"; loc := "h40") +
+filter ipDst = 111.0.5.5;
+(drop + filter loc = "s41"; loc := "s40" + filter loc = "s40"; loc := "s24" +
+ filter loc = "s24"; loc := "s5" + filter loc = "s5"; loc := "h5") +
+filter ipDst = 111.0.43.43;
+(drop + filter loc = "s41"; loc := "s40" + filter loc = "s40"; loc := "s30" +
+ filter loc = "s30"; loc := "s43" + filter loc = "s43"; loc := "h43") +
+filter ipDst = 111.0.44.44;
+(drop + filter loc = "s41"; loc := "s40" + filter loc = "s40"; loc := "s30" +
+ filter loc = "s30"; loc := "s44" + filter loc = "s44"; loc := "h44") +
+filter ipDst = 111.0.45.45;
+(drop + filter loc = "s41"; loc := "s40" + filter loc = "s40"; loc := "s30" +
+ filter loc = "s30"; loc := "s45" + filter loc = "s45"; loc := "h45") +
+filter ipDst = 111.0.46.46;
+(drop + filter loc = "s41"; loc := "s40" + filter loc = "s40"; loc := "s24" +
+ filter loc = "s24"; loc := "s3" + filter loc = "s3"; loc := "s46" +
+ filter loc = "s46"; loc := "h46") +
+filter ipDst = 111.0.20.20;
+(drop + filter loc = "s41"; loc := "s40" + filter loc = "s40"; loc := "s30" +
+ filter loc = "s30"; loc := "s20" + filter loc = "s20"; loc := "h20") +
+filter ipDst = 111.0.7.7;
+(drop + filter loc = "s41"; loc := "s40" + filter loc = "s40"; loc := "s24" +
+ filter loc = "s24"; loc := "s7" + filter loc = "s7"; loc := "h7") +
+filter ipDst = 111.0.0.0;
+(drop + filter loc = "s41"; loc := "s40" + filter loc = "s40"; loc := "s24" +
+ filter loc = "s24"; loc := "s3" + filter loc = "s3"; loc := "s0" +
+ filter loc = "s0"; loc := "h0") +
+filter ipDst = 111.0.26.26;
+(drop + filter loc = "s5"; loc := "s9" + filter loc = "s9"; loc := "s0" +
+ filter loc = "s0"; loc := "s43" + filter loc = "s43"; loc := "s26" +
+ filter loc = "s26"; loc := "h26") +
+filter ipDst = 111.0.28.28;
+(drop + filter loc = "s5"; loc := "s24" + filter loc = "s24"; loc := "s40" +
+ filter loc = "s40"; loc := "s39" + filter loc = "s39"; loc := "s28" +
+ filter loc = "s28"; loc := "h28") +
+filter ipDst = 111.0.29.29;
+(drop + filter loc = "s5"; loc := "s24" + filter loc = "s24"; loc := "s40" +
+ filter loc = "s40"; loc := "s29" + filter loc = "s29"; loc := "h29") +
+filter ipDst = 111.0.32.32;
+(drop + filter loc = "s5"; loc := "s32" + filter loc = "s32"; loc := "h32") +
+filter ipDst = 111.0.30.30;
+(drop + filter loc = "s5"; loc := "s9" + filter loc = "s9"; loc := "s30" +
+ filter loc = "s30"; loc := "h30") +
+filter ipDst = 111.0.31.31;
+(drop + filter loc = "s5"; loc := "s24" + filter loc = "s24"; loc := "s31" +
+ filter loc = "s31"; loc := "h31") +
+filter ipDst = 111.0.36.36;
+(drop + filter loc = "s5"; loc := "s9" + filter loc = "s9"; loc := "s30" +
+ filter loc = "s30"; loc := "s36" + filter loc = "s36"; loc := "h36") +
+filter ipDst = 111.0.37.37;
+(drop + filter loc = "s5"; loc := "s9" + filter loc = "s9"; loc := "s0" +
+ filter loc = "s0"; loc := "s37" + filter loc = "s37"; loc := "h37") +
+filter ipDst = 111.0.34.34;
+(drop + filter loc = "s5"; loc := "s9" + filter loc = "s9"; loc := "s30" +
+ filter loc = "s30"; loc := "s34" + filter loc = "s34"; loc := "h34") +
+filter ipDst = 111.0.35.35;
+(drop + filter loc = "s5"; loc := "s9" + filter loc = "s9"; loc := "s30" +
+ filter loc = "s30"; loc := "s35" + filter loc = "s35"; loc := "h35") +
+filter ipDst = 111.0.38.38;
+(drop + filter loc = "s5"; loc := "s9" + filter loc = "s9"; loc := "s0" +
+ filter loc = "s0"; loc := "s37" + filter loc = "s37"; loc := "s38" +
+ filter loc = "s38"; loc := "h38") +
+filter ipDst = 111.0.39.39;
+(drop + filter loc = "s5"; loc := "s24" + filter loc = "s24"; loc := "s40" +
+ filter loc = "s40"; loc := "s39" + filter loc = "s39"; loc := "h39") +
+filter ipDst = 111.0.6.6;
+(drop + filter loc = "s5"; loc := "s9" + filter loc = "s9"; loc := "s6" +
+ filter loc = "s6"; loc := "h6") +
+filter ipDst = 111.0.1.1;
+(drop + filter loc = "s5"; loc := "s9" + filter loc = "s9"; loc := "s0" +
+ filter loc = "s0"; loc := "s1" + filter loc = "s1"; loc := "h1") +
+filter ipDst = 111.0.3.3;
+(drop + filter loc = "s5"; loc := "s24" + filter loc = "s24"; loc := "s3" +
+ filter loc = "s3"; loc := "h3") +
+filter ipDst = 111.0.2.2;
+(drop + filter loc = "s5"; loc := "s9" + filter loc = "s9"; loc := "s0" +
+ filter loc = "s0"; loc := "s2" + filter loc = "s2"; loc := "h2") +
+filter ipDst = 111.0.9.9;
+(drop + filter loc = "s5"; loc := "s9" + filter loc = "s9"; loc := "h9") +
+filter ipDst = 111.0.8.8;
+(drop + filter loc = "s5"; loc := "s8" + filter loc = "s8"; loc := "h8") +
+filter ipDst = 111.0.13.13;
+(drop + filter loc = "s5"; loc := "s24" + filter loc = "s24"; loc := "s40" +
+ filter loc = "s40"; loc := "s13" + filter loc = "s13"; loc := "h13") +
+filter ipDst = 111.0.42.42;
+(drop + filter loc = "s5"; loc := "s9" + filter loc = "s9"; loc := "s30" +
+ filter loc = "s30"; loc := "s42" + filter loc = "s42"; loc := "h42") +
+filter ipDst = 111.0.24.24;
+(drop + filter loc = "s5"; loc := "s24" + filter loc = "s24"; loc := "h24") +
+filter ipDst = 111.0.4.4;
+(drop + filter loc = "s5"; loc := "s4" + filter loc = "s4"; loc := "h4") +
+filter ipDst = 111.0.40.40;
+(drop + filter loc = "s5"; loc := "s24" + filter loc = "s24"; loc := "s40" +
+ filter loc = "s40"; loc := "h40") +
+filter ipDst = 111.0.41.41;
+(drop + filter loc = "s5"; loc := "s24" + filter loc = "s24"; loc := "s40" +
+ filter loc = "s40"; loc := "s41" + filter loc = "s41"; loc := "h41") +
+filter ipDst = 111.0.43.43;
+(drop + filter loc = "s5"; loc := "s9" + filter loc = "s9"; loc := "s0" +
+ filter loc = "s0"; loc := "s43" + filter loc = "s43"; loc := "h43") +
+filter ipDst = 111.0.44.44;
+(drop + filter loc = "s5"; loc := "s9" + filter loc = "s9"; loc := "s0" +
+ filter loc = "s0"; loc := "s44" + filter loc = "s44"; loc := "h44") +
+filter ipDst = 111.0.45.45;
+(drop + filter loc = "s5"; loc := "s9" + filter loc = "s9"; loc := "s0" +
+ filter loc = "s0"; loc := "s45" + filter loc = "s45"; loc := "h45") +
+filter ipDst = 111.0.46.46;
+(drop + filter loc = "s5"; loc := "s24" + filter loc = "s24"; loc := "s3" +
+ filter loc = "s3"; loc := "s46" + filter loc = "s46"; loc := "h46") +
+filter ipDst = 111.0.20.20;
+(drop + filter loc = "s5"; loc := "s9" + filter loc = "s9"; loc := "s30" +
+ filter loc = "s30"; loc := "s20" + filter loc = "s20"; loc := "h20") +
+filter ipDst = 111.0.7.7;
+(drop + filter loc = "s5"; loc := "s9" + filter loc = "s9"; loc := "s7" +
+ filter loc = "s7"; loc := "h7") +
+filter ipDst = 111.0.0.0;
+(drop + filter loc = "s5"; loc := "s9" + filter loc = "s9"; loc := "s0" +
+ filter loc = "s0"; loc := "h0") +
+filter ipDst = 111.0.26.26;
+(drop + filter loc = "s43"; loc := "s26" + filter loc = "s26"; loc := "h26") +
+filter ipDst = 111.0.28.28;
+(drop + filter loc = "s43"; loc := "s30" + filter loc = "s30"; loc := "s40" +
+ filter loc = "s40"; loc := "s39" + filter loc = "s39"; loc := "s28" +
+ filter loc = "s28"; loc := "h28") +
+filter ipDst = 111.0.29.29;
+(drop + filter loc = "s43"; loc := "s30" + filter loc = "s30"; loc := "s29" +
+ filter loc = "s29"; loc := "h29") +
+filter ipDst = 111.0.32.32;
+(drop + filter loc = "s43"; loc := "s0" + filter loc = "s0"; loc := "s9" +
+ filter loc = "s9"; loc := "s5" + filter loc = "s5"; loc := "s32" +
+ filter loc = "s32"; loc := "h32") +
+filter ipDst = 111.0.30.30;
+(drop + filter loc = "s43"; loc := "s30" + filter loc = "s30"; loc := "h30") +
+filter ipDst = 111.0.31.31;
+(drop + filter loc = "s43"; loc := "s31" + filter loc = "s31"; loc := "h31") +
+filter ipDst = 111.0.36.36;
+(drop + filter loc = "s43"; loc := "s30" + filter loc = "s30"; loc := "s36" +
+ filter loc = "s36"; loc := "h36") +
+filter ipDst = 111.0.37.37;
+(drop + filter loc = "s43"; loc := "s37" + filter loc = "s37"; loc := "h37") +
+filter ipDst = 111.0.34.34;
+(drop + filter loc = "s43"; loc := "s30" + filter loc = "s30"; loc := "s34" +
+ filter loc = "s34"; loc := "h34") +
+filter ipDst = 111.0.35.35;
+(drop + filter loc = "s43"; loc := "s30" + filter loc = "s30"; loc := "s35" +
+ filter loc = "s35"; loc := "h35") +
+filter ipDst = 111.0.38.38;
+(drop + filter loc = "s43"; loc := "s37" + filter loc = "s37"; loc := "s38" +
+ filter loc = "s38"; loc := "h38") +
+filter ipDst = 111.0.39.39;
+(drop + filter loc = "s43"; loc := "s30" + filter loc = "s30"; loc := "s40" +
+ filter loc = "s40"; loc := "s39" + filter loc = "s39"; loc := "h39") +
+filter ipDst = 111.0.6.6;
+(drop + filter loc = "s43"; loc := "s0" + filter loc = "s0"; loc := "s9" +
+ filter loc = "s9"; loc := "s6" + filter loc = "s6"; loc := "h6") +
+filter ipDst = 111.0.1.1;
+(drop + filter loc = "s43"; loc := "s0" + filter loc = "s0"; loc := "s1" +
+ filter loc = "s1"; loc := "h1") +
+filter ipDst = 111.0.3.3;
+(drop + filter loc = "s43"; loc := "s0" + filter loc = "s0"; loc := "s3" +
+ filter loc = "s3"; loc := "h3") +
+filter ipDst = 111.0.2.2;
+(drop + filter loc = "s43"; loc := "s0" + filter loc = "s0"; loc := "s2" +
+ filter loc = "s2"; loc := "h2") +
+filter ipDst = 111.0.9.9;
+(drop + filter loc = "s43"; loc := "s0" + filter loc = "s0"; loc := "s9" +
+ filter loc = "s9"; loc := "h9") +
+filter ipDst = 111.0.8.8;
+(drop + filter loc = "s43"; loc := "s0" + filter loc = "s0"; loc := "s9" +
+ filter loc = "s9"; loc := "s8" + filter loc = "s8"; loc := "h8") +
+filter ipDst = 111.0.13.13;
+(drop + filter loc = "s43"; loc := "s30" + filter loc = "s30"; loc := "s40" +
+ filter loc = "s40"; loc := "s13" + filter loc = "s13"; loc := "h13") +
+filter ipDst = 111.0.42.42;
+(drop + filter loc = "s43"; loc := "s42" + filter loc = "s42"; loc := "h42") +
+filter ipDst = 111.0.24.24;
+(drop + filter loc = "s43"; loc := "s31" + filter loc = "s31"; loc := "s24" +
+ filter loc = "s24"; loc := "h24") +
+filter ipDst = 111.0.4.4;
+(drop + filter loc = "s43"; loc := "s0" + filter loc = "s0"; loc := "s9" +
+ filter loc = "s9"; loc := "s5" + filter loc = "s5"; loc := "s4" +
+ filter loc = "s4"; loc := "h4") +
+filter ipDst = 111.0.40.40;
+(drop + filter loc = "s43"; loc := "s30" + filter loc = "s30"; loc := "s40" +
+ filter loc = "s40"; loc := "h40") +
+filter ipDst = 111.0.41.41;
+(drop + filter loc = "s43"; loc := "s30" + filter loc = "s30"; loc := "s40" +
+ filter loc = "s40"; loc := "s41" + filter loc = "s41"; loc := "h41") +
+filter ipDst = 111.0.5.5;
+(drop + filter loc = "s43"; loc := "s0" + filter loc = "s0"; loc := "s9" +
+ filter loc = "s9"; loc := "s5" + filter loc = "s5"; loc := "h5") +
+filter ipDst = 111.0.44.44;
+(drop + filter loc = "s43"; loc := "s44" + filter loc = "s44"; loc := "h44") +
+filter ipDst = 111.0.45.45;
+(drop + filter loc = "s43"; loc := "s45" + filter loc = "s45"; loc := "h45") +
+filter ipDst = 111.0.46.46;
+(drop + filter loc = "s43"; loc := "s46" + filter loc = "s46"; loc := "h46") +
+filter ipDst = 111.0.20.20;
+(drop + filter loc = "s43"; loc := "s30" + filter loc = "s30"; loc := "s20" +
+ filter loc = "s20"; loc := "h20") +
+filter ipDst = 111.0.7.7;
+(drop + filter loc = "s43"; loc := "s0" + filter loc = "s0"; loc := "s9" +
+ filter loc = "s9"; loc := "s7" + filter loc = "s7"; loc := "h7") +
+filter ipDst = 111.0.0.0;
+(drop + filter loc = "s43"; loc := "s0" + filter loc = "s0"; loc := "h0") +
+filter ipDst = 111.0.26.26;
+(drop + filter loc = "s44"; loc := "s43" + filter loc = "s43"; loc := "s26" +
+ filter loc = "s26"; loc := "h26") +
+filter ipDst = 111.0.28.28;
+(drop + filter loc = "s44"; loc := "s30" + filter loc = "s30"; loc := "s40" +
+ filter loc = "s40"; loc := "s39" + filter loc = "s39"; loc := "s28" +
+ filter loc = "s28"; loc := "h28") +
+filter ipDst = 111.0.29.29;
+(drop + filter loc = "s44"; loc := "s30" + filter loc = "s30"; loc := "s29" +
+ filter loc = "s29"; loc := "h29") +
+filter ipDst = 111.0.32.32;
+(drop + filter loc = "s44"; loc := "s0" + filter loc = "s0"; loc := "s9" +
+ filter loc = "s9"; loc := "s5" + filter loc = "s5"; loc := "s32" +
+ filter loc = "s32"; loc := "h32") +
+filter ipDst = 111.0.30.30;
+(drop + filter loc = "s44"; loc := "s30" + filter loc = "s30"; loc := "h30") +
+filter ipDst = 111.0.31.31;
+(drop + filter loc = "s44"; loc := "s31" + filter loc = "s31"; loc := "h31") +
+filter ipDst = 111.0.36.36;
+(drop + filter loc = "s44"; loc := "s30" + filter loc = "s30"; loc := "s36" +
+ filter loc = "s36"; loc := "h36") +
+filter ipDst = 111.0.37.37;
+(drop + filter loc = "s44"; loc := "s37" + filter loc = "s37"; loc := "h37") +
+filter ipDst = 111.0.34.34;
+(drop + filter loc = "s44"; loc := "s30" + filter loc = "s30"; loc := "s34" +
+ filter loc = "s34"; loc := "h34") +
+filter ipDst = 111.0.35.35;
+(drop + filter loc = "s44"; loc := "s30" + filter loc = "s30"; loc := "s35" +
+ filter loc = "s35"; loc := "h35") +
+filter ipDst = 111.0.38.38;
+(drop + filter loc = "s44"; loc := "s38" + filter loc = "s38"; loc := "h38") +
+filter ipDst = 111.0.39.39;
+(drop + filter loc = "s44"; loc := "s30" + filter loc = "s30"; loc := "s40" +
+ filter loc = "s40"; loc := "s39" + filter loc = "s39"; loc := "h39") +
+filter ipDst = 111.0.6.6;
+(drop + filter loc = "s44"; loc := "s0" + filter loc = "s0"; loc := "s9" +
+ filter loc = "s9"; loc := "s6" + filter loc = "s6"; loc := "h6") +
+filter ipDst = 111.0.1.1;
+(drop + filter loc = "s44"; loc := "s0" + filter loc = "s0"; loc := "s1" +
+ filter loc = "s1"; loc := "h1") +
+filter ipDst = 111.0.3.3;
+(drop + filter loc = "s44"; loc := "s0" + filter loc = "s0"; loc := "s3" +
+ filter loc = "s3"; loc := "h3") +
+filter ipDst = 111.0.2.2;
+(drop + filter loc = "s44"; loc := "s0" + filter loc = "s0"; loc := "s2" +
+ filter loc = "s2"; loc := "h2") +
+filter ipDst = 111.0.9.9;
+(drop + filter loc = "s44"; loc := "s0" + filter loc = "s0"; loc := "s9" +
+ filter loc = "s9"; loc := "h9") +
+filter ipDst = 111.0.8.8;
+(drop + filter loc = "s44"; loc := "s0" + filter loc = "s0"; loc := "s9" +
+ filter loc = "s9"; loc := "s8" + filter loc = "s8"; loc := "h8") +
+filter ipDst = 111.0.13.13;
+(drop + filter loc = "s44"; loc := "s30" + filter loc = "s30"; loc := "s40" +
+ filter loc = "s40"; loc := "s13" + filter loc = "s13"; loc := "h13") +
+filter ipDst = 111.0.42.42;
+(drop + filter loc = "s44"; loc := "s43" + filter loc = "s43"; loc := "s42" +
+ filter loc = "s42"; loc := "h42") +
+filter ipDst = 111.0.24.24;
+(drop + filter loc = "s44"; loc := "s31" + filter loc = "s31"; loc := "s24" +
+ filter loc = "s24"; loc := "h24") +
+filter ipDst = 111.0.4.4;
+(drop + filter loc = "s44"; loc := "s0" + filter loc = "s0"; loc := "s9" +
+ filter loc = "s9"; loc := "s5" + filter loc = "s5"; loc := "s4" +
+ filter loc = "s4"; loc := "h4") +
+filter ipDst = 111.0.40.40;
+(drop + filter loc = "s44"; loc := "s30" + filter loc = "s30"; loc := "s40" +
+ filter loc = "s40"; loc := "h40") +
+filter ipDst = 111.0.41.41;
+(drop + filter loc = "s44"; loc := "s30" + filter loc = "s30"; loc := "s40" +
+ filter loc = "s40"; loc := "s41" + filter loc = "s41"; loc := "h41") +
+filter ipDst = 111.0.5.5;
+(drop + filter loc = "s44"; loc := "s0" + filter loc = "s0"; loc := "s9" +
+ filter loc = "s9"; loc := "s5" + filter loc = "s5"; loc := "h5") +
+filter ipDst = 111.0.43.43;
+(drop + filter loc = "s44"; loc := "s43" + filter loc = "s43"; loc := "h43") +
+filter ipDst = 111.0.45.45;
+(drop + filter loc = "s44"; loc := "s0" + filter loc = "s0"; loc := "s45" +
+ filter loc = "s45"; loc := "h45") +
+filter ipDst = 111.0.46.46;
+(drop + filter loc = "s44"; loc := "s37" + filter loc = "s37"; loc := "s46" +
+ filter loc = "s46"; loc := "h46") +
+filter ipDst = 111.0.20.20;
+(drop + filter loc = "s44"; loc := "s30" + filter loc = "s30"; loc := "s20" +
+ filter loc = "s20"; loc := "h20") +
+filter ipDst = 111.0.7.7;
+(drop + filter loc = "s44"; loc := "s0" + filter loc = "s0"; loc := "s9" +
+ filter loc = "s9"; loc := "s7" + filter loc = "s7"; loc := "h7") +
+filter ipDst = 111.0.0.0;
+(drop + filter loc = "s44"; loc := "s0" + filter loc = "s0"; loc := "h0") +
+filter ipDst = 111.0.26.26;
+(drop + filter loc = "s45"; loc := "s43" + filter loc = "s43"; loc := "s26" +
+ filter loc = "s26"; loc := "h26") +
+filter ipDst = 111.0.28.28;
+(drop + filter loc = "s45"; loc := "s30" + filter loc = "s30"; loc := "s40" +
+ filter loc = "s40"; loc := "s39" + filter loc = "s39"; loc := "s28" +
+ filter loc = "s28"; loc := "h28") +
+filter ipDst = 111.0.29.29;
+(drop + filter loc = "s45"; loc := "s30" + filter loc = "s30"; loc := "s29" +
+ filter loc = "s29"; loc := "h29") +
+filter ipDst = 111.0.32.32;
+(drop + filter loc = "s45"; loc := "s0" + filter loc = "s0"; loc := "s9" +
+ filter loc = "s9"; loc := "s5" + filter loc = "s5"; loc := "s32" +
+ filter loc = "s32"; loc := "h32") +
+filter ipDst = 111.0.30.30;
+(drop + filter loc = "s45"; loc := "s30" + filter loc = "s30"; loc := "h30") +
+filter ipDst = 111.0.31.31;
+(drop + filter loc = "s45"; loc := "s31" + filter loc = "s31"; loc := "h31") +
+filter ipDst = 111.0.36.36;
+(drop + filter loc = "s45"; loc := "s30" + filter loc = "s30"; loc := "s36" +
+ filter loc = "s36"; loc := "h36") +
+filter ipDst = 111.0.37.37;
+(drop + filter loc = "s45"; loc := "s0" + filter loc = "s0"; loc := "s37" +
+ filter loc = "s37"; loc := "h37") +
+filter ipDst = 111.0.34.34;
+(drop + filter loc = "s45"; loc := "s30" + filter loc = "s30"; loc := "s34" +
+ filter loc = "s34"; loc := "h34") +
+filter ipDst = 111.0.35.35;
+(drop + filter loc = "s45"; loc := "s30" + filter loc = "s30"; loc := "s35" +
+ filter loc = "s35"; loc := "h35") +
+filter ipDst = 111.0.38.38;
+(drop + filter loc = "s45"; loc := "s0" + filter loc = "s0"; loc := "s37" +
+ filter loc = "s37"; loc := "s38" + filter loc = "s38"; loc := "h38") +
+filter ipDst = 111.0.39.39;
+(drop + filter loc = "s45"; loc := "s30" + filter loc = "s30"; loc := "s40" +
+ filter loc = "s40"; loc := "s39" + filter loc = "s39"; loc := "h39") +
+filter ipDst = 111.0.6.6;
+(drop + filter loc = "s45"; loc := "s0" + filter loc = "s0"; loc := "s9" +
+ filter loc = "s9"; loc := "s6" + filter loc = "s6"; loc := "h6") +
+filter ipDst = 111.0.1.1;
+(drop + filter loc = "s45"; loc := "s0" + filter loc = "s0"; loc := "s1" +
+ filter loc = "s1"; loc := "h1") +
+filter ipDst = 111.0.3.3;
+(drop + filter loc = "s45"; loc := "s3" + filter loc = "s3"; loc := "h3") +
+filter ipDst = 111.0.2.2;
+(drop + filter loc = "s45"; loc := "s0" + filter loc = "s0"; loc := "s2" +
+ filter loc = "s2"; loc := "h2") +
+filter ipDst = 111.0.9.9;
+(drop + filter loc = "s45"; loc := "s0" + filter loc = "s0"; loc := "s9" +
+ filter loc = "s9"; loc := "h9") +
+filter ipDst = 111.0.8.8;
+(drop + filter loc = "s45"; loc := "s0" + filter loc = "s0"; loc := "s9" +
+ filter loc = "s9"; loc := "s8" + filter loc = "s8"; loc := "h8") +
+filter ipDst = 111.0.13.13;
+(drop + filter loc = "s45"; loc := "s30" + filter loc = "s30"; loc := "s40" +
+ filter loc = "s40"; loc := "s13" + filter loc = "s13"; loc := "h13") +
+filter ipDst = 111.0.42.42;
+(drop + filter loc = "s45"; loc := "s43" + filter loc = "s43"; loc := "s42" +
+ filter loc = "s42"; loc := "h42") +
+filter ipDst = 111.0.24.24;
+(drop + filter loc = "s45"; loc := "s3" + filter loc = "s3"; loc := "s24" +
+ filter loc = "s24"; loc := "h24") +
+filter ipDst = 111.0.4.4;
+(drop + filter loc = "s45"; loc := "s0" + filter loc = "s0"; loc := "s9" +
+ filter loc = "s9"; loc := "s5" + filter loc = "s5"; loc := "s4" +
+ filter loc = "s4"; loc := "h4") +
+filter ipDst = 111.0.40.40;
+(drop + filter loc = "s45"; loc := "s30" + filter loc = "s30"; loc := "s40" +
+ filter loc = "s40"; loc := "h40") +
+filter ipDst = 111.0.41.41;
+(drop + filter loc = "s45"; loc := "s30" + filter loc = "s30"; loc := "s40" +
+ filter loc = "s40"; loc := "s41" + filter loc = "s41"; loc := "h41") +
+filter ipDst = 111.0.5.5;
+(drop + filter loc = "s45"; loc := "s0" + filter loc = "s0"; loc := "s9" +
+ filter loc = "s9"; loc := "s5" + filter loc = "s5"; loc := "h5") +
+filter ipDst = 111.0.43.43;
+(drop + filter loc = "s45"; loc := "s43" + filter loc = "s43"; loc := "h43") +
+filter ipDst = 111.0.44.44;
+(drop + filter loc = "s45"; loc := "s0" + filter loc = "s0"; loc := "s44" +
+ filter loc = "s44"; loc := "h44") +
+filter ipDst = 111.0.46.46;
+(drop + filter loc = "s45"; loc := "s46" + filter loc = "s46"; loc := "h46") +
+filter ipDst = 111.0.20.20;
+(drop + filter loc = "s45"; loc := "s30" + filter loc = "s30"; loc := "s20" +
+ filter loc = "s20"; loc := "h20") +
+filter ipDst = 111.0.7.7;
+(drop + filter loc = "s45"; loc := "s0" + filter loc = "s0"; loc := "s9" +
+ filter loc = "s9"; loc := "s7" + filter loc = "s7"; loc := "h7") +
+filter ipDst = 111.0.0.0;
+(drop + filter loc = "s45"; loc := "s0" + filter loc = "s0"; loc := "h0") +
+filter ipDst = 111.0.26.26;
+(drop + filter loc = "s46"; loc := "s43" + filter loc = "s43"; loc := "s26" +
+ filter loc = "s26"; loc := "h26") +
+filter ipDst = 111.0.28.28;
+(drop + filter loc = "s46"; loc := "s3" + filter loc = "s3"; loc := "s24" +
+ filter loc = "s24"; loc := "s40" + filter loc = "s40"; loc := "s39" +
+ filter loc = "s39"; loc := "s28" + filter loc = "s28"; loc := "h28") +
+filter ipDst = 111.0.29.29;
+(drop + filter loc = "s46"; loc := "s45" + filter loc = "s45"; loc := "s30" +
+ filter loc = "s30"; loc := "s29" + filter loc = "s29"; loc := "h29") +
+filter ipDst = 111.0.32.32;
+(drop + filter loc = "s46"; loc := "s3" + filter loc = "s3"; loc := "s24" +
+ filter loc = "s24"; loc := "s5" + filter loc = "s5"; loc := "s32" +
+ filter loc = "s32"; loc := "h32") +
+filter ipDst = 111.0.30.30;
+(drop + filter loc = "s46"; loc := "s45" + filter loc = "s45"; loc := "s30" +
+ filter loc = "s30"; loc := "h30") +
+filter ipDst = 111.0.31.31;
+(drop + filter loc = "s46"; loc := "s45" + filter loc = "s45"; loc := "s31" +
+ filter loc = "s31"; loc := "h31") +
+filter ipDst = 111.0.36.36;
+(drop + filter loc = "s46"; loc := "s45" + filter loc = "s45"; loc := "s30" +
+ filter loc = "s30"; loc := "s36" + filter loc = "s36"; loc := "h36") +
+filter ipDst = 111.0.37.37;
+(drop + filter loc = "s46"; loc := "s37" + filter loc = "s37"; loc := "h37") +
+filter ipDst = 111.0.34.34;
+(drop + filter loc = "s46"; loc := "s45" + filter loc = "s45"; loc := "s30" +
+ filter loc = "s30"; loc := "s34" + filter loc = "s34"; loc := "h34") +
+filter ipDst = 111.0.35.35;
+(drop + filter loc = "s46"; loc := "s45" + filter loc = "s45"; loc := "s30" +
+ filter loc = "s30"; loc := "s35" + filter loc = "s35"; loc := "h35") +
+filter ipDst = 111.0.38.38;
+(drop + filter loc = "s46"; loc := "s37" + filter loc = "s37"; loc := "s38" +
+ filter loc = "s38"; loc := "h38") +
+filter ipDst = 111.0.39.39;
+(drop + filter loc = "s46"; loc := "s3" + filter loc = "s3"; loc := "s24" +
+ filter loc = "s24"; loc := "s40" + filter loc = "s40"; loc := "s39" +
+ filter loc = "s39"; loc := "h39") +
+filter ipDst = 111.0.6.6;
+(drop + filter loc = "s46"; loc := "s3" + filter loc = "s3"; loc := "s24" +
+ filter loc = "s24"; loc := "s6" + filter loc = "s6"; loc := "h6") +
+filter ipDst = 111.0.1.1;
+(drop + filter loc = "s46"; loc := "s37" + filter loc = "s37"; loc := "s1" +
+ filter loc = "s1"; loc := "h1") +
+filter ipDst = 111.0.3.3;
+(drop + filter loc = "s46"; loc := "s3" + filter loc = "s3"; loc := "h3") +
+filter ipDst = 111.0.2.2;
+(drop + filter loc = "s46"; loc := "s37" + filter loc = "s37"; loc := "s2" +
+ filter loc = "s2"; loc := "h2") +
+filter ipDst = 111.0.9.9;
+(drop + filter loc = "s46"; loc := "s37" + filter loc = "s37"; loc := "s0" +
+ filter loc = "s0"; loc := "s9" + filter loc = "s9"; loc := "h9") +
+filter ipDst = 111.0.8.8;
+(drop + filter loc = "s46"; loc := "s37" + filter loc = "s37"; loc := "s0" +
+ filter loc = "s0"; loc := "s9" + filter loc = "s9"; loc := "s8" +
+ filter loc = "s8"; loc := "h8") +
+filter ipDst = 111.0.13.13;
+(drop + filter loc = "s46"; loc := "s3" + filter loc = "s3"; loc := "s24" +
+ filter loc = "s24"; loc := "s40" + filter loc = "s40"; loc := "s13" +
+ filter loc = "s13"; loc := "h13") +
+filter ipDst = 111.0.42.42;
+(drop + filter loc = "s46"; loc := "s43" + filter loc = "s43"; loc := "s42" +
+ filter loc = "s42"; loc := "h42") +
+filter ipDst = 111.0.24.24;
+(drop + filter loc = "s46"; loc := "s3" + filter loc = "s3"; loc := "s24" +
+ filter loc = "s24"; loc := "h24") +
+filter ipDst = 111.0.4.4;
+(drop + filter loc = "s46"; loc := "s3" + filter loc = "s3"; loc := "s24" +
+ filter loc = "s24"; loc := "s5" + filter loc = "s5"; loc := "s4" +
+ filter loc = "s4"; loc := "h4") +
+filter ipDst = 111.0.40.40;
+(drop + filter loc = "s46"; loc := "s3" + filter loc = "s3"; loc := "s24" +
+ filter loc = "s24"; loc := "s40" + filter loc = "s40"; loc := "h40") +
+filter ipDst = 111.0.41.41;
+(drop + filter loc = "s46"; loc := "s3" + filter loc = "s3"; loc := "s24" +
+ filter loc = "s24"; loc := "s40" + filter loc = "s40"; loc := "s41" +
+ filter loc = "s41"; loc := "h41") +
+filter ipDst = 111.0.5.5;
+(drop + filter loc = "s46"; loc := "s3" + filter loc = "s3"; loc := "s24" +
+ filter loc = "s24"; loc := "s5" + filter loc = "s5"; loc := "h5") +
+filter ipDst = 111.0.43.43;
+(drop + filter loc = "s46"; loc := "s43" + filter loc = "s43"; loc := "h43") +
+filter ipDst = 111.0.44.44;
+(drop + filter loc = "s46"; loc := "s37" + filter loc = "s37"; loc := "s44" +
+ filter loc = "s44"; loc := "h44") +
+filter ipDst = 111.0.45.45;
+(drop + filter loc = "s46"; loc := "s45" + filter loc = "s45"; loc := "h45") +
+filter ipDst = 111.0.20.20;
+(drop + filter loc = "s46"; loc := "s45" + filter loc = "s45"; loc := "s30" +
+ filter loc = "s30"; loc := "s20" + filter loc = "s20"; loc := "h20") +
+filter ipDst = 111.0.7.7;
+(drop + filter loc = "s46"; loc := "s3" + filter loc = "s3"; loc := "s24" +
+ filter loc = "s24"; loc := "s7" + filter loc = "s7"; loc := "h7") +
+filter ipDst = 111.0.0.0;
+(drop + filter loc = "s46"; loc := "s37" + filter loc = "s37"; loc := "s0" +
+ filter loc = "s0"; loc := "h0") +
+filter ipDst = 111.0.26.26;
+(drop + filter loc = "s20"; loc := "s30" + filter loc = "s30"; loc := "s43" +
+ filter loc = "s43"; loc := "s26" + filter loc = "s26"; loc := "h26") +
+filter ipDst = 111.0.28.28;
+(drop + filter loc = "s20"; loc := "s30" + filter loc = "s30"; loc := "s40" +
+ filter loc = "s40"; loc := "s39" + filter loc = "s39"; loc := "s28" +
+ filter loc = "s28"; loc := "h28") +
+filter ipDst = 111.0.29.29;
+(drop + filter loc = "s20"; loc := "s30" + filter loc = "s30"; loc := "s29" +
+ filter loc = "s29"; loc := "h29") +
+filter ipDst = 111.0.32.32;
+(drop + filter loc = "s20"; loc := "s30" + filter loc = "s30"; loc := "s9" +
+ filter loc = "s9"; loc := "s5" + filter loc = "s5"; loc := "s32" +
+ filter loc = "s32"; loc := "h32") +
+filter ipDst = 111.0.30.30;
+(drop + filter loc = "s20"; loc := "s30" + filter loc = "s30"; loc := "h30") +
+filter ipDst = 111.0.31.31;
+(drop + filter loc = "s20"; loc := "s31" + filter loc = "s31"; loc := "h31") +
+filter ipDst = 111.0.36.36;
+(drop + filter loc = "s20"; loc := "s30" + filter loc = "s30"; loc := "s36" +
+ filter loc = "s36"; loc := "h36") +
+filter ipDst = 111.0.37.37;
+(drop + filter loc = "s20"; loc := "s30" + filter loc = "s30"; loc := "s44" +
+ filter loc = "s44"; loc := "s37" + filter loc = "s37"; loc := "h37") +
+filter ipDst = 111.0.34.34;
+(drop + filter loc = "s20"; loc := "s30" + filter loc = "s30"; loc := "s34" +
+ filter loc = "s34"; loc := "h34") +
+filter ipDst = 111.0.35.35;
+(drop + filter loc = "s20"; loc := "s30" + filter loc = "s30"; loc := "s35" +
+ filter loc = "s35"; loc := "h35") +
+filter ipDst = 111.0.38.38;
+(drop + filter loc = "s20"; loc := "s30" + filter loc = "s30"; loc := "s44" +
+ filter loc = "s44"; loc := "s38" + filter loc = "s38"; loc := "h38") +
+filter ipDst = 111.0.39.39;
+(drop + filter loc = "s20"; loc := "s30" + filter loc = "s30"; loc := "s40" +
+ filter loc = "s40"; loc := "s39" + filter loc = "s39"; loc := "h39") +
+filter ipDst = 111.0.6.6;
+(drop + filter loc = "s20"; loc := "s30" + filter loc = "s30"; loc := "s9" +
+ filter loc = "s9"; loc := "s6" + filter loc = "s6"; loc := "h6") +
+filter ipDst = 111.0.1.1;
+(drop + filter loc = "s20"; loc := "s30" + filter loc = "s30"; loc := "s45" +
+ filter loc = "s45"; loc := "s0" + filter loc = "s0"; loc := "s1" +
+ filter loc = "s1"; loc := "h1") +
+filter ipDst = 111.0.3.3;
+(drop + filter loc = "s20"; loc := "s30" + filter loc = "s30"; loc := "s45" +
+ filter loc = "s45"; loc := "s3" + filter loc = "s3"; loc := "h3") +
+filter ipDst = 111.0.2.2;
+(drop + filter loc = "s20"; loc := "s30" + filter loc = "s30"; loc := "s45" +
+ filter loc = "s45"; loc := "s0" + filter loc = "s0"; loc := "s2" +
+ filter loc = "s2"; loc := "h2") +
+filter ipDst = 111.0.9.9;
+(drop + filter loc = "s20"; loc := "s30" + filter loc = "s30"; loc := "s9" +
+ filter loc = "s9"; loc := "h9") +
+filter ipDst = 111.0.8.8;
+(drop + filter loc = "s20"; loc := "s30" + filter loc = "s30"; loc := "s9" +
+ filter loc = "s9"; loc := "s8" + filter loc = "s8"; loc := "h8") +
+filter ipDst = 111.0.13.13;
+(drop + filter loc = "s20"; loc := "s30" + filter loc = "s30"; loc := "s40" +
+ filter loc = "s40"; loc := "s13" + filter loc = "s13"; loc := "h13") +
+filter ipDst = 111.0.42.42;
+(drop + filter loc = "s20"; loc := "s30" + filter loc = "s30"; loc := "s42" +
+ filter loc = "s42"; loc := "h42") +
+filter ipDst = 111.0.24.24;
+(drop + filter loc = "s20"; loc := "s31" + filter loc = "s31"; loc := "s24" +
+ filter loc = "s24"; loc := "h24") +
+filter ipDst = 111.0.4.4;
+(drop + filter loc = "s20"; loc := "s30" + filter loc = "s30"; loc := "s9" +
+ filter loc = "s9"; loc := "s5" + filter loc = "s5"; loc := "s4" +
+ filter loc = "s4"; loc := "h4") +
+filter ipDst = 111.0.40.40;
+(drop + filter loc = "s20"; loc := "s30" + filter loc = "s30"; loc := "s40" +
+ filter loc = "s40"; loc := "h40") +
+filter ipDst = 111.0.41.41;
+(drop + filter loc = "s20"; loc := "s30" + filter loc = "s30"; loc := "s40" +
+ filter loc = "s40"; loc := "s41" + filter loc = "s41"; loc := "h41") +
+filter ipDst = 111.0.5.5;
+(drop + filter loc = "s20"; loc := "s30" + filter loc = "s30"; loc := "s9" +
+ filter loc = "s9"; loc := "s5" + filter loc = "s5"; loc := "h5") +
+filter ipDst = 111.0.43.43;
+(drop + filter loc = "s20"; loc := "s30" + filter loc = "s30"; loc := "s43" +
+ filter loc = "s43"; loc := "h43") +
+filter ipDst = 111.0.44.44;
+(drop + filter loc = "s20"; loc := "s30" + filter loc = "s30"; loc := "s44" +
+ filter loc = "s44"; loc := "h44") +
+filter ipDst = 111.0.45.45;
+(drop + filter loc = "s20"; loc := "s30" + filter loc = "s30"; loc := "s45" +
+ filter loc = "s45"; loc := "h45") +
+filter ipDst = 111.0.46.46;
+(drop + filter loc = "s20"; loc := "s30" + filter loc = "s30"; loc := "s45" +
+ filter loc = "s45"; loc := "s46" + filter loc = "s46"; loc := "h46") +
+filter ipDst = 111.0.7.7;
+(drop + filter loc = "s20"; loc := "s30" + filter loc = "s30"; loc := "s9" +
+ filter loc = "s9"; loc := "s7" + filter loc = "s7"; loc := "h7") +
+filter ipDst = 111.0.0.0;
+(drop + filter loc = "s20"; loc := "s30" + filter loc = "s30"; loc := "s45" +
+ filter loc = "s45"; loc := "s0" + filter loc = "s0"; loc := "h0") +
+filter ipDst = 111.0.26.26;
+(drop + filter loc = "s7"; loc := "s9" + filter loc = "s9"; loc := "s0" +
+ filter loc = "s0"; loc := "s43" + filter loc = "s43"; loc := "s26" +
+ filter loc = "s26"; loc := "h26") +
+filter ipDst = 111.0.28.28;
+(drop + filter loc = "s7"; loc := "s24" + filter loc = "s24"; loc := "s40" +
+ filter loc = "s40"; loc := "s39" + filter loc = "s39"; loc := "s28" +
+ filter loc = "s28"; loc := "h28") +
+filter ipDst = 111.0.29.29;
+(drop + filter loc = "s7"; loc := "s24" + filter loc = "s24"; loc := "s40" +
+ filter loc = "s40"; loc := "s29" + filter loc = "s29"; loc := "h29") +
+filter ipDst = 111.0.32.32;
+(drop + filter loc = "s7"; loc := "s9" + filter loc = "s9"; loc := "s5" +
+ filter loc = "s5"; loc := "s32" + filter loc = "s32"; loc := "h32") +
+filter ipDst = 111.0.30.30;
+(drop + filter loc = "s7"; loc := "s9" + filter loc = "s9"; loc := "s30" +
+ filter loc = "s30"; loc := "h30") +
+filter ipDst = 111.0.31.31;
+(drop + filter loc = "s7"; loc := "s24" + filter loc = "s24"; loc := "s31" +
+ filter loc = "s31"; loc := "h31") +
+filter ipDst = 111.0.36.36;
+(drop + filter loc = "s7"; loc := "s9" + filter loc = "s9"; loc := "s30" +
+ filter loc = "s30"; loc := "s36" + filter loc = "s36"; loc := "h36") +
+filter ipDst = 111.0.37.37;
+(drop + filter loc = "s7"; loc := "s9" + filter loc = "s9"; loc := "s0" +
+ filter loc = "s0"; loc := "s37" + filter loc = "s37"; loc := "h37") +
+filter ipDst = 111.0.34.34;
+(drop + filter loc = "s7"; loc := "s9" + filter loc = "s9"; loc := "s30" +
+ filter loc = "s30"; loc := "s34" + filter loc = "s34"; loc := "h34") +
+filter ipDst = 111.0.35.35;
+(drop + filter loc = "s7"; loc := "s9" + filter loc = "s9"; loc := "s30" +
+ filter loc = "s30"; loc := "s35" + filter loc = "s35"; loc := "h35") +
+filter ipDst = 111.0.38.38;
+(drop + filter loc = "s7"; loc := "s9" + filter loc = "s9"; loc := "s0" +
+ filter loc = "s0"; loc := "s37" + filter loc = "s37"; loc := "s38" +
+ filter loc = "s38"; loc := "h38") +
+filter ipDst = 111.0.39.39;
+(drop + filter loc = "s7"; loc := "s24" + filter loc = "s24"; loc := "s40" +
+ filter loc = "s40"; loc := "s39" + filter loc = "s39"; loc := "h39") +
+filter ipDst = 111.0.6.6;
+(drop + filter loc = "s7"; loc := "s9" + filter loc = "s9"; loc := "s6" +
+ filter loc = "s6"; loc := "h6") +
+filter ipDst = 111.0.1.1;
+(drop + filter loc = "s7"; loc := "s9" + filter loc = "s9"; loc := "s0" +
+ filter loc = "s0"; loc := "s1" + filter loc = "s1"; loc := "h1") +
+filter ipDst = 111.0.3.3;
+(drop + filter loc = "s7"; loc := "s24" + filter loc = "s24"; loc := "s3" +
+ filter loc = "s3"; loc := "h3") +
+filter ipDst = 111.0.2.2;
+(drop + filter loc = "s7"; loc := "s9" + filter loc = "s9"; loc := "s0" +
+ filter loc = "s0"; loc := "s2" + filter loc = "s2"; loc := "h2") +
+filter ipDst = 111.0.9.9;
+(drop + filter loc = "s7"; loc := "s9" + filter loc = "s9"; loc := "h9") +
+filter ipDst = 111.0.8.8;
+(drop + filter loc = "s7"; loc := "s9" + filter loc = "s9"; loc := "s8" +
+ filter loc = "s8"; loc := "h8") +
+filter ipDst = 111.0.13.13;
+(drop + filter loc = "s7"; loc := "s24" + filter loc = "s24"; loc := "s40" +
+ filter loc = "s40"; loc := "s13" + filter loc = "s13"; loc := "h13") +
+filter ipDst = 111.0.42.42;
+(drop + filter loc = "s7"; loc := "s9" + filter loc = "s9"; loc := "s30" +
+ filter loc = "s30"; loc := "s42" + filter loc = "s42"; loc := "h42") +
+filter ipDst = 111.0.24.24;
+(drop + filter loc = "s7"; loc := "s24" + filter loc = "s24"; loc := "h24") +
+filter ipDst = 111.0.4.4;
+(drop + filter loc = "s7"; loc := "s9" + filter loc = "s9"; loc := "s5" +
+ filter loc = "s5"; loc := "s4" + filter loc = "s4"; loc := "h4") +
+filter ipDst = 111.0.40.40;
+(drop + filter loc = "s7"; loc := "s24" + filter loc = "s24"; loc := "s40" +
+ filter loc = "s40"; loc := "h40") +
+filter ipDst = 111.0.41.41;
+(drop + filter loc = "s7"; loc := "s24" + filter loc = "s24"; loc := "s40" +
+ filter loc = "s40"; loc := "s41" + filter loc = "s41"; loc := "h41") +
+filter ipDst = 111.0.5.5;
+(drop + filter loc = "s7"; loc := "s9" + filter loc = "s9"; loc := "s5" +
+ filter loc = "s5"; loc := "h5") +
+filter ipDst = 111.0.43.43;
+(drop + filter loc = "s7"; loc := "s9" + filter loc = "s9"; loc := "s0" +
+ filter loc = "s0"; loc := "s43" + filter loc = "s43"; loc := "h43") +
+filter ipDst = 111.0.44.44;
+(drop + filter loc = "s7"; loc := "s9" + filter loc = "s9"; loc := "s0" +
+ filter loc = "s0"; loc := "s44" + filter loc = "s44"; loc := "h44") +
+filter ipDst = 111.0.45.45;
+(drop + filter loc = "s7"; loc := "s9" + filter loc = "s9"; loc := "s0" +
+ filter loc = "s0"; loc := "s45" + filter loc = "s45"; loc := "h45") +
+filter ipDst = 111.0.46.46;
+(drop + filter loc = "s7"; loc := "s24" + filter loc = "s24"; loc := "s3" +
+ filter loc = "s3"; loc := "s46" + filter loc = "s46"; loc := "h46") +
+filter ipDst = 111.0.20.20;
+(drop + filter loc = "s7"; loc := "s9" + filter loc = "s9"; loc := "s30" +
+ filter loc = "s30"; loc := "s20" + filter loc = "s20"; loc := "h20") +
+filter ipDst = 111.0.0.0;
+(drop + filter loc = "s7"; loc := "s9" + filter loc = "s9"; loc := "s0" +
+ filter loc = "s0"; loc := "h0") +
+filter ipDst = 111.0.26.26;
+(drop + filter loc = "s0"; loc := "s43" + filter loc = "s43"; loc := "s26" +
+ filter loc = "s26"; loc := "h26") +
+filter ipDst = 111.0.28.28;
+(drop + filter loc = "s0"; loc := "s3" + filter loc = "s3"; loc := "s24" +
+ filter loc = "s24"; loc := "s40" + filter loc = "s40"; loc := "s39" +
+ filter loc = "s39"; loc := "s28" + filter loc = "s28"; loc := "h28") +
+filter ipDst = 111.0.29.29;
+(drop + filter loc = "s0"; loc := "s45" + filter loc = "s45"; loc := "s30" +
+ filter loc = "s30"; loc := "s29" + filter loc = "s29"; loc := "h29") +
+filter ipDst = 111.0.32.32;
+(drop + filter loc = "s0"; loc := "s9" + filter loc = "s9"; loc := "s5" +
+ filter loc = "s5"; loc := "s32" + filter loc = "s32"; loc := "h32") +
+filter ipDst = 111.0.30.30;
+(drop + filter loc = "s0"; loc := "s45" + filter loc = "s45"; loc := "s30" +
+ filter loc = "s30"; loc := "h30") +
+filter ipDst = 111.0.31.31;
+(drop + filter loc = "s0"; loc := "s45" + filter loc = "s45"; loc := "s31" +
+ filter loc = "s31"; loc := "h31") +
+filter ipDst = 111.0.36.36;
+(drop + filter loc = "s0"; loc := "s45" + filter loc = "s45"; loc := "s30" +
+ filter loc = "s30"; loc := "s36" + filter loc = "s36"; loc := "h36") +
+filter ipDst = 111.0.37.37;
+(drop + filter loc = "s0"; loc := "s37" + filter loc = "s37"; loc := "h37") +
+filter ipDst = 111.0.34.34;
+(drop + filter loc = "s0"; loc := "s45" + filter loc = "s45"; loc := "s30" +
+ filter loc = "s30"; loc := "s34" + filter loc = "s34"; loc := "h34") +
+filter ipDst = 111.0.35.35;
+(drop + filter loc = "s0"; loc := "s45" + filter loc = "s45"; loc := "s30" +
+ filter loc = "s30"; loc := "s35" + filter loc = "s35"; loc := "h35") +
+filter ipDst = 111.0.38.38;
+(drop + filter loc = "s0"; loc := "s37" + filter loc = "s37"; loc := "s38" +
+ filter loc = "s38"; loc := "h38") +
+filter ipDst = 111.0.39.39;
+(drop + filter loc = "s0"; loc := "s3" + filter loc = "s3"; loc := "s24" +
+ filter loc = "s24"; loc := "s40" + filter loc = "s40"; loc := "s39" +
+ filter loc = "s39"; loc := "h39") +
+filter ipDst = 111.0.6.6;
+(drop + filter loc = "s0"; loc := "s9" + filter loc = "s9"; loc := "s6" +
+ filter loc = "s6"; loc := "h6") +
+filter ipDst = 111.0.1.1;
+(drop + filter loc = "s0"; loc := "s1" + filter loc = "s1"; loc := "h1") +
+filter ipDst = 111.0.3.3;
+(drop + filter loc = "s0"; loc := "s3" + filter loc = "s3"; loc := "h3") +
+filter ipDst = 111.0.2.2;
+(drop + filter loc = "s0"; loc := "s2" + filter loc = "s2"; loc := "h2") +
+filter ipDst = 111.0.9.9;
+(drop + filter loc = "s0"; loc := "s9" + filter loc = "s9"; loc := "h9") +
+filter ipDst = 111.0.8.8;
+(drop + filter loc = "s0"; loc := "s9" + filter loc = "s9"; loc := "s8" +
+ filter loc = "s8"; loc := "h8") +
+filter ipDst = 111.0.13.13;
+(drop + filter loc = "s0"; loc := "s3" + filter loc = "s3"; loc := "s24" +
+ filter loc = "s24"; loc := "s40" + filter loc = "s40"; loc := "s13" +
+ filter loc = "s13"; loc := "h13") +
+filter ipDst = 111.0.42.42;
+(drop + filter loc = "s0"; loc := "s43" + filter loc = "s43"; loc := "s42" +
+ filter loc = "s42"; loc := "h42") +
+filter ipDst = 111.0.24.24;
+(drop + filter loc = "s0"; loc := "s3" + filter loc = "s3"; loc := "s24" +
+ filter loc = "s24"; loc := "h24") +
+filter ipDst = 111.0.4.4;
+(drop + filter loc = "s0"; loc := "s9" + filter loc = "s9"; loc := "s5" +
+ filter loc = "s5"; loc := "s4" + filter loc = "s4"; loc := "h4") +
+filter ipDst = 111.0.40.40;
+(drop + filter loc = "s0"; loc := "s3" + filter loc = "s3"; loc := "s24" +
+ filter loc = "s24"; loc := "s40" + filter loc = "s40"; loc := "h40") +
+filter ipDst = 111.0.41.41;
+(drop + filter loc = "s0"; loc := "s3" + filter loc = "s3"; loc := "s24" +
+ filter loc = "s24"; loc := "s40" + filter loc = "s40"; loc := "s41" +
+ filter loc = "s41"; loc := "h41") +
+filter ipDst = 111.0.5.5;
+(drop + filter loc = "s0"; loc := "s9" + filter loc = "s9"; loc := "s5" +
+ filter loc = "s5"; loc := "h5") +
+filter ipDst = 111.0.43.43;
+(drop + filter loc = "s0"; loc := "s43" + filter loc = "s43"; loc := "h43") +
+filter ipDst = 111.0.44.44;
+(drop + filter loc = "s0"; loc := "s44" + filter loc = "s44"; loc := "h44") +
+filter ipDst = 111.0.45.45;
+(drop + filter loc = "s0"; loc := "s45" + filter loc = "s45"; loc := "h45") +
+filter ipDst = 111.0.46.46;
+(drop + filter loc = "s0"; loc := "s37" + filter loc = "s37"; loc := "s46" +
+ filter loc = "s46"; loc := "h46") +
+filter ipDst = 111.0.20.20;
+(drop + filter loc = "s0"; loc := "s45" + filter loc = "s45"; loc := "s30" +
+ filter loc = "s30"; loc := "s20" + filter loc = "s20"; loc := "h20") +
+filter ipDst = 111.0.7.7;
+(drop + filter loc = "s0"; loc := "s9" + filter loc = "s9"; loc := "s7" +
+ filter loc = "s7"; loc := "h7")

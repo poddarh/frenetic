@@ -1,0 +1,4 @@
+filter ethDst = 00:00:00:00:03:03; vport := 3 +
+filter ethDst = 00:00:00:00:01:01; vport := 1 +
+filter ethDst = 00:00:00:00:02:02; vport := 2 +
+filter ethDst = 00:00:00:00:00:00; vport := 0

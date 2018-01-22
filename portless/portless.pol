@@ -1,0 +1,14 @@
+if loc = "s1" then
+	if from = "s2" then loc := "s1"; loc := "s2"; loc := "s3"
+	else if from = "s3" then loc := "s2"
+	else drop
+else if loc = "s2" then
+	if ethDst = 00:00:00:00:00:01 then loc := "h1"
+	else if ethDst = 00:00:00:00:00:02 then loc := "h2"
+	else loc := "s1"
+else if loc = "s3" then
+	if ethDst = 00:00:00:00:00:03 then loc := "h3"
+	else if ethDst = 00:00:00:00:00:04 then loc := "h3"
+	else loc := "s1"
+else
+	drop

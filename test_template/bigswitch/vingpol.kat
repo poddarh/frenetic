@@ -1,0 +1,4 @@
+filter switch = 3 and port = 1; (vswitch := 1; vport := 3) +
+filter switch = 1 and port = 1; (vswitch := 1; vport := 1) +
+filter switch = 2 and port = 1; (vswitch := 1; vport := 2) +
+filter switch = 0 and port = 1; (vswitch := 1; vport := 0)

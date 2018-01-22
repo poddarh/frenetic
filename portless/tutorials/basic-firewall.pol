@@ -1,0 +1,9 @@
+if ipProto = 0x01 and ethTyp = 0x800 then
+	drop
+else
+	filter ethTyp = 0x800;
+	if ip4Dst = 10.0.0.1 then loc := "h1"
+	else if ip4Dst = 10.0.0.2 then loc := "h2"
+	else if ip4Dst = 10.0.0.3 then loc := "h3"
+	else if ip4Dst = 10.0.0.4 then loc := "h4"
+	else drop

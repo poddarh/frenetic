@@ -1,0 +1,19 @@
+filter switch = 14 and port = 1; (vswitch := 1; vport := 14) +
+filter switch = 15 and port = 1; (vswitch := 1; vport := 15) +
+filter switch = 16 and port = 1; (vswitch := 1; vport := 16) +
+filter switch = 17 and port = 1; (vswitch := 1; vport := 17) +
+filter switch = 10 and port = 1; (vswitch := 1; vport := 10) +
+filter switch = 11 and port = 1; (vswitch := 1; vport := 11) +
+filter switch = 12 and port = 1; (vswitch := 1; vport := 12) +
+filter switch = 13 and port = 1; (vswitch := 1; vport := 13) +
+filter switch = 18 and port = 1; (vswitch := 1; vport := 18) +
+filter switch = 5 and port = 1; (vswitch := 1; vport := 5) +
+filter switch = 4 and port = 1; (vswitch := 2; vport := 4) +
+filter switch = 7 and port = 1; (vswitch := 2; vport := 7) +
+filter switch = 6 and port = 1; (vswitch := 2; vport := 6) +
+filter switch = 1 and port = 1; (vswitch := 2; vport := 1) +
+filter switch = 0 and port = 1; (vswitch := 2; vport := 0) +
+filter switch = 3 and port = 1; (vswitch := 2; vport := 3) +
+filter switch = 2 and port = 1; (vswitch := 2; vport := 2) +
+filter switch = 9 and port = 1; (vswitch := 2; vport := 9) +
+filter switch = 8 and port = 1; (vswitch := 2; vport := 8)

@@ -1,0 +1,10 @@
+vswitch = 1 and vport = 14 or vswitch = 1 and vport = 15 or
+vswitch = 1 and vport = 16 or vswitch = 1 and vport = 17 or
+vswitch = 1 and vport = 10 or vswitch = 1 and vport = 11 or
+vswitch = 1 and vport = 12 or vswitch = 1 and vport = 13 or
+vswitch = 1 and vport = 18 or vswitch = 1 and vport = 5 or
+vswitch = 2 and vport = 4 or vswitch = 2 and vport = 7 or
+vswitch = 2 and vport = 6 or vswitch = 2 and vport = 1 or
+vswitch = 2 and vport = 0 or vswitch = 2 and vport = 3 or
+vswitch = 2 and vport = 2 or vswitch = 2 and vport = 9 or
+vswitch = 2 and vport = 8

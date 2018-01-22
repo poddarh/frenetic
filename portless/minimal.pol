@@ -1,0 +1,4 @@
+if from = h1 then
+	loc := h2
+else
+	loc := h1

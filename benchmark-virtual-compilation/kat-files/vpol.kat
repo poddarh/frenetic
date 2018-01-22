@@ -1,0 +1,28 @@
+filter vswitch = 0;
+(filter ethDst = 00:00:00:00:06:06; vport := 2 +
+ filter ethDst = 00:00:00:00:05:05; vport := 2 +
+ filter ethDst = 00:00:00:00:04:04; vport := 1 +
+ filter ethDst = 00:00:00:00:03:03; vport := 1) +
+filter vswitch = 1;
+(filter ethDst = 00:00:00:00:05:05 or ethDst = 00:00:00:00:06:06; vport := 0 +
+ filter ethDst = 00:00:00:00:04:04; vport := 2 +
+ filter ethDst = 00:00:00:00:03:03; vport := 1) +
+filter vswitch = 2;
+(filter ethDst = 00:00:00:00:03:03 or ethDst = 00:00:00:00:04:04; vport := 0 +
+ filter ethDst = 00:00:00:00:06:06; vport := 2 +
+ filter ethDst = 00:00:00:00:05:05; vport := 1) +
+filter vswitch = 3;
+(filter ethDst = 00:00:00:00:04:04 or ethDst = 00:00:00:00:05:05 or ethDst = 00:00:00:00:06:06; vport := 0 +
+ filter ethDst = 00:00:00:00:03:03; vport := 1) +
+filter vswitch = 4;
+(filter ethDst = 00:00:00:00:03:03 or ethDst = 00:00:00:00:05:05 or
+        ethDst = 00:00:00:00:06:06;
+ vport := 0 + filter ethDst = 00:00:00:00:04:04; vport := 1) +
+filter vswitch = 5;
+(filter ethDst = 00:00:00:00:03:03 or ethDst = 00:00:00:00:04:04 or
+        ethDst = 00:00:00:00:06:06;
+ vport := 0 + filter ethDst = 00:00:00:00:05:05; vport := 1) +
+filter vswitch = 6;
+(filter ethDst = 00:00:00:00:03:03 or ethDst = 00:00:00:00:04:04 or
+        ethDst = 00:00:00:00:05:05;
+ vport := 0 + filter ethDst = 00:00:00:00:06:06; vport := 1)

@@ -1,0 +1,5 @@
+if from = "h1" then loc := "h2" + loc := "h3" + loc := "h4"
+else if from = "h2" then loc := "h1" + loc := "h3" + loc := "h4"
+else if from = "h3" then loc := "h1" + loc := "h2" + loc := "h4"
+else if from = "h4" then loc := "h1" + loc := "h2" + loc := "h3"
+else drop

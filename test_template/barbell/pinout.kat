@@ -1,0 +1,2 @@
+switch = 3 and port = 1 or switch = 1 and port = 1 or switch = 2 and port = 1 or
+switch = 0 and port = 1

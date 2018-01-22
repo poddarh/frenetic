@@ -1,0 +1,19 @@
+vswitch = 1 and vport = 14 and (switch = 14 and port = 1) or
+vswitch = 1 and vport = 15 and (switch = 15 and port = 1) or
+vswitch = 1 and vport = 16 and (switch = 16 and port = 1) or
+vswitch = 1 and vport = 17 and (switch = 17 and port = 1) or
+vswitch = 1 and vport = 10 and (switch = 10 and port = 1) or
+vswitch = 1 and vport = 11 and (switch = 11 and port = 1) or
+vswitch = 1 and vport = 12 and (switch = 12 and port = 1) or
+vswitch = 1 and vport = 13 and (switch = 13 and port = 1) or
+vswitch = 1 and vport = 18 and (switch = 18 and port = 1) or
+vswitch = 1 and vport = 5 and (switch = 5 and port = 1) or
+vswitch = 2 and vport = 4 and (switch = 4 and port = 1) or
+vswitch = 2 and vport = 7 and (switch = 7 and port = 1) or
+vswitch = 2 and vport = 6 and (switch = 6 and port = 1) or
+vswitch = 2 and vport = 1 and (switch = 1 and port = 1) or
+vswitch = 2 and vport = 0 and (switch = 0 and port = 1) or
+vswitch = 2 and vport = 3 and (switch = 3 and port = 1) or
+vswitch = 2 and vport = 2 and (switch = 2 and port = 1) or
+vswitch = 2 and vport = 9 and (switch = 9 and port = 1) or
+vswitch = 2 and vport = 8 and (switch = 8 and port = 1)

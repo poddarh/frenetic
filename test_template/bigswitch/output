@@ -1,0 +1,179 @@
+[virtual] Statistics:
+  |V(vgraph)|: 8
+  |E(vgraph)|: 16
+  |V(pgraph)|: 24
+  |E(pgraph)|: 46
+  |V(prod_graph)|: 24
+  |E(prod_graph)|: 32
+  |V(pruned_graph)|: 24
+  |E(pruned_graph)|: 32
+  |V(fabric_graph)|: 24
+  |E(fabric_graph)|: 32
+
+Global Policy:
+filter switch = 3 and port = 1 or switch = 1 and port = 1 or switch = 2 and port = 1 or switch = 0 and port = 1;
+(filter switch = 3 and port = 1; (vswitch := 1; vport := 3) +
+ filter switch = 1 and port = 1; (vswitch := 1; vport := 1) +
+ filter switch = 2 and port = 1; (vswitch := 1; vport := 2) +
+ filter switch = 0 and port = 1; (vswitch := 1; vport := 0));
+filter vswitch = 1 and vport = 3 or vswitch = 1 and vport = 1 or vswitch = 1 and vport = 2 or vswitch = 1 and vport = 0;
+((filter ethDst = 00:00:00:00:03:03; vport := 3 + filter ethDst = 00:00:00:00:01:01; vport := 1 +
+  filter ethDst = 00:00:00:00:02:02; vport := 2 + filter ethDst = 00:00:00:00:00:00; vport := 0);
+ (filter vswitch = 1 and vport = 3; filter switch = 3 and port = 1; (vswitch := 1; vport := 3) +
+  filter vswitch = 1 and vport = 3; filter switch = 2 and port = 1;
+  (port := 2; (2@2 => 0@3; (port := 4; (0@4 => 3@2; port := 1)))); (vswitch := 1; vport := 3) +
+  filter vswitch = 1 and vport = 3; filter switch = 1 and port = 1;
+  (port := 2; (1@2 => 0@2; (port := 4; (0@4 => 3@2; port := 1)))); (vswitch := 1; vport := 3) +
+  filter vswitch = 1 and vport = 3; filter switch = 0 and port = 1; (port := 4; (0@4 => 3@2; port := 1));
+  (vswitch := 1; vport := 3) +
+  filter vswitch = 1 and vport = 2; filter switch = 3 and port = 1;
+  (port := 2; (3@2 => 0@4; (port := 3; (0@3 => 2@2; port := 1)))); (vswitch := 1; vport := 2) +
+  filter vswitch = 1 and vport = 2; filter switch = 2 and port = 1; (vswitch := 1; vport := 2) +
+  filter vswitch = 1 and vport = 2; filter switch = 1 and port = 1; (port := 3; (1@3 => 2@3; port := 1));
+  (vswitch := 1; vport := 2) +
+  filter vswitch = 1 and vport = 2; filter switch = 0 and port = 1; (port := 3; (0@3 => 2@2; port := 1));
+  (vswitch := 1; vport := 2) +
+  filter vswitch = 1 and vport = 1; filter switch = 3 and port = 1;
+  (port := 2; (3@2 => 0@4; (port := 2; (0@2 => 1@2; port := 1)))); (vswitch := 1; vport := 1) +
+  filter vswitch = 1 and vport = 1; filter switch = 2 and port = 1; (port := 3; (2@3 => 1@3; port := 1));
+  (vswitch := 1; vport := 1) +
+  filter vswitch = 1 and vport = 1; filter switch = 1 and port = 1; (vswitch := 1; vport := 1) +
+  filter vswitch = 1 and vport = 1; filter switch = 0 and port = 1; (port := 2; (0@2 => 1@2; port := 1));
+  (vswitch := 1; vport := 1) +
+  filter vswitch = 1 and vport = 0; filter switch = 3 and port = 1; (port := 2; (3@2 => 0@4; port := 1));
+  (vswitch := 1; vport := 0) +
+  filter vswitch = 1 and vport = 0; filter switch = 2 and port = 1; (port := 2; (2@2 => 0@3; port := 1));
+  (vswitch := 1; vport := 0) +
+  filter vswitch = 1 and vport = 0; filter switch = 1 and port = 1; (port := 2; (1@2 => 0@2; port := 1));
+  (vswitch := 1; vport := 0) +
+  filter vswitch = 1 and vport = 0; filter switch = 0 and port = 1; (vswitch := 1; vport := 0)));
+filter (vswitch = 1 and vport = 3 or vswitch = 1 and vport = 1 or vswitch = 1 and vport = 2 or
+        vswitch = 1 and vport = 0) and
+       (switch = 3 and port = 1 or switch = 1 and port = 1 or switch = 2 and port = 1 or switch = 0 and port = 1)
+
++-------------------------------------------------+
+| Switch 0 | Pattern         | Action             |
+|-------------------------------------------------|
+| InPort = 1                 | Output(InPort)     |
+| EthDst = 00:00:00:00:00:00 |                    |
+|-------------------------------------------------|
+| InPort = 1                 | SetField(vlan, 7)  |
+| EthDst = 00:00:00:00:01:01 | Output(2)          |
+|-------------------------------------------------|
+| InPort = 1                 | SetField(vlan, 13) |
+| EthDst = 00:00:00:00:02:02 | Output(3)          |
+|-------------------------------------------------|
+| InPort = 1                 | SetField(vlan, 19) |
+| EthDst = 00:00:00:00:03:03 | Output(4)          |
+|-------------------------------------------------|
+| InPort = 1                 |                    |
+|-------------------------------------------------|
+| InPort = 2                 | Output(1)          |
+| Vlan = 1                   |                    |
+|-------------------------------------------------|
+| InPort = 2                 | SetField(vlan, 19) |
+| Vlan = 21                  | Output(4)          |
+|-------------------------------------------------|
+| InPort = 2                 |                    |
+|-------------------------------------------------|
+| InPort = 3                 | Output(1)          |
+| Vlan = 3                   |                    |
+|-------------------------------------------------|
+| InPort = 3                 | SetField(vlan, 19) |
+| Vlan = 23                  | Output(4)          |
+|-------------------------------------------------|
+| InPort = 3                 |                    |
+|-------------------------------------------------|
+| InPort = 4                 | Output(1)          |
+| Vlan = 5                   |                    |
+|-------------------------------------------------|
+| InPort = 4                 | SetField(vlan, 7)  |
+| Vlan = 11                  | Output(2)          |
+|-------------------------------------------------|
+| InPort = 4                 | SetField(vlan, 13) |
+| Vlan = 17                  | Output(3)          |
+|-------------------------------------------------|
+|                            |                    |
++-------------------------------------------------+
+
++-------------------------------------------------+
+| Switch 1 | Pattern         | Action             |
+|-------------------------------------------------|
+| InPort = 1                 | SetField(vlan, 1)  |
+| EthDst = 00:00:00:00:00:00 | Output(2)          |
+|-------------------------------------------------|
+| InPort = 1                 | Output(InPort)     |
+| EthDst = 00:00:00:00:01:01 |                    |
+|-------------------------------------------------|
+| InPort = 1                 | SetField(vlan, 15) |
+| EthDst = 00:00:00:00:02:02 | Output(3)          |
+|-------------------------------------------------|
+| InPort = 1                 | SetField(vlan, 21) |
+| EthDst = 00:00:00:00:03:03 | Output(2)          |
+|-------------------------------------------------|
+| InPort = 1                 |                    |
+|-------------------------------------------------|
+| InPort = 2                 | Output(1)          |
+| Vlan = 7                   |                    |
+|-------------------------------------------------|
+| InPort = 2                 |                    |
+|-------------------------------------------------|
+| InPort = 3                 | Output(1)          |
+| Vlan = 9                   |                    |
+|-------------------------------------------------|
+|                            |                    |
++-------------------------------------------------+
+
++-------------------------------------------------+
+| Switch 2 | Pattern         | Action             |
+|-------------------------------------------------|
+| InPort = 1                 | SetField(vlan, 3)  |
+| EthDst = 00:00:00:00:00:00 | Output(2)          |
+|-------------------------------------------------|
+| InPort = 1                 | SetField(vlan, 9)  |
+| EthDst = 00:00:00:00:01:01 | Output(3)          |
+|-------------------------------------------------|
+| InPort = 1                 | Output(InPort)     |
+| EthDst = 00:00:00:00:02:02 |                    |
+|-------------------------------------------------|
+| InPort = 1                 | SetField(vlan, 23) |
+| EthDst = 00:00:00:00:03:03 | Output(2)          |
+|-------------------------------------------------|
+| InPort = 1                 |                    |
+|-------------------------------------------------|
+| InPort = 2                 | Output(1)          |
+| Vlan = 13                  |                    |
+|-------------------------------------------------|
+| InPort = 2                 |                    |
+|-------------------------------------------------|
+| InPort = 3                 | Output(1)          |
+| Vlan = 15                  |                    |
+|-------------------------------------------------|
+|                            |                    |
++-------------------------------------------------+
+
++-------------------------------------------------+
+| Switch 3 | Pattern         | Action             |
+|-------------------------------------------------|
+| InPort = 1                 | SetField(vlan, 5)  |
+| EthDst = 00:00:00:00:00:00 | Output(2)          |
+|-------------------------------------------------|
+| InPort = 1                 | SetField(vlan, 11) |
+| EthDst = 00:00:00:00:01:01 | Output(2)          |
+|-------------------------------------------------|
+| InPort = 1                 | SetField(vlan, 17) |
+| EthDst = 00:00:00:00:02:02 | Output(2)          |
+|-------------------------------------------------|
+| InPort = 1                 | Output(InPort)     |
+| EthDst = 00:00:00:00:03:03 |                    |
+|-------------------------------------------------|
+| InPort = 1                 |                    |
+|-------------------------------------------------|
+| InPort = 2                 | Output(1)          |
+| Vlan = 19                  |                    |
+|-------------------------------------------------|
+|                            |                    |
++-------------------------------------------------+
+
+virtual compilation time: 0.0083
+global compilation time: 0.0032

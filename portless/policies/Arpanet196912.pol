@@ -1,0 +1,29 @@
+drop +
+filter ipDst = 111.0.1.1;
+(drop + filter loc = "s3"; loc := "s0" + filter loc = "s0"; loc := "s1" +
+ filter loc = "s1"; loc := "h1") +
+filter ipDst = 111.0.2.2;
+(drop + filter loc = "s3"; loc := "s0" + filter loc = "s0"; loc := "s2" +
+ filter loc = "s2"; loc := "h2") +
+filter ipDst = 111.0.0.0;
+(drop + filter loc = "s3"; loc := "s0" + filter loc = "s0"; loc := "h0") +
+filter ipDst = 111.0.3.3;
+(drop + filter loc = "s1"; loc := "s0" + filter loc = "s0"; loc := "s3" +
+ filter loc = "s3"; loc := "h3") +
+filter ipDst = 111.0.2.2;
+(drop + filter loc = "s1"; loc := "s2" + filter loc = "s2"; loc := "h2") +
+filter ipDst = 111.0.0.0;
+(drop + filter loc = "s1"; loc := "s0" + filter loc = "s0"; loc := "h0") +
+filter ipDst = 111.0.3.3;
+(drop + filter loc = "s2"; loc := "s0" + filter loc = "s0"; loc := "s3" +
+ filter loc = "s3"; loc := "h3") +
+filter ipDst = 111.0.1.1;
+(drop + filter loc = "s2"; loc := "s1" + filter loc = "s1"; loc := "h1") +
+filter ipDst = 111.0.0.0;
+(drop + filter loc = "s2"; loc := "s0" + filter loc = "s0"; loc := "h0") +
+filter ipDst = 111.0.3.3;
+(drop + filter loc = "s0"; loc := "s3" + filter loc = "s3"; loc := "h3") +
+filter ipDst = 111.0.1.1;
+(drop + filter loc = "s0"; loc := "s1" + filter loc = "s1"; loc := "h1") +
+filter ipDst = 111.0.2.2;
+(drop + filter loc = "s0"; loc := "s2" + filter loc = "s2"; loc := "h2")
